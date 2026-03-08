@@ -96,4 +96,40 @@ concurso-pcsc/
 
 ---
 
-*Material de estudo de uso pessoal. Elaborado por Dani Kaloi.*
+## Este projeto é uma pequena amostra do que a IA pode fazer pelos seus estudos
+
+Todo o material deste repositório foi criado com auxílio de Inteligência Artificial — e isso é só o começo.
+
+### O que foi feito aqui
+- Apostilas completas com conteúdo pesquisado e estruturado por disciplina
+- Áudios de leitura integral de cada matéria
+- Narrações didáticas com linguagem simples, analogias e exemplos do dia a dia
+- PDF unificado com capa, índice e contracapa
+
+### O que mais é possível
+
+**Estudo ativo**
+- Simulados gerados automaticamente com questões inéditas no estilo da banca
+- Correção comentada de cada questão errada
+- Flashcards por tema para revisão espaçada
+
+**Personalização**
+- Identificar matérias mais fracas pelos erros e gerar mais conteúdo nelas
+- Cronograma de estudos adaptado aos dias restantes antes da prova
+- Resumão de véspera focado nos pontos com maior probabilidade de cair
+
+**Outros formatos**
+- Mapa mental visual de cada matéria em HTML
+- Videoaula em formato de slides animados
+- Podcast estilo debate simulando uma banca examinadora
+
+**Na carreira, depois de aprovada**
+- IA auxiliando na redação de relatórios e peças do inquérito
+- Pesquisa de jurisprudência instantânea
+- Análise de documentos e contratos
+
+> A IA não substitui o esforço de estudar — mas multiplica o que você consegue fazer com o mesmo tempo.
+
+---
+
+*Material de estudo de uso pessoal. Elaborado por Dani Kaloi com auxílio de IA.*
