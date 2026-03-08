@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Study Guide PC-SC — PORTUGUESE LANGUAGE</title>
+<style>
+  @page { size: A5; margin: 12mm 10mm 16mm 10mm; @bottom-center { content: "Page " counter(page) " of " counter(pages); font-size: 7pt; color: #555; font-family: Arial, sans-serif; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 8.5pt; color: #111; line-height: 1.4; background: #fff; }
+  .secao { page-break-before: always; }
+  .secao:first-of-type { page-break-before: avoid; }
+  h1.titulo { background: #1a3560; color: #fff; font-size: 13pt; padding: 8px 12px; margin-bottom: 14px; }
+  h1.titulo span { font-size: 10pt; font-weight: normal; color: #aad4f5; }
+  h2.sub { font-size: 11pt; color: #1a3560; border-left: 4px solid #1a3560; padding-left: 8px; margin: 14px 0 7px; }
+  h3.sub2 { font-size: 10pt; color: #c0392b; margin: 10px 0 4px; font-weight: bold; }
+  p { margin-bottom: 7px; }
+  ul, ol { padding-left: 18px; margin-bottom: 8px; }
+  li { margin-bottom: 3px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 9.5pt; }
+  th { background: #1a3560; color: #fff; padding: 5px 7px; text-align: left; }
+  td { padding: 4px 7px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  .alerta { background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .dica { background: #d4edda; border-left: 4px solid #28a745; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .atencao { background: #f8d7da; border-left: 4px solid #c0392b; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .ex { background: #f4f7fb; border: 1px solid #1a3560; border-radius: 4px; padding: 12px 14px; margin: 16px 0; }
+  .ex h3 { color: #1a3560; font-size: 11pt; margin-bottom: 10px; border-bottom: 1px solid #1a3560; padding-bottom: 4px; }
+  .q { margin-bottom: 14px; }
+  .q p { font-weight: bold; margin-bottom: 5px; font-size: 9.5pt; }
+  .q ul { font-size: 9.5pt; padding-left: 10px; }
+  .q ul li { list-style: none; margin-bottom: 2px; }
+  .gab { background: #1a3560; color: #fff; border-radius: 4px; padding: 8px 14px; margin-top: 10px; font-size: 9pt; }
+  .gab span { color: #aad4f5; font-weight: bold; }
+  .exemplo { background: #e8f4fd; border-left: 4px solid #2980b9; padding: 8px 12px; margin: 8px 0; font-size: 9.5pt; font-style: italic; }
+  /* COVER */
+  .capa { text-align: center; background: #1a3560; color: #fff; padding: 8mm 8mm 10mm 8mm; page-break-after: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .capa .num { font-size: 52pt; color: #fff; font-weight: bold; margin: 0 0 2mm 0; line-height: 1; }
+  .capa h1 { font-size: 14pt; color: #fff; margin-bottom: 4px; font-weight: bold; }
+  .capa h2 { font-size: 10pt; color: #aad4f5; margin-bottom: 6px; font-weight: normal; }
+  .capa .info { font-size: 8.5pt; color: #ccc; margin: 2px 0; }
+  .capa .stripe { width: 100%; height: 3px; background: #c0392b; margin: 5mm 0; }
+  .capa .prova { font-size: 9.5pt; font-weight: bold; color: #fff; background: #c0392b; padding: 6px 16px; display: inline-block; margin-top: 5mm; border-radius: 2px; }
+  /* BACK COVER */
+  .contracapa { text-align: center; background: #1a3560; color: #fff; padding: 10mm 8mm; page-break-before: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .contracapa .logo-pc { font-size: 48pt; font-weight: bold; color: #c0392b; line-height: 1; letter-spacing: 4px; }
+  .contracapa .logo-sc { font-size: 8.5pt; color: #aad4f5; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 1mm; }
+  .contracapa .stripe { width: 60%; height: 3px; background: #c0392b; margin: 6mm auto; }
+  .contracapa h2 { font-size: 14pt; color: #fff; margin: 0 0 4mm 0; }
+  .contracapa p { font-size: 8.5pt; color: #aad4f5; margin: 2px 0; line-height: 1.6; }
+  .contracapa .data { font-size: 10pt; color: #fff; font-weight: bold; margin-top: 5mm; border: 2px solid #c0392b; padding: 5px 14px; display: inline-block; letter-spacing: 1px; }
+  .contracapa .rodape { font-size: 7pt; color: #444; margin-top: 10mm; }
+</style>
+</head>
+<body>
+
+<div class="capa">
+  <div class="num">01</div>
+  <div class="stripe"></div>
+  <h1>PORTUGUESE LANGUAGE</h1>
+  <h2>Complete Study Guide — PC-SC 2026</h2>
+  <div class="info">Civil Police of Santa Catarina | Public Notice 01/2025</div>
+  <div class="info"><strong>20 questions on the exam</strong></div>
+  <div class="prova">EXAM DATE: MARCH 21, 2026</div>
+</div>
+
+
+<div class="secao">
+<h1 class="titulo">1. TEXT INTERPRETATION <span>— Most tested topic</span></h1>
+<h2 class="sub">What the exam requires</h2>
+<p>The exam provides a text (newspaper article, chronicle, opinion piece) and asks questions about its content. Your task is to understand exactly what the author wrote — nothing more, nothing less.</p>
+<div class="atencao"><strong>Golden Rule:</strong> What is NOT in the text does NOT exist. Never generalize, exaggerate, or invent. Always return to the text.</div>
+<h2 class="sub">Common traps</h2>
+<table>
+  <tr><th>Trap</th><th>Example</th></tr>
+  <tr><td>Overgeneralization</td><td>Text says "many" → wrong answer says "all"</td></tr>
+  <tr><td>Going beyond the text</td><td>Answer adds information not present in the text</td></tr>
+  <tr><td>Distortion</td><td>Answer changes the author's intent</td></tr>
+  <tr><td>Absolute negation</td><td>Text is conditional → answer states it as absolute</td></tr>
+</table>
+</div>
+
+<div class="secao">
+<h1 class="titulo">2. COHERENCE AND COHESION</h1>
+<h2 class="sub">Coherence</h2>
+<p>Coherence is about ideas making logical sense together. A coherent text does not contradict itself. All ideas flow in a connected, logical way from beginning to end.</p>
+<h2 class="sub">Cohesion</h2>
+<p>Cohesion is the technical connection between sentences using pronouns, conjunctions, and transitional expressions.</p>
+<table>
+  <tr><th>Cohesion element</th><th>Function</th><th>Examples</th></tr>
+  <tr><td>Pronouns</td><td>Replace nouns to avoid repetition</td><td>he, she, it, they, this, that</td></tr>
+  <tr><td>Conjunctions</td><td>Connect clauses and ideas</td><td>but, because, therefore, if</td></tr>
+  <tr><td>Adverbs</td><td>Connect ideas temporally/logically</td><td>however, furthermore, meanwhile</td></tr>
+</table>
+</div>
+
+<div class="secao">
+<h1 class="titulo">3. VERBAL AGREEMENT</h1>
+<p>The verb must agree with the subject in number (singular/plural) and person.</p>
+<h2 class="sub">Basic rule</h2>
+<div class="exemplo">Singular subject → singular verb: "The officer arrived."<br>Plural subject → plural verb: "The officers arrived."</div>
+<h2 class="sub">Tricky cases</h2>
+<table>
+  <tr><th>Case</th><th>Rule</th><th>Example</th></tr>
+  <tr><td>Subject after verb</td><td>Still agrees with subject</td><td>"There were clues in the file."</td></tr>
+  <tr><td>Collective nouns</td><td>Singular verb</td><td>"The majority passed."</td></tr>
+  <tr><td>Compound subject</td><td>Plural verb</td><td>"The detective and the expert arrived."</td></tr>
+</table>
+<div class="dica"><strong>Tip:</strong> Find the subject first, then match the verb to it — regardless of word order.</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">4. CONJUNCTIONS</h1>
+<p>Conjunctions connect ideas. Their type defines the logical relationship between clauses.</p>
+<table>
+  <tr><th>Type</th><th>Conjunctions</th><th>Example</th></tr>
+  <tr><td>Opposition</td><td>but, however, yet, nevertheless</td><td>"I studied hard, but still had doubts."</td></tr>
+  <tr><td>Cause</td><td>because, since, as, given that</td><td>"She passed because she studied."</td></tr>
+  <tr><td>Conclusion</td><td>therefore, thus, so, consequently</td><td>"She studied; therefore she passed."</td></tr>
+  <tr><td>Condition</td><td>if, unless, provided that</td><td>"If you study, you will pass."</td></tr>
+  <tr><td>Purpose</td><td>so that, in order to</td><td>"I study so that I can be approved."</td></tr>
+</table>
+</div>
+
+<div class="secao">
+<h1 class="titulo">5. VERB MOODS AND DOUBLE PARTICIPLE</h1>
+<h2 class="sub">Three verb moods</h2>
+<table>
+  <tr><th>Mood</th><th>Use</th><th>Example</th></tr>
+  <tr><td>Indicative</td><td>Certain, real facts</td><td>"I study every day."</td></tr>
+  <tr><td>Subjunctive</td><td>Uncertainty, hypothesis, desire</td><td>"I hope she passes."</td></tr>
+  <tr><td>Imperative</td><td>Orders, requests, advice</td><td>"Study every day!"</td></tr>
+</table>
+<h2 class="sub">Double Participle (Portuguese grammar)</h2>
+<p>Some Portuguese verbs have two past participle forms. The choice depends on the auxiliary verb:</p>
+<table>
+  <tr><th>Infinitive</th><th>Regular (with ter/haver)</th><th>Irregular (with ser/estar)</th></tr>
+  <tr><td>prender (to arrest)</td><td>prendido</td><td>preso</td></tr>
+  <tr><td>acender (to light)</td><td>acendido</td><td>aceso</td></tr>
+  <tr><td>entregar (to deliver)</td><td>entregado</td><td>entregue</td></tr>
+  <tr><td>aceitar (to accept)</td><td>aceitado</td><td>aceito</td></tr>
+  <tr><td>eleger (to elect)</td><td>elegido</td><td>eleito</td></tr>
+</table>
+<div class="atencao"><strong>Rule:</strong> With TER and HAVER → use regular. With SER and ESTAR → use irregular.</div>
+</div>
+
+<div class="secao">
+<div class="ex"><h3>PRACTICE QUESTIONS</h3>
+<div class="q"><p>Q1. The exam text says "some officers were present." A correct interpretation would be:</p>
+<ul><li>A) All officers were at the location</li><li>B) A portion of the officers were present</li><li>C) No officer was absent</li><li>D) Officers were forced to be present</li></ul>
+<div class="gab">Answer: <span>B</span> — "some" means a portion, not all. Never generalize beyond what the text states.</div></div>
+<div class="q"><p>Q2. The sentence "She studied hard; _______ she passed the exam" requires a conjunction of:</p>
+<ul><li>A) Opposition</li><li>B) Cause</li><li>C) Conclusion</li><li>D) Condition</li></ul>
+<div class="gab">Answer: <span>C</span> — "therefore / thus" = conclusion. The second clause is the result of the first.</div></div>
+<div class="q"><p>Q3. Choose the correct use of the double participle: "The evidence had been _______ by the forensic team."</p>
+<ul><li>A) entregado</li><li>B) entregue</li><li>C) Both are correct here</li><li>D) Neither is correct</li></ul>
+<div class="gab">Answer: <span>B</span> — "had been" uses SER → irregular form "entregue."</div></div>
+</div></div>
+
+<div class="contracapa">
+  <div class="logo-sc">Civil Police</div>
+  <div class="logo-pc">PC-SC</div>
+  <div class="logo-sc">Santa Catarina</div>
+  <div class="stripe"></div>
+  <h2>Good luck with your studies!</h2>
+  <p>Public Competitive Exam — Notice 01/2025</p>
+  <p>Position: Police Officer (Agente de Polícia Civil)</p>
+  <p>Organizing Institution: IDECAN</p>
+  <p style="margin-top:4mm; color:#fff; font-weight:bold;">Prepared by: Dani Kaloi</p>
+  <div class="stripe"></div>
+  <div class="data">EXAM: MARCH 21, 2026</div>
+  <div class="rodape">Study material — personal use only</div>
+</div>
+
+</body>
+</html>

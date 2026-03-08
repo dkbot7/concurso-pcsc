@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Study Guide PC-SC — MONEY LAUNDERING & FINANCE</title>
+<style>
+  @page { size: A5; margin: 12mm 10mm 16mm 10mm; @bottom-center { content: "Page " counter(page) " of " counter(pages); font-size: 7pt; color: #555; font-family: Arial, sans-serif; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 8.5pt; color: #111; line-height: 1.4; background: #fff; }
+  .secao { page-break-before: always; }
+  .secao:first-of-type { page-break-before: avoid; }
+  h1.titulo { background: #1a3560; color: #fff; font-size: 13pt; padding: 8px 12px; margin-bottom: 14px; }
+  h1.titulo span { font-size: 10pt; font-weight: normal; color: #aad4f5; }
+  h2.sub { font-size: 11pt; color: #1a3560; border-left: 4px solid #1a3560; padding-left: 8px; margin: 14px 0 7px; }
+  h3.sub2 { font-size: 10pt; color: #c0392b; margin: 10px 0 4px; font-weight: bold; }
+  p { margin-bottom: 7px; }
+  ul, ol { padding-left: 18px; margin-bottom: 8px; }
+  li { margin-bottom: 3px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 9.5pt; }
+  th { background: #1a3560; color: #fff; padding: 5px 7px; text-align: left; }
+  td { padding: 4px 7px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  .alerta { background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .dica { background: #d4edda; border-left: 4px solid #28a745; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .atencao { background: #f8d7da; border-left: 4px solid #c0392b; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .ex { background: #f4f7fb; border: 1px solid #1a3560; border-radius: 4px; padding: 12px 14px; margin: 16px 0; }
+  .ex h3 { color: #1a3560; font-size: 11pt; margin-bottom: 10px; border-bottom: 1px solid #1a3560; padding-bottom: 4px; }
+  .q { margin-bottom: 14px; }
+  .q p { font-weight: bold; margin-bottom: 5px; font-size: 9.5pt; }
+  .q ul { font-size: 9.5pt; padding-left: 10px; }
+  .q ul li { list-style: none; margin-bottom: 2px; }
+  .gab { background: #1a3560; color: #fff; border-radius: 4px; padding: 8px 14px; margin-top: 10px; font-size: 9pt; }
+  .gab span { color: #aad4f5; font-weight: bold; }
+  .exemplo { background: #e8f4fd; border-left: 4px solid #2980b9; padding: 8px 12px; margin: 8px 0; font-size: 9.5pt; font-style: italic; }
+  /* COVER */
+  .capa { text-align: center; background: #1a3560; color: #fff; padding: 8mm 8mm 10mm 8mm; page-break-after: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .capa .num { font-size: 52pt; color: #fff; font-weight: bold; margin: 0 0 2mm 0; line-height: 1; }
+  .capa h1 { font-size: 14pt; color: #fff; margin-bottom: 4px; font-weight: bold; }
+  .capa h2 { font-size: 10pt; color: #aad4f5; margin-bottom: 6px; font-weight: normal; }
+  .capa .info { font-size: 8.5pt; color: #ccc; margin: 2px 0; }
+  .capa .stripe { width: 100%; height: 3px; background: #c0392b; margin: 5mm 0; }
+  .capa .prova { font-size: 9.5pt; font-weight: bold; color: #fff; background: #c0392b; padding: 6px 16px; display: inline-block; margin-top: 5mm; border-radius: 2px; }
+  /* BACK COVER */
+  .contracapa { text-align: center; background: #1a3560; color: #fff; padding: 10mm 8mm; page-break-before: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .contracapa .logo-pc { font-size: 48pt; font-weight: bold; color: #c0392b; line-height: 1; letter-spacing: 4px; }
+  .contracapa .logo-sc { font-size: 8.5pt; color: #aad4f5; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 1mm; }
+  .contracapa .stripe { width: 60%; height: 3px; background: #c0392b; margin: 6mm auto; }
+  .contracapa h2 { font-size: 14pt; color: #fff; margin: 0 0 4mm 0; }
+  .contracapa p { font-size: 8.5pt; color: #aad4f5; margin: 2px 0; line-height: 1.6; }
+  .contracapa .data { font-size: 10pt; color: #fff; font-weight: bold; margin-top: 5mm; border: 2px solid #c0392b; padding: 5px 14px; display: inline-block; letter-spacing: 1px; }
+  .contracapa .rodape { font-size: 7pt; color: #444; margin-top: 10mm; }
+</style>
+</head>
+<body>
+
+<div class="capa">
+  <div class="num">08</div>
+  <div class="stripe"></div>
+  <h1>MONEY LAUNDERING & FINANCE</h1>
+  <h2>Complete Study Guide — PC-SC 2026</h2>
+  <div class="info">Civil Police of Santa Catarina | Public Notice 01/2025</div>
+  <div class="info"><strong>05 questions on the exam</strong></div>
+  <div class="prova">EXAM DATE: MARCH 21, 2026</div>
+</div>
+
+
+<div class="secao">
+<h1 class="titulo">1. MONEY LAUNDERING — Law 9,613/1998</h1>
+<h2 class="sub">Definition</h2>
+<p>Money laundering is the act of disguising the criminal origin of assets, making them appear to come from legitimate sources.</p>
+<div class="exemplo">Example: A drug dealer earns R$1 million illegally. He opens a restaurant, inflates revenue records, and the criminal money appears as legitimate restaurant income.</div>
+<h2 class="sub">The Three Phases</h2>
+<table>
+  <tr><th>Phase</th><th>Goal</th><th>Methods</th></tr>
+  <tr><td>1. Placement</td><td>Introduce criminal money into the financial system</td><td>Cash deposits, real estate purchase, illegal currency exchange, smurfing</td></tr>
+  <tr><td>2. Layering (Ocultação)</td><td>Create complex transactions to hide the trail</td><td>Multiple account transfers, offshore companies, shell companies, tax havens</td></tr>
+  <tr><td>3. Integration</td><td>Criminal money re-enters the economy appearing legal</td><td>Real estate investment, legitimate businesses, luxury goods</td></tr>
+</table>
+<div class="atencao"><strong>Smurfing:</strong> Breaking large sums into small deposits just below mandatory reporting thresholds to avoid detection.</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">2. OBLIGATED ENTITIES AND COAF</h1>
+<h2 class="sub">Who must report suspicious transactions</h2>
+<ul>
+  <li>Banks and financial institutions</li>
+  <li>Insurance companies and pension funds</li>
+  <li>Real estate agencies and brokers</li>
+  <li>Jewelry stores and precious stone dealers</li>
+  <li>Auctioneers</li>
+  <li>Art and antique dealers</li>
+  <li>Accountants and financial advisors</li>
+  <li>Lawyers and notaries (in financial transactions)</li>
+  <li>Currency exchange houses</li>
+  <li>Factoring companies</li>
+</ul>
+<h2 class="sub">COAF — Financial Intelligence Unit</h2>
+<p>Brazil's financial watchdog, linked to the Ministry of Finance. Receives reports, analyzes suspicious transactions, and issues the <strong>RIF</strong> (Financial Intelligence Report) to law enforcement when criminal activity is suspected.</p>
+</div>
+
+<div class="secao">
+<h1 class="titulo">3. RED FLAGS — Warning Signs</h1>
+<table>
+  <tr><th>Warning sign</th><th>Why suspicious</th></tr>
+  <tr><td>Financial movement incompatible with declared income</td><td>R$3k salary but R$50k monthly movement</td></tr>
+  <tr><td>Smurfing (structuring)</td><td>Repeated deposits just below R$50,000 threshold</td></tr>
+  <tr><td>Large cash purchases</td><td>R$80,000 car bought entirely in cash</td></tr>
+  <tr><td>Use of straw men</td><td>Transactions in another person's name without clear reason</td></tr>
+  <tr><td>Shell companies</td><td>Company with no employees, no expenses, but large bank movements</td></tr>
+  <tr><td>Tax haven transactions</td><td>Transfers to Cayman Islands, Panama, Monaco</td></tr>
+  <tr><td>Refusal to identify</td><td>Client refuses to provide required identification</td></tr>
+  <tr><td>High-value real estate paid in cash</td><td>Especially above market rates</td></tr>
+</table>
+</div>
+
+<div class="secao">
+<div class="ex"><h3>PRACTICE QUESTIONS</h3>
+<div class="q"><p>Q1. A drug trafficker deposits R$48,000 in cash in multiple bank accounts every week, always below the R$50,000 automatic reporting threshold. This technique is called:</p>
+<ul><li>A) Integration</li><li>B) Layering</li><li>C) Smurfing (structuring)</li><li>D) Placement</li></ul>
+<div class="gab">Answer: <span>C</span> — Smurfing (or structuring) involves deliberately breaking deposits into amounts just below the mandatory reporting threshold.</div></div>
+<div class="q"><p>Q2. Regarding the money laundering process, the CORRECT sequence of phases is:</p>
+<ul><li>A) Integration → Placement → Layering</li><li>B) Placement → Integration → Layering</li><li>C) Placement → Layering → Integration</li><li>D) Layering → Placement → Integration</li></ul>
+<div class="gab">Answer: <span>C</span> — Placement (enter financial system) → Layering (hide the trail) → Integration (re-enter as legitimate).</div></div>
+</div></div>
+
+<div class="contracapa">
+  <div class="logo-sc">Civil Police</div>
+  <div class="logo-pc">PC-SC</div>
+  <div class="logo-sc">Santa Catarina</div>
+  <div class="stripe"></div>
+  <h2>Good luck with your studies!</h2>
+  <p>Public Competitive Exam — Notice 01/2025</p>
+  <p>Position: Police Officer (Agente de Polícia Civil)</p>
+  <p>Organizing Institution: IDECAN</p>
+  <p style="margin-top:4mm; color:#fff; font-weight:bold;">Prepared by: Dani Kaloi</p>
+  <div class="stripe"></div>
+  <div class="data">EXAM: MARCH 21, 2026</div>
+  <div class="rodape">Study material — personal use only</div>
+</div>
+
+</body>
+</html>

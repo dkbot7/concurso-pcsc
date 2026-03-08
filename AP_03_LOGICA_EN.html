@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Study Guide PC-SC — LOGICAL REASONING</title>
+<style>
+  @page { size: A5; margin: 12mm 10mm 16mm 10mm; @bottom-center { content: "Page " counter(page) " of " counter(pages); font-size: 7pt; color: #555; font-family: Arial, sans-serif; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 8.5pt; color: #111; line-height: 1.4; background: #fff; }
+  .secao { page-break-before: always; }
+  .secao:first-of-type { page-break-before: avoid; }
+  h1.titulo { background: #1a3560; color: #fff; font-size: 13pt; padding: 8px 12px; margin-bottom: 14px; }
+  h1.titulo span { font-size: 10pt; font-weight: normal; color: #aad4f5; }
+  h2.sub { font-size: 11pt; color: #1a3560; border-left: 4px solid #1a3560; padding-left: 8px; margin: 14px 0 7px; }
+  h3.sub2 { font-size: 10pt; color: #c0392b; margin: 10px 0 4px; font-weight: bold; }
+  p { margin-bottom: 7px; }
+  ul, ol { padding-left: 18px; margin-bottom: 8px; }
+  li { margin-bottom: 3px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 9.5pt; }
+  th { background: #1a3560; color: #fff; padding: 5px 7px; text-align: left; }
+  td { padding: 4px 7px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  .alerta { background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .dica { background: #d4edda; border-left: 4px solid #28a745; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .atencao { background: #f8d7da; border-left: 4px solid #c0392b; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .ex { background: #f4f7fb; border: 1px solid #1a3560; border-radius: 4px; padding: 12px 14px; margin: 16px 0; }
+  .ex h3 { color: #1a3560; font-size: 11pt; margin-bottom: 10px; border-bottom: 1px solid #1a3560; padding-bottom: 4px; }
+  .q { margin-bottom: 14px; }
+  .q p { font-weight: bold; margin-bottom: 5px; font-size: 9.5pt; }
+  .q ul { font-size: 9.5pt; padding-left: 10px; }
+  .q ul li { list-style: none; margin-bottom: 2px; }
+  .gab { background: #1a3560; color: #fff; border-radius: 4px; padding: 8px 14px; margin-top: 10px; font-size: 9pt; }
+  .gab span { color: #aad4f5; font-weight: bold; }
+  .exemplo { background: #e8f4fd; border-left: 4px solid #2980b9; padding: 8px 12px; margin: 8px 0; font-size: 9.5pt; font-style: italic; }
+  /* COVER */
+  .capa { text-align: center; background: #1a3560; color: #fff; padding: 8mm 8mm 10mm 8mm; page-break-after: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .capa .num { font-size: 52pt; color: #fff; font-weight: bold; margin: 0 0 2mm 0; line-height: 1; }
+  .capa h1 { font-size: 14pt; color: #fff; margin-bottom: 4px; font-weight: bold; }
+  .capa h2 { font-size: 10pt; color: #aad4f5; margin-bottom: 6px; font-weight: normal; }
+  .capa .info { font-size: 8.5pt; color: #ccc; margin: 2px 0; }
+  .capa .stripe { width: 100%; height: 3px; background: #c0392b; margin: 5mm 0; }
+  .capa .prova { font-size: 9.5pt; font-weight: bold; color: #fff; background: #c0392b; padding: 6px 16px; display: inline-block; margin-top: 5mm; border-radius: 2px; }
+  /* BACK COVER */
+  .contracapa { text-align: center; background: #1a3560; color: #fff; padding: 10mm 8mm; page-break-before: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .contracapa .logo-pc { font-size: 48pt; font-weight: bold; color: #c0392b; line-height: 1; letter-spacing: 4px; }
+  .contracapa .logo-sc { font-size: 8.5pt; color: #aad4f5; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 1mm; }
+  .contracapa .stripe { width: 60%; height: 3px; background: #c0392b; margin: 6mm auto; }
+  .contracapa h2 { font-size: 14pt; color: #fff; margin: 0 0 4mm 0; }
+  .contracapa p { font-size: 8.5pt; color: #aad4f5; margin: 2px 0; line-height: 1.6; }
+  .contracapa .data { font-size: 10pt; color: #fff; font-weight: bold; margin-top: 5mm; border: 2px solid #c0392b; padding: 5px 14px; display: inline-block; letter-spacing: 1px; }
+  .contracapa .rodape { font-size: 7pt; color: #444; margin-top: 10mm; }
+</style>
+</head>
+<body>
+
+<div class="capa">
+  <div class="num">03</div>
+  <div class="stripe"></div>
+  <h1>LOGICAL REASONING</h1>
+  <h2>Complete Study Guide — PC-SC 2026</h2>
+  <div class="info">Civil Police of Santa Catarina | Public Notice 01/2025</div>
+  <div class="info"><strong>10 questions on the exam</strong></div>
+  <div class="prova">EXAM DATE: MARCH 21, 2026</div>
+</div>
+
+
+<div class="secao">
+<h1 class="titulo">1. PROPOSITIONAL LOGIC</h1>
+<h2 class="sub">What is a proposition?</h2>
+<p>A proposition is a statement that can be either TRUE or FALSE — only those two options. Commands and questions are not propositions.</p>
+<h2 class="sub">Logical Connectives</h2>
+<table>
+  <tr><th>Connective</th><th>Symbol</th><th>True when</th><th>False when</th></tr>
+  <tr><td>AND (conjunction)</td><td>∧</td><td>Both sides are true</td><td>Either side is false</td></tr>
+  <tr><td>OR (disjunction)</td><td>∨</td><td>At least one side is true</td><td>Both sides are false</td></tr>
+  <tr><td>NOT (negation)</td><td>¬</td><td>Original is false</td><td>Original is true</td></tr>
+  <tr><td>IF...THEN (conditional)</td><td>→</td><td>Always except when P=T and Q=F</td><td>P is true AND Q is false</td></tr>
+  <tr><td>IF AND ONLY IF (biconditional)</td><td>↔</td><td>Both have the same value</td><td>Values differ</td></tr>
+</table>
+<div class="atencao"><strong>Most tested:</strong> The conditional (IF P THEN Q) is FALSE only when P is TRUE and Q is FALSE.<br>
+Its negation is: P AND NOT Q.</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">2. SYLLOGISMS</h1>
+<p>A syllogism has two premises and a conclusion. If the premises are true and the structure is valid, the conclusion must be true.</p>
+<div class="exemplo">Premise 1: All police officers are public servants.<br>
+Premise 2: Maria is a police officer.<br>
+Conclusion: Therefore, Maria is a public servant. ✓</div>
+<div class="dica"><strong>Tip:</strong> Validity depends on STRUCTURE, not on whether the content makes real-world sense.</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">3. PERCENTAGES</h1>
+<p>"Percent" = "per hundred." To find X% of a value: multiply value × (X ÷ 100).</p>
+<table>
+  <tr><th>Operation</th><th>Method</th><th>Example</th></tr>
+  <tr><td>Find X% of N</td><td>N × (X/100)</td><td>20% of 500 = 500 × 0.20 = 100</td></tr>
+  <tr><td>Increase by X%</td><td>N × (1 + X/100)</td><td>+15% on 2,000 = 2,000 × 1.15 = 2,300</td></tr>
+  <tr><td>Discount of X%</td><td>N × (1 - X/100)</td><td>-20% on 300 = 300 × 0.80 = 240</td></tr>
+</table>
+<div class="atencao"><strong>Warning:</strong> +50% then -50% ≠ original value. Example: 100 → 150 → 75. Not 100!</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">4. PROPORTIONS AND RATIO</h1>
+<table>
+  <tr><th>Type</th><th>Rule</th><th>Example</th></tr>
+  <tr><td>Direct proportion</td><td>More of A → more of B</td><td>More workers = more output</td></tr>
+  <tr><td>Inverse proportion</td><td>More of A → less of B</td><td>More workers = fewer days needed</td></tr>
+</table>
+<h2 class="sub">Speed, Distance, Time</h2>
+<p style="text-align:center;font-size:14pt;font-weight:bold;margin:8px 0;">D = S × T</p>
+<table>
+  <tr><th>Find</th><th>Formula</th></tr>
+  <tr><td>Distance (D)</td><td>D = Speed × Time</td></tr>
+  <tr><td>Speed (S)</td><td>S = Distance ÷ Time</td></tr>
+  <tr><td>Time (T)</td><td>T = Distance ÷ Speed</td></tr>
+</table>
+</div>
+
+<div class="secao">
+<h1 class="titulo">5. NUMBER SEQUENCES</h1>
+<table>
+  <tr><th>Type</th><th>Pattern</th><th>Example</th></tr>
+  <tr><td>Arithmetic</td><td>Constant difference</td><td>2, 5, 8, 11, 14 (+3)</td></tr>
+  <tr><td>Geometric</td><td>Constant ratio</td><td>2, 6, 18, 54 (×3)</td></tr>
+  <tr><td>Fibonacci</td><td>Sum of previous two</td><td>1, 1, 2, 3, 5, 8, 13, 21</td></tr>
+  <tr><td>Perfect squares</td><td>n²</td><td>1, 4, 9, 16, 25, 36, 49</td></tr>
+</table>
+<div class="dica"><strong>Strategy:</strong> Always look for the pattern before guessing. What changes between consecutive terms?</div>
+</div>
+
+<div class="secao">
+<div class="ex"><h3>PRACTICE QUESTIONS</h3>
+<div class="q"><p>Q1. The conditional "If P, then Q" is FALSE only when:</p>
+<ul><li>A) P is false and Q is true</li><li>B) P is true and Q is false</li><li>C) Both P and Q are false</li><li>D) Both P and Q are true</li></ul>
+<div class="gab">Answer: <span>B</span> — The conditional is false only when the hypothesis (P) is true and the conclusion (Q) is false.</div></div>
+<div class="q"><p>Q2. A vehicle travels 180 km in 2 hours. What is its average speed?</p>
+<ul><li>A) 80 km/h</li><li>B) 85 km/h</li><li>C) 90 km/h</li><li>D) 95 km/h</li></ul>
+<div class="gab">Answer: <span>C</span> — S = D ÷ T = 180 ÷ 2 = 90 km/h.</div></div>
+<div class="q"><p>Q3. What is the next number in the sequence: 3, 6, 12, 24, ___?</p>
+<ul><li>A) 36</li><li>B) 42</li><li>C) 48</li><li>D) 54</li></ul>
+<div class="gab">Answer: <span>C</span> — Geometric sequence with ratio ×2. 24 × 2 = 48.</div></div>
+</div></div>
+
+<div class="contracapa">
+  <div class="logo-sc">Civil Police</div>
+  <div class="logo-pc">PC-SC</div>
+  <div class="logo-sc">Santa Catarina</div>
+  <div class="stripe"></div>
+  <h2>Good luck with your studies!</h2>
+  <p>Public Competitive Exam — Notice 01/2025</p>
+  <p>Position: Police Officer (Agente de Polícia Civil)</p>
+  <p>Organizing Institution: IDECAN</p>
+  <p style="margin-top:4mm; color:#fff; font-weight:bold;">Prepared by: Dani Kaloi</p>
+  <div class="stripe"></div>
+  <div class="data">EXAM: MARCH 21, 2026</div>
+  <div class="rodape">Study material — personal use only</div>
+</div>
+
+</body>
+</html>

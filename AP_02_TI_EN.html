@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Study Guide PC-SC — INFORMATION TECHNOLOGY</title>
+<style>
+  @page { size: A5; margin: 12mm 10mm 16mm 10mm; @bottom-center { content: "Page " counter(page) " of " counter(pages); font-size: 7pt; color: #555; font-family: Arial, sans-serif; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 8.5pt; color: #111; line-height: 1.4; background: #fff; }
+  .secao { page-break-before: always; }
+  .secao:first-of-type { page-break-before: avoid; }
+  h1.titulo { background: #1a3560; color: #fff; font-size: 13pt; padding: 8px 12px; margin-bottom: 14px; }
+  h1.titulo span { font-size: 10pt; font-weight: normal; color: #aad4f5; }
+  h2.sub { font-size: 11pt; color: #1a3560; border-left: 4px solid #1a3560; padding-left: 8px; margin: 14px 0 7px; }
+  h3.sub2 { font-size: 10pt; color: #c0392b; margin: 10px 0 4px; font-weight: bold; }
+  p { margin-bottom: 7px; }
+  ul, ol { padding-left: 18px; margin-bottom: 8px; }
+  li { margin-bottom: 3px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 9.5pt; }
+  th { background: #1a3560; color: #fff; padding: 5px 7px; text-align: left; }
+  td { padding: 4px 7px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  .alerta { background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .dica { background: #d4edda; border-left: 4px solid #28a745; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .atencao { background: #f8d7da; border-left: 4px solid #c0392b; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .ex { background: #f4f7fb; border: 1px solid #1a3560; border-radius: 4px; padding: 12px 14px; margin: 16px 0; }
+  .ex h3 { color: #1a3560; font-size: 11pt; margin-bottom: 10px; border-bottom: 1px solid #1a3560; padding-bottom: 4px; }
+  .q { margin-bottom: 14px; }
+  .q p { font-weight: bold; margin-bottom: 5px; font-size: 9.5pt; }
+  .q ul { font-size: 9.5pt; padding-left: 10px; }
+  .q ul li { list-style: none; margin-bottom: 2px; }
+  .gab { background: #1a3560; color: #fff; border-radius: 4px; padding: 8px 14px; margin-top: 10px; font-size: 9pt; }
+  .gab span { color: #aad4f5; font-weight: bold; }
+  .exemplo { background: #e8f4fd; border-left: 4px solid #2980b9; padding: 8px 12px; margin: 8px 0; font-size: 9.5pt; font-style: italic; }
+  /* COVER */
+  .capa { text-align: center; background: #1a3560; color: #fff; padding: 8mm 8mm 10mm 8mm; page-break-after: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .capa .num { font-size: 52pt; color: #fff; font-weight: bold; margin: 0 0 2mm 0; line-height: 1; }
+  .capa h1 { font-size: 14pt; color: #fff; margin-bottom: 4px; font-weight: bold; }
+  .capa h2 { font-size: 10pt; color: #aad4f5; margin-bottom: 6px; font-weight: normal; }
+  .capa .info { font-size: 8.5pt; color: #ccc; margin: 2px 0; }
+  .capa .stripe { width: 100%; height: 3px; background: #c0392b; margin: 5mm 0; }
+  .capa .prova { font-size: 9.5pt; font-weight: bold; color: #fff; background: #c0392b; padding: 6px 16px; display: inline-block; margin-top: 5mm; border-radius: 2px; }
+  /* BACK COVER */
+  .contracapa { text-align: center; background: #1a3560; color: #fff; padding: 10mm 8mm; page-break-before: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .contracapa .logo-pc { font-size: 48pt; font-weight: bold; color: #c0392b; line-height: 1; letter-spacing: 4px; }
+  .contracapa .logo-sc { font-size: 8.5pt; color: #aad4f5; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 1mm; }
+  .contracapa .stripe { width: 60%; height: 3px; background: #c0392b; margin: 6mm auto; }
+  .contracapa h2 { font-size: 14pt; color: #fff; margin: 0 0 4mm 0; }
+  .contracapa p { font-size: 8.5pt; color: #aad4f5; margin: 2px 0; line-height: 1.6; }
+  .contracapa .data { font-size: 10pt; color: #fff; font-weight: bold; margin-top: 5mm; border: 2px solid #c0392b; padding: 5px 14px; display: inline-block; letter-spacing: 1px; }
+  .contracapa .rodape { font-size: 7pt; color: #444; margin-top: 10mm; }
+</style>
+</head>
+<body>
+
+<div class="capa">
+  <div class="num">02</div>
+  <div class="stripe"></div>
+  <h1>INFORMATION TECHNOLOGY</h1>
+  <h2>Complete Study Guide — PC-SC 2026</h2>
+  <div class="info">Civil Police of Santa Catarina | Public Notice 01/2025</div>
+  <div class="info"><strong>20 questions on the exam</strong></div>
+  <div class="prova">EXAM DATE: MARCH 21, 2026</div>
+</div>
+
+
+<div class="secao">
+<h1 class="titulo">1. COMPUTER FUNDAMENTALS</h1>
+<h2 class="sub">Hardware vs. Software</h2>
+<table>
+  <tr><th>Category</th><th>Definition</th><th>Examples</th></tr>
+  <tr><td>Hardware</td><td>Physical components — everything you can touch</td><td>CPU, RAM, hard drive, keyboard, screen</td></tr>
+  <tr><td>Software</td><td>Programs — instructions that tell hardware what to do</td><td>Windows, Word, Chrome, antivirus</td></tr>
+  <tr><td>Operating System</td><td>Master software managing all hardware and software</td><td>Windows, Linux, macOS, Android</td></tr>
+</table>
+<h2 class="sub">Networks and Internet</h2>
+<p>A computer network is a group of connected devices that share information. The Internet is the largest global network.</p>
+<table>
+  <tr><th>Concept</th><th>Meaning</th></tr>
+  <tr><td>IP Address</td><td>Unique identifier for each device on the network (like a postal address)</td></tr>
+  <tr><td>IPv4</td><td>Format: 4 numbers separated by dots (e.g., 192.168.0.1) — limited addresses</td></tr>
+  <tr><td>IPv6</td><td>Longer format — created because IPv4 addresses were running out</td></tr>
+  <tr><td>TCP/IP</td><td>Core protocol suite of the internet — ensures data delivery and addressing</td></tr>
+  <tr><td>HTTP/HTTPS</td><td>Protocol for websites — HTTPS is the secure encrypted version</td></tr>
+  <tr><td>DNS</td><td>Translates domain names (google.com) into IP addresses — internet's phone book</td></tr>
+</table>
+</div>
+
+<div class="secao">
+<h1 class="titulo">2. INFORMATION SECURITY</h1>
+<h2 class="sub">The CIA Triangle</h2>
+<table>
+  <tr><th>Pillar</th><th>Meaning</th><th>Example</th></tr>
+  <tr><td><strong>C</strong>onfidentiality</td><td>Only authorized people access the info</td><td>Court-sealed records</td></tr>
+  <tr><td><strong>I</strong>ntegrity</td><td>Info cannot be altered without authorization</td><td>Unmodified police report</td></tr>
+  <tr><td><strong>A</strong>vailability</td><td>System works when needed</td><td>Database accessible during emergency</td></tr>
+</table>
+</div>
+
+<div class="secao">
+<h1 class="titulo">3. MALWARE AND CYBER ATTACKS</h1>
+<table>
+  <tr><th>Threat</th><th>How it works</th><th>Key difference</th></tr>
+  <tr><td>Virus</td><td>Copies itself into files; needs user to execute</td><td>Requires human action to spread</td></tr>
+  <tr><td>Worm</td><td>Self-replicates through networks automatically</td><td>No human action needed to spread</td></tr>
+  <tr><td>Trojan Horse</td><td>Disguises itself as legitimate software</td><td>Deceives user into installing it</td></tr>
+  <tr><td>Ransomware</td><td>Encrypts files and demands ransom payment</td><td>Extortion — demands payment (often crypto)</td></tr>
+  <tr><td>Spyware</td><td>Records user activity secretly</td><td>Surveillance — steals data silently</td></tr>
+  <tr><td>Keylogger</td><td>Records every keystroke</td><td>Targets passwords and credentials</td></tr>
+  <tr><td>Phishing</td><td>Fake emails/sites to steal credentials</td><td>Social engineering — not a virus</td></tr>
+</table>
+<div class="atencao"><strong>Key distinction:</strong> Phishing and social engineering exploit PEOPLE. Virus/worm/trojan exploit SOFTWARE vulnerabilities.</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">4. CLOUD COMPUTING AND IoT</h1>
+<h2 class="sub">Cloud Service Models</h2>
+<table>
+  <tr><th>Model</th><th>What you get</th><th>Analogy</th></tr>
+  <tr><td>IaaS — Infrastructure as a Service</td><td>Servers, storage, network</td><td>Renting land to build on</td></tr>
+  <tr><td>PaaS — Platform as a Service</td><td>Development environment</td><td>Renting an equipped kitchen</td></tr>
+  <tr><td>SaaS — Software as a Service</td><td>App through browser, no install</td><td>Ordering food delivery</td></tr>
+</table>
+<h2 class="sub">Internet of Things (IoT)</h2>
+<p>Everyday objects connected to the internet: security cameras, cars, smartwatches, locks. For police investigations, IoT devices are valuable sources of digital evidence.</p>
+<div class="dica"><strong>Investigation note:</strong> A home camera, car GPS, or smartwatch may contain crucial evidence of a crime — time, location, or visual record.</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">5. DIGITAL CRIME LEGISLATION</h1>
+<table>
+  <tr><th>Law</th><th>Name</th><th>What it covers</th></tr>
+  <tr><td>Law 12,737/2012</td><td>Carolina Dieckmann Law</td><td>Unauthorized access to computer systems, hacking, data theft</td></tr>
+  <tr><td>LGPD (Law 13,709/2018)</td><td>General Data Protection Law</td><td>Rules for collecting, storing, and using personal data</td></tr>
+</table>
+</div>
+
+<div class="secao">
+<div class="ex"><h3>PRACTICE QUESTIONS</h3>
+<div class="q"><p>Q1. A criminal encrypts all files on a company's server and demands payment in cryptocurrency to restore access. This attack is called:</p>
+<ul><li>A) Phishing</li><li>B) Ransomware</li><li>C) Worm</li><li>D) Spyware</li></ul>
+<div class="gab">Answer: <span>B</span> — Ransomware encrypts data and demands ransom. "Ransom" = payment for release.</div></div>
+<div class="q"><p>Q2. A company uses software entirely through a browser — nothing installed on local machines. This cloud model is:</p>
+<ul><li>A) IaaS</li><li>B) PaaS</li><li>C) SaaS</li><li>D) DaaS</li></ul>
+<div class="gab">Answer: <span>C</span> — Software as a Service (SaaS) delivers applications through the browser. Examples: Gmail, Office 365.</div></div>
+<div class="q"><p>Q3. The three pillars of information security are:</p>
+<ul><li>A) Control, Integrity, Access</li><li>B) Confidentiality, Integrity, Availability</li><li>C) Compliance, Infrastructure, Audit</li><li>D) Cryptography, Identification, Authentication</li></ul>
+<div class="gab">Answer: <span>B</span> — The CIA triangle: Confidentiality, Integrity, Availability.</div></div>
+</div></div>
+
+<div class="contracapa">
+  <div class="logo-sc">Civil Police</div>
+  <div class="logo-pc">PC-SC</div>
+  <div class="logo-sc">Santa Catarina</div>
+  <div class="stripe"></div>
+  <h2>Good luck with your studies!</h2>
+  <p>Public Competitive Exam — Notice 01/2025</p>
+  <p>Position: Police Officer (Agente de Polícia Civil)</p>
+  <p>Organizing Institution: IDECAN</p>
+  <p style="margin-top:4mm; color:#fff; font-weight:bold;">Prepared by: Dani Kaloi</p>
+  <div class="stripe"></div>
+  <div class="data">EXAM: MARCH 21, 2026</div>
+  <div class="rodape">Study material — personal use only</div>
+</div>
+
+</body>
+</html>
