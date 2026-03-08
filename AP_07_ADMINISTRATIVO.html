@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Apostila PC-SC — Direito Administrativo</title>
+<style>
+  @page { size: A5; margin: 12mm 10mm 16mm 10mm; @bottom-center { content: "Página " counter(page) " de " counter(pages); font-size: 7pt; color: #555; font-family: Arial, sans-serif; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 8.5pt; color: #111; line-height: 1.4; background: #fff; }
+  .capa { text-align: center; padding: 40mm 20mm; page-break-after: always; }
+  .capa .num { font-size: 48pt; color: #1a3560; font-weight: bold; margin: 20px 0; }
+  .capa h1 { font-size: 22pt; color: #1a3560; margin-bottom: 8px; }
+  .capa h2 { font-size: 15pt; color: #c0392b; margin-bottom: 20px; }
+  .capa .info { font-size: 11pt; margin: 5px 0; }
+  .capa .prova { font-size: 12pt; font-weight: bold; color: #c0392b; border: 2px solid #c0392b; padding: 10px 20px; display: inline-block; margin-top: 20px; }
+  .secao { page-break-before: always; }
+  .secao:first-of-type { page-break-before: avoid; }
+  h1.titulo { background: #1a3560; color: #fff; font-size: 13pt; padding: 8px 12px; margin-bottom: 14px; }
+  h2.sub { font-size: 11pt; color: #1a3560; border-left: 4px solid #1a3560; padding-left: 8px; margin: 14px 0 7px; }
+  p { margin-bottom: 7px; }
+  ul, ol { padding-left: 18px; margin-bottom: 8px; }
+  li { margin-bottom: 3px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 9.5pt; }
+  th { background: #1a3560; color: #fff; padding: 5px 7px; text-align: left; }
+  td { padding: 4px 7px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  .alerta { background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .dica { background: #d4edda; border-left: 4px solid #28a745; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .atencao { background: #f8d7da; border-left: 4px solid #c0392b; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .ex { background: #f4f7fb; border: 1px solid #1a3560; border-radius: 4px; padding: 12px 14px; margin: 16px 0; }
+  .ex h3 { color: #1a3560; font-size: 11pt; margin-bottom: 10px; border-bottom: 1px solid #1a3560; padding-bottom: 4px; }
+  .q { margin-bottom: 14px; }
+  .q p { font-weight: bold; margin-bottom: 5px; }
+  .q ul { font-size: 9.5pt; padding-left: 10px; }
+  .q ul li { list-style: none; margin-bottom: 2px; }
+  .gab { background: #1a3560; color: #fff; border-radius: 4px; padding: 8px 14px; margin-top: 10px; font-size: 9pt; }
+  /* === CAPA REDESIGN === */
+  .capa { text-align: center; background: #1a3560; color: #fff; padding: 8mm 8mm 10mm 8mm; page-break-after: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .capa .num { font-size: 52pt; color: #fff; font-weight: bold; margin: 0 0 2mm 0; line-height: 1; }
+  .capa h1 { font-size: 14pt; color: #fff; margin-bottom: 4px; font-weight: bold; }
+  .capa h2 { font-size: 10pt; color: #aad4f5; margin-bottom: 6px; font-weight: normal; }
+  .capa .info { font-size: 8.5pt; color: #ccc; margin: 2px 0; }
+  .capa .stripe { width: 100%; height: 3px; background: #c0392b; margin: 5mm 0; }
+  .capa .prova { font-size: 9.5pt; font-weight: bold; color: #fff; background: #c0392b; padding: 6px 16px; display: inline-block; margin-top: 5mm; border-radius: 2px; }
+  /* === CONTRACAPA === */
+  .contracapa { text-align: center; background: #1a3560; color: #fff; padding: 10mm 8mm; page-break-before: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .contracapa .logo-pc { font-size: 48pt; font-weight: bold; color: #c0392b; line-height: 1; letter-spacing: 4px; }
+  .contracapa .logo-sc { font-size: 8.5pt; color: #aad4f5; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 1mm; }
+  .contracapa .stripe { width: 60%; height: 3px; background: #c0392b; margin: 6mm auto; }
+  .contracapa h2 { font-size: 14pt; color: #fff; margin: 0 0 4mm 0; }
+  .contracapa p { font-size: 8.5pt; color: #aad4f5; margin: 2px 0; line-height: 1.6; }
+  .contracapa .data { font-size: 10pt; color: #fff; font-weight: bold; margin-top: 5mm; border: 2px solid #c0392b; padding: 5px 14px; display: inline-block; letter-spacing: 1px; }
+  .contracapa .rodape { font-size: 7pt; color: #444; margin-top: 10mm; }
+</style>
+</head>
+<body>
+<div class="capa">
+  <div class="num">7</div>
+  <div class="stripe"></div>
+  <h1>NOÇÕES DE DIREITO ADMINISTRATIVO</h1>
+  <h2>Apostila Completa — PC-SC 2026</h2>
+  <div class="info">Polícia Civil de Santa Catarina | Edital 01/2025</div>
+  <div class="info"><strong>6 questões na prova</strong></div>
+  <div class="prova">PROVA: 21 DE MARÇO DE 2026</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">1. PRINCÍPIOS — LIMPE</h1>
+<p>O art. 37 da CF estabelece os princípios da administração pública: <strong>L</strong>egalidade, <strong>I</strong>mpessoalidade, <strong>M</strong>oralidade, <strong>P</strong>ublicidade, <strong>E</strong>ficiência.</p>
+<table>
+  <tr><th>Princípio</th><th>Significado para o servidor</th></tr>
+  <tr><td>Legalidade</td><td>Só faço o que a lei permite (diferente do particular: pode tudo que a lei não proíbe)</td></tr>
+  <tr><td>Impessoalidade</td><td>Atendo a todos igualmente. O ato é do órgão, não da minha pessoa. Proíbe favoritismo e perseguição.</td></tr>
+  <tr><td>Moralidade</td><td>Devo agir com ética, honestidade, boa-fé. Não basta ser legal — precisa ser moral.</td></tr>
+  <tr><td>Publicidade</td><td>Os atos públicos devem ser divulgados. Transparência é regra; sigilo é exceção.</td></tr>
+  <tr><td>Eficiência</td><td>Usar bem os recursos públicos para obter melhores resultados. Qualidade + agilidade.</td></tr>
+</table>
+<p><strong>Outros princípios importantes:</strong> supremacia do interesse público (o interesse coletivo prevalece sobre o particular), autotutela (a própria Administração pode anular seus atos ilegais ou revogar os inconvenientes), proporcionalidade, razoabilidade, motivação, continuidade dos serviços públicos.</p>
+<div class="ex">
+  <h3>Exercícios — Princípios</h3>
+  <div class="q"><p>Q1. Um delegado aproveita seu cargo para nomear um familiar sem concurso para um cargo público. Viola o princípio da:</p>
+    <ul><li>A) Legalidade apenas</li><li>B) Impessoalidade e moralidade</li><li>C) Eficiência</li><li>D) Publicidade</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q1-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">2. ADMINISTRAÇÃO DIRETA E INDIRETA</h1>
+<h2 class="sub">Administração Direta</h2>
+<p>São os órgãos que compõem diretamente o Estado — não têm personalidade jurídica própria. Ex.: Ministérios, Secretarias, Delegacias (órgão), Polícia Civil.</p>
+<h2 class="sub">Administração Indireta</h2>
+<table>
+  <tr><th>Entidade</th><th>Personalidade</th><th>Capital</th><th>Forma jurídica</th><th>Exemplos</th></tr>
+  <tr><td>Autarquia</td><td>Pública</td><td>100% público</td><td>Pública (criada por lei)</td><td>INSS, BACEN, INMETRO</td></tr>
+  <tr><td>Fundação Pública</td><td>Pública ou Privada</td><td>Público</td><td>Criada/autorizada por lei</td><td>IBGE, FUNAI</td></tr>
+  <tr><td>Empresa Pública</td><td>Privada</td><td>100% público</td><td>Qualquer forma societária</td><td>Correios, CEF, BNDES</td></tr>
+  <tr><td>Soc. de Econ. Mista</td><td>Privada</td><td>Público + privado (Estado controla)</td><td>Somente S/A</td><td>Petrobras, Banco do Brasil</td></tr>
+</table>
+<div class="dica"><strong>Macete EP x SEM:</strong> Empresa Pública = qualquer forma + só capital público. Soc. de Econ. Mista = sempre S/A + capital misto.</div>
+
+<div class="ex">
+  <h3>Exercícios — Administração Indireta</h3>
+  <div class="q"><p>Q2. O INSS (Instituto Nacional do Seguro Social) é uma:</p>
+    <ul><li>A) Empresa pública</li><li>B) Sociedade de economia mista</li><li>C) Autarquia federal</li><li>D) Fundação pública</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q2-C</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">3. PODERES E ATOS ADMINISTRATIVOS</h1>
+<h2 class="sub">Poderes da Administração</h2>
+<table>
+  <tr><th>Poder</th><th>Descrição</th></tr>
+  <tr><td>Vinculado</td><td>A lei determina exatamente o que fazer. Sem margem de escolha. Ex.: conceder aposentadoria ao preencher requisitos.</td></tr>
+  <tr><td>Discricionário</td><td>A lei dá margem de escolha (conveniência e oportunidade). Ex.: autorizar ou não evento. O judiciário não controla o mérito, só a legalidade.</td></tr>
+  <tr><td>Hierárquico</td><td>Organizar, fiscalizar, dar ordens. Inclui avocar (trazer para si) e delegar atribuições.</td></tr>
+  <tr><td>Disciplinar</td><td>Punir infrações funcionais de servidores e particulares vinculados à Administração.</td></tr>
+  <tr><td>Regulamentar</td><td>Editar regulamentos para detalhar aplicação de leis (decretos do Executivo).</td></tr>
+  <tr><td>De Polícia</td><td>Limitar direitos individuais em prol do coletivo. Atributos: discricionariedade, autoexecutoriedade, coercibilidade.</td></tr>
+</table>
+<h2 class="sub">Atos Administrativos</h2>
+<p><strong>Elementos (COFIM):</strong> <u>C</u>ompetência (quem pode praticar), <u>O</u>bjeto (o que determina), <u>F</u>orma (como deve ser feito), <u>I</u>nteresse público / finalidade, <u>M</u>otivo (razão de fato e direito).</p>
+<p><strong>Atributos:</strong> presunção de legitimidade (vale até ser anulado), imperatividade (impõe sem precisar de concordância), autoexecutoriedade (executa sem precisar do judiciário — nem todos os atos têm).</p>
+<p><strong>Extinção dos atos:</strong> anulação (por ilegalidade — efeito ex tunc, retroativo) e revogação (por conveniência/oportunidade — efeito ex nunc, não retroativo).</p>
+
+<div class="ex">
+  <h3>Exercícios — Poderes e Atos</h3>
+  <div class="q"><p>Q3. A Administração anula seus próprios atos ilegais com base no princípio da:</p>
+    <ul><li>A) Eficiência</li><li>B) Autotutela</li><li>C) Publicidade</li><li>D) Supremacia do interesse público</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q3-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">4. LEI DE IMPROBIDADE, LAI E LGPD</h1>
+<h2 class="sub">Lei de Improbidade (Lei 8.429/1992 + alterações Lei 14.230/2021)</h2>
+<table>
+  <tr><th>Tipo</th><th>Art.</th><th>Elemento subjetivo</th><th>Sanção principal</th></tr>
+  <tr><td>Enriquecimento ilícito</td><td>9°</td><td>Dolo (intencional)</td><td>Suspensão de direitos políticos 14 a 17 anos, perda de bens, multa</td></tr>
+  <tr><td>Dano ao erário</td><td>10</td><td>Dolo (após Lei 14.230/2021 — era culpa+dolo)</td><td>Suspensão 12 a 14 anos, multa, ressarcimento</td></tr>
+  <tr><td>Violação de princípios</td><td>11</td><td>Dolo</td><td>Suspensão 4 a 8 anos, multa</td></tr>
+</table>
+<div class="atencao"><strong>Mudança importante (Lei 14.230/2021):</strong> todos os atos de improbidade agora exigem DOLO — a culpa foi removida. O art. 10 (dano ao erário) que antes admitia culpa, agora também exige dolo.</div>
+
+<h2 class="sub">Lei de Acesso à Informação — LAI (Lei 12.527/2011)</h2>
+<ul>
+  <li>A publicidade é a regra; o sigilo é exceção.</li>
+  <li>Qualquer pessoa pode pedir informações públicas.</li>
+  <li>Prazo para resposta: <strong>20 dias</strong>, prorrogável por mais <strong>10 dias</strong>.</li>
+  <li>Classificação do sigilo: <strong>reservada</strong> (5 anos), <strong>secreta</strong> (15 anos), <strong>ultrassecreta</strong> (25 anos).</li>
+  <li>Dados pessoais: protegidos por <strong>100 anos</strong>.</li>
+  <li>Rol mínimo de transparência ativa: o governo deve disponibilizar informações básicas sem precisar de pedido.</li>
+</ul>
+
+<h2 class="sub">LGPD — Lei Geral de Proteção de Dados (Lei 13.709/2018)</h2>
+<ul>
+  <li>Aplica-se a qualquer operação com dados pessoais no Brasil (empresas e governo).</li>
+  <li><strong>Dado pessoal:</strong> info que identifica ou pode identificar pessoa física.</li>
+  <li><strong>Dado sensível:</strong> origem racial, religião, saúde, biometria, orientação sexual, etc.</li>
+  <li><strong>Titular:</strong> a pessoa cujos dados são tratados. Tem direito: confirmar, acessar, corrigir, anonimizar, bloquear, eliminar, portabilidade.</li>
+  <li><strong>Controlador:</strong> quem decide sobre o tratamento. <strong>Operador:</strong> quem trata em nome do controlador.</li>
+  <li><strong>ANPD</strong> (Autoridade Nacional de Proteção de Dados): fiscaliza o cumprimento da LGPD.</li>
+  <li>Base legal para tratamento: consentimento, obrigação legal, execução de contrato, exercício de direitos, legítimo interesse, etc.</li>
+</ul>
+
+<div class="ex">
+  <h3>Exercícios — Improbidade, LAI e LGPD</h3>
+  <div class="q"><p>Q4. Após a Lei 14.230/2021, os atos de improbidade administrativa exigem como elemento subjetivo:</p>
+    <ul><li>A) Culpa ou dolo</li><li>B) Apenas culpa</li><li>C) Apenas dolo</li><li>D) Nem dolo nem culpa — responsabilidade objetiva</li></ul>
+  </div>
+  <div class="q"><p>Q5. O prazo padrão para resposta a pedido de acesso à informação é de:</p>
+    <ul><li>A) 5 dias úteis</li><li>B) 10 dias corridos</li><li>C) 20 dias, prorrogável por 10</li><li>D) 30 dias improrrogáveis</li></ul>
+  </div>
+  <div class="q"><p>Q6. Na LGPD, dados sobre raça, religião, saúde e biometria são classificados como dados:</p>
+    <ul><li>A) Pessoais comuns</li><li>B) Sigilosos</li><li>C) Sensíveis</li><li>D) Públicos</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q4-C | Q5-C | Q6-C</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">5. LEI 13.869/2019 — ABUSO DE AUTORIDADE</h1>
+
+<h2 class="sub">O que é abuso de autoridade</h2>
+<p>Praticado pelo agente público (policial, delegado, promotor, juiz, etc.) que age com a finalidade específica de prejudicar outrem, beneficiar a si mesmo ou terceiro, ou por mero capricho ou satisfação pessoal — com dolo específico.</p>
+<div class="atencao"><strong>Elemento subjetivo:</strong> o abuso de autoridade exige <strong>dolo específico</strong> (finalidade de prejudicar ou capricho pessoal). Erros técnicos sem essa intenção não configuram abuso.</div>
+
+<h2 class="sub">Condutas típicas relevantes para o agente de polícia</h2>
+<table>
+  <tr><th>Conduta</th><th>Art.</th><th>Pena</th></tr>
+  <tr><td>Decretar ou executar medida privativa de liberdade em manifesta desconformidade com a lei</td><td>9°</td><td>1 a 4 anos + multa</td></tr>
+  <tr><td>Deixar de comunicar prisão em flagrante ao juiz em 24h</td><td>12</td><td>6 meses a 2 anos + multa</td></tr>
+  <tr><td>Usar algemas fora das hipóteses legais (SV 11)</td><td>10</td><td>1 a 4 anos + multa</td></tr>
+  <tr><td>Submeter preso a situação vexatória ou constrangedora na captura</td><td>13</td><td>1 a 4 anos + multa</td></tr>
+  <tr><td>Divulgar gravação sem autorização ou fora do contexto (de interrogatório, por ex.)</td><td>20</td><td>1 a 4 anos + multa</td></tr>
+  <tr><td>Impedir comunicação do preso com advogado, família ou MP</td><td>14</td><td>1 a 4 anos + multa</td></tr>
+  <tr><td>Investigar ou iniciar processo sem justa causa (evidente ao agente)</td><td>27</td><td>6 meses a 2 anos + multa</td></tr>
+</table>
+
+<h2 class="sub">Penas e efeitos</h2>
+<ul>
+  <li><strong>Pena principal:</strong> detenção ou reclusão + multa.</li>
+  <li><strong>Penas restritivas de direitos:</strong> podem substituir a pena privativa se preenchidos requisitos.</li>
+  <li><strong>Efeitos da condenação:</strong> perda do cargo com inabilitação para exercer função pública por até 3x o prazo da pena.</li>
+  <li><strong>Ação penal:</strong> pública incondicionada — o MP age sem precisar de representação.</li>
+  <li><strong>Responsabilidade em dupla esfera:</strong> o abuso gera responsabilidade penal (Lei 13.869), administrativa (estatuto) e civil (indenização à vítima).</li>
+</ul>
+
+<div class="ex">
+  <h3>Exercícios — Abuso de Autoridade</h3>
+  <div class="q"><p>Q4-A (complementar). Para configurar crime de abuso de autoridade (Lei 13.869/2019), é necessário que o agente atue com:</p>
+    <ul><li>A) Simples negligência ou erro técnico</li><li>B) Dolo específico — finalidade de prejudicar, beneficiar-se ou por capricho pessoal</li><li>C) Dolo eventual — assumiu o risco do resultado</li><li>D) Culpa grave por imprudência manifesta</li></ul>
+  </div>
+  <div class="q"><p>Q4-B (complementar). O policial que usa algemas em preso já algemado, imobilizado e sem oferecer resistência, com o objetivo de humilhá-lo publicamente, comete:</p>
+    <ul><li>A) Apenas infração administrativa</li><li>B) Lesão corporal culposa</li><li>C) Crime de abuso de autoridade (art. 10 da Lei 13.869/2019)</li><li>D) Nenhum crime, pois o uso de algemas é sempre legal</li></ul>
+  </div>
+  <div class="gab">Q4-A: B | Q4-B: C</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">GABARITO GERAL — ADMINISTRATIVO</h1>
+<table>
+  <tr><th>Q</th><th>Resp.</th><th>Tema</th></tr>
+  <tr><td>Q1</td><td>B</td><td>Impessoalidade + moralidade</td></tr>
+  <tr><td>Q2</td><td>C</td><td>INSS = autarquia</td></tr>
+  <tr><td>Q3</td><td>B</td><td>Autotutela</td></tr>
+  <tr><td>Q4</td><td>C</td><td>Improbidade = só dolo (após 14.230/2021)</td></tr>
+  <tr><td>Q5</td><td>C</td><td>LAI = 20+10 dias</td></tr>
+  <tr><td>Q6</td><td>C</td><td>Dados sensíveis = LGPD</td></tr>
+</table>
+</div>
+
+<div class="contracapa">
+  <div class="logo-sc">Polícia Civil</div>
+  <div class="logo-pc">PC-SC</div>
+  <div class="logo-sc">Santa Catarina</div>
+  <div class="stripe"></div>
+  <h2>Bons estudos!</h2>
+  <p>Concurso Público — Edital 01/2025</p>
+  <p>Cargo: Agente de Polícia Civil</p>
+  <p>Organizadora: IDECAN</p>
+  <p style="margin-top:4mm; color:#fff; font-weight:bold;">Elaborado por: Dani Kaloi</p>
+  <div class="stripe"></div>
+  <div class="data">PROVA: 21 DE MARÇO DE 2026</div>
+  <div class="rodape">Material de estudo — uso pessoal</div>
+</div>
+
+</body>
+</html>

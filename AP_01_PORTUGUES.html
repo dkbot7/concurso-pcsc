@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Apostila PC-SC — Língua Portuguesa</title>
+<style>
+  @page { size: A5; margin: 12mm 10mm 16mm 10mm; @bottom-center { content: "Página " counter(page) " de " counter(pages); font-size: 7pt; color: #555; font-family: Arial, sans-serif; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 8.5pt; color: #111; line-height: 1.4; background: #fff; }
+  .capa { text-align: center; padding: 40mm 20mm; page-break-after: always; }
+  .capa h1 { font-size: 24pt; color: #1a3560; margin-bottom: 8px; }
+  .capa h2 { font-size: 16pt; color: #c0392b; margin-bottom: 20px; }
+  .capa .info { font-size: 11pt; margin: 5px 0; }
+  .capa .num { font-size: 48pt; color: #1a3560; font-weight: bold; margin: 20px 0; }
+  .capa .prova { font-size: 12pt; font-weight: bold; color: #c0392b; border: 2px solid #c0392b; padding: 10px 20px; display: inline-block; margin-top: 20px; }
+  .secao { page-break-before: always; }
+  .secao:first-of-type { page-break-before: avoid; }
+  h1.titulo { background: #1a3560; color: #fff; font-size: 13pt; padding: 8px 12px; margin-bottom: 14px; }
+  h1.titulo span { font-size: 10pt; font-weight: normal; color: #aad4f5; }
+  h2.sub { font-size: 11pt; color: #1a3560; border-left: 4px solid #1a3560; padding-left: 8px; margin: 14px 0 7px; }
+  h3.sub2 { font-size: 10pt; color: #c0392b; margin: 10px 0 4px; font-weight: bold; }
+  p { margin-bottom: 7px; }
+  ul, ol { padding-left: 18px; margin-bottom: 8px; }
+  li { margin-bottom: 3px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 9.5pt; }
+  th { background: #1a3560; color: #fff; padding: 5px 7px; text-align: left; }
+  td { padding: 4px 7px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  .alerta { background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .dica { background: #d4edda; border-left: 4px solid #28a745; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .atencao { background: #f8d7da; border-left: 4px solid #c0392b; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .ex { background: #f4f7fb; border: 1px solid #1a3560; border-radius: 4px; padding: 12px 14px; margin: 16px 0; }
+  .ex h3 { color: #1a3560; font-size: 11pt; margin-bottom: 10px; border-bottom: 1px solid #1a3560; padding-bottom: 4px; }
+  .q { margin-bottom: 14px; }
+  .q p { font-weight: bold; margin-bottom: 5px; font-size: 9.5pt; }
+  .q ul { font-size: 9.5pt; padding-left: 10px; }
+  .q ul li { list-style: none; margin-bottom: 2px; }
+  .gab { background: #1a3560; color: #fff; border-radius: 4px; padding: 8px 14px; margin-top: 10px; font-size: 9pt; }
+  .gab span { color: #aad4f5; font-weight: bold; }
+  .exemplo { background: #e8f4fd; border-left: 4px solid #2980b9; padding: 8px 12px; margin: 8px 0; font-size: 9.5pt; font-style: italic; }
+  /* === CAPA REDESIGN === */
+  .capa { text-align: center; background: #1a3560; color: #fff; padding: 8mm 8mm 10mm 8mm; page-break-after: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .capa .num { font-size: 52pt; color: #fff; font-weight: bold; margin: 0 0 2mm 0; line-height: 1; }
+  .capa h1 { font-size: 14pt; color: #fff; margin-bottom: 4px; font-weight: bold; }
+  .capa h2 { font-size: 10pt; color: #aad4f5; margin-bottom: 6px; font-weight: normal; }
+  .capa .info { font-size: 8.5pt; color: #ccc; margin: 2px 0; }
+  .capa .stripe { width: 100%; height: 3px; background: #c0392b; margin: 5mm 0; }
+  .capa .prova { font-size: 9.5pt; font-weight: bold; color: #fff; background: #c0392b; padding: 6px 16px; display: inline-block; margin-top: 5mm; border-radius: 2px; }
+  /* === CONTRACAPA === */
+  .contracapa { text-align: center; background: #1a3560; color: #fff; padding: 10mm 8mm; page-break-before: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .contracapa .logo-pc { font-size: 48pt; font-weight: bold; color: #c0392b; line-height: 1; letter-spacing: 4px; }
+  .contracapa .logo-sc { font-size: 8.5pt; color: #aad4f5; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 1mm; }
+  .contracapa .stripe { width: 60%; height: 3px; background: #c0392b; margin: 6mm auto; }
+  .contracapa h2 { font-size: 14pt; color: #fff; margin: 0 0 4mm 0; }
+  .contracapa p { font-size: 8.5pt; color: #aad4f5; margin: 2px 0; line-height: 1.6; }
+  .contracapa .data { font-size: 10pt; color: #fff; font-weight: bold; margin-top: 5mm; border: 2px solid #c0392b; padding: 5px 14px; display: inline-block; letter-spacing: 1px; }
+  .contracapa .rodape { font-size: 7pt; color: #444; margin-top: 10mm; }
+</style>
+</head>
+<body>
+
+<div class="capa">
+  <div class="num">1</div>
+  <div class="stripe"></div>
+  <h1>LÍNGUA PORTUGUESA</h1>
+  <h2>Apostila Completa — PC-SC 2026</h2>
+  <div class="info">Polícia Civil de Santa Catarina | Edital 01/2025</div>
+  <div class="info"><strong>20 questões na prova</strong> — maior peso da prova</div>
+  <div class="prova">PROVA: 21 DE MARÇO DE 2026</div>
+</div>
+
+<!-- ========================= -->
+<div class="secao">
+<h1 class="titulo">1. INTERPRETAÇÃO E COMPREENSÃO DE TEXTO</h1>
+
+<h2 class="sub">O que a prova pede</h2>
+<p>Interpretação de texto é a maior parte da prova de Português. A banca dá um texto e faz perguntas sobre ele. Você precisa entender o que está escrito — não inventar o que não está no texto.</p>
+
+<h2 class="sub">Tipos textuais</h2>
+<table>
+  <tr><th>Tipo</th><th>Objetivo</th><th>Exemplo</th></tr>
+  <tr><td>Narrativo</td><td>Conta uma história com personagens, tempo, espaço e conflito</td><td>Conto, romance, notícia policial</td></tr>
+  <tr><td>Descritivo</td><td>Descreve características de pessoas, lugares ou objetos</td><td>Retrato de suspeito, descrição de cena do crime</td></tr>
+  <tr><td>Dissertativo-argumentativo</td><td>Defende uma tese com argumentos e conclusão</td><td>Editorial, artigo de opinião</td></tr>
+  <tr><td>Expositivo</td><td>Explica um assunto de forma neutra</td><td>Verbete de dicionário, texto científico</td></tr>
+  <tr><td>Injuntivo</td><td>Dá instruções, ordens ou procedimentos</td><td>Manual, receita, lei</td></tr>
+</table>
+
+<h2 class="sub">Gêneros textuais mais cobrados</h2>
+<ul>
+  <li><strong>Notícia:</strong> relato factual, responde Quem? O quê? Quando? Onde? Como? Por quê?</li>
+  <li><strong>Crônica:</strong> texto literário curto sobre o cotidiano, com humor ou crítica.</li>
+  <li><strong>Artigo de opinião:</strong> defende uma posição sobre um tema.</li>
+  <li><strong>Editorial:</strong> opinião do veículo de comunicação, sem assinatura.</li>
+  <li><strong>Relatório policial:</strong> registro formal de ocorrência — linguagem técnica e impessoal.</li>
+</ul>
+
+<h2 class="sub">Como ler o texto na prova</h2>
+<ol>
+  <li>Leia o texto inteiro uma vez para ter ideia geral do assunto.</li>
+  <li>Leia as perguntas.</li>
+  <li>Releia as partes do texto que respondem cada questão.</li>
+  <li>Elimine as alternativas erradas antes de marcar.</li>
+</ol>
+<div class="alerta"><strong>Armadilhas comuns:</strong> alternativas que usam palavras do texto mas com sentido trocado; alternativas que são verdadeiras no mundo real mas não estão no texto; alternativas que exageram ("sempre", "nunca", "todos") quando o texto diz "em geral".</div>
+
+<h2 class="sub">Ideias implícitas e explícitas</h2>
+<p><strong>Explícita:</strong> está dito claramente no texto. Ex.: "O suspeito foi preso às 15h."</p>
+<p><strong>Implícita (inferência):</strong> pode-se concluir a partir do texto, mas não está dito diretamente. Ex.: "Ele pulou o muro" → implicitamente estava fugindo.</p>
+
+<h2 class="sub">Intertextualidade</h2>
+<p>Quando um texto faz referência a outro texto, ideia, obra ou evento. Ex.: texto que menciona um provérbio popular, uma cena bíblica ou uma lei.</p>
+
+<div class="ex">
+  <h3>Exercícios — Interpretação</h3>
+  <div class="q"><p>Q1. Leia: "O delegado, embora cansado após 12 horas de plantão, recusou-se a encerrar o inquérito sem ouvir a última testemunha." O texto permite inferir que o delegado é:</p>
+    <ul><li>A) Imprudente ao prolongar seu expediente</li><li>B) Dedicado e comprometido com a investigação</li><li>C) Desobediente às normas do plantão</li><li>D) Incapaz de tomar decisões racionais quando cansado</li></ul>
+  </div>
+  <div class="q"><p>Q2. No texto "A polícia identificou o suspeito por meio de câmeras de segurança. Ele foi localizado horas depois em um bairro vizinho.", o conectivo "depois" indica relação de:</p>
+    <ul><li>A) Causa</li><li>B) Concessão</li><li>C) Tempo</li><li>D) Condição</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q1-B | Q2-C</div>
+</div>
+</div>
+
+<!-- ========================= -->
+<div class="secao">
+<h1 class="titulo">2. ORTOGRAFIA OFICIAL E NOVO ACORDO ORTOGRÁFICO</h1>
+
+<h2 class="sub">Novo Acordo Ortográfico (em vigor desde 2009)</h2>
+<p>O Acordo Ortográfico eliminou o trema em palavras de origem portuguesa (mas manteve em nomes estrangeiros: Müller), aboliu o acento diferencial em alguns casos e unificou a escrita entre Brasil e Portugal.</p>
+
+<h2 class="sub">Uso do hífen — regras principais</h2>
+<table>
+  <tr><th>Situação</th><th>Regra</th><th>Exemplos</th></tr>
+  <tr><td>Prefixo termina em vogal + palavra começa com H ou mesma vogal</td><td>USA hífen</td><td>anti-herói, micro-ondas, contra-ataque</td></tr>
+  <tr><td>Prefixo termina em vogal + palavra começa com vogal diferente</td><td>NÃO usa hífen</td><td>autoescola, semiaberto, extraoficial</td></tr>
+  <tr><td>Prefixo termina em consoante + palavra começa com consoante diferente</td><td>NÃO usa hífen</td><td>subproduto, interplanetário</td></tr>
+  <tr><td>Prefixo termina em consoante + palavra começa com mesma consoante</td><td>USA hífen</td><td>sub-bibliotecário, inter-racial</td></tr>
+  <tr><td>Palavras compostas (substantivos, adjetivos)</td><td>Depende — memorize os mais cobrados</td><td>guarda-chuva, beija-flor, bem-vindo</td></tr>
+</table>
+<div class="dica"><strong>Prefixos que sempre usam hífen:</strong> ex- (ex-marido), vice- (vice-presidente), sota-, soto-, pós-, pré-, pró- (quando têm sentido próprio), recém- (recém-nascido), sem- (sem-teto), além- (além-mar).</div>
+
+<h2 class="sub">Uso de letras maiúsculas</h2>
+<ul>
+  <li>Início de frase e após ponto final.</li>
+  <li>Nomes próprios: pessoas, países, cidades, rios, montanhas. Ex.: João, Brasil, Florianópolis, Rio Amazonas.</li>
+  <li>Siglas e abreviações: PC-SC, CPP, STF.</li>
+  <li>Títulos de obras, documentos e leis: Constituição Federal, Código Penal.</li>
+  <li>Não se usa maiúscula em cargos quando não vêm antes do nome: "o presidente foi eleito" / "o Presidente Lula".</li>
+</ul>
+
+<h2 class="sub">Parônimos e Homônimos mais cobrados</h2>
+<table>
+  <tr><th>Par</th><th>Diferença</th></tr>
+  <tr><td>descrição / discrição</td><td>descrição = ato de descrever; discrição = ser discreto</td></tr>
+  <tr><td>comprimento / cumprimento</td><td>comprimento = tamanho; cumprimento = saudação ou execução</td></tr>
+  <tr><td>flagrante / fragrante</td><td>flagrante = em ato; fragrante = que tem fragrância (cheiro)</td></tr>
+  <tr><td>infligir / infringir</td><td>infligir = aplicar (pena); infringir = violar (lei)</td></tr>
+  <tr><td>ratificar / retificar</td><td>ratificar = confirmar; retificar = corrigir</td></tr>
+  <tr><td>eminente / iminente</td><td>eminente = notável, importante; iminente = prestes a acontecer</td></tr>
+  <tr><td>tráfico / trafego</td><td>tráfico = comércio ilícito; tráfego = fluxo de veículos</td></tr>
+  <tr><td>seção / sessão / cessão</td><td>seção = parte/divisão; sessão = reunião; cessão = ato de ceder</td></tr>
+  <tr><td>deferir / diferir</td><td>deferir = conceder; diferir = ser diferente ou adiar</td></tr>
+</table>
+
+<div class="ex">
+  <h3>Exercícios — Ortografia</h3>
+  <div class="q"><p>Q3. Assinale a frase com uso correto do hífen:</p>
+    <ul><li>A) anti-inflamatório</li><li>B) autoescola</li><li>C) sub-normal</li><li>D) extra-judicial</li></ul>
+  </div>
+  <div class="q"><p>Q4. "O agente precisava agir com _____ para não revelar a identidade do informante." A palavra correta é:</p>
+    <ul><li>A) descrição</li><li>B) discrição</li><li>C) discreção</li><li>D) discrisão</li></ul>
+  </div>
+  <div class="q"><p>Q5. O perigo de novas explosões era _____. A palavra que completa corretamente é:</p>
+    <ul><li>A) eminente</li><li>B) iminente</li><li>C) eminente ou iminente, indistintamente</li><li>D) imponente</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q3-A | Q4-B | Q5-B</div>
+</div>
+</div>
+
+<!-- ========================= -->
+<div class="secao">
+<h1 class="titulo">3. COESÃO TEXTUAL — CONECTIVOS E REFERÊNCIA</h1>
+
+<h2 class="sub">O que é coesão</h2>
+<p>Coesão é o que faz as frases e parágrafos se ligarem bem, formando um texto unido. Sem coesão, o texto fica um amontoado de frases soltas.</p>
+
+<h2 class="sub">Referência textual</h2>
+<p>Quando um termo do texto aponta para outro já mencionado (anáfora) ou que será mencionado (catáfora).</p>
+<div class="exemplo">"O policial chegou ao local. <u>Ele</u> encontrou evidências importantes." → "ele" é anáfora de "policial".</div>
+<div class="exemplo">"<u>Isto</u> ficou claro: o réu mentia." → "isto" é catáfora — aponta para o que vem depois.</div>
+
+<h2 class="sub">Substituição e elipse</h2>
+<p><strong>Substituição lexical:</strong> usa sinônimo ou expressão equivalente para evitar repetição.</p>
+<div class="exemplo">"O delegado iniciou o inquérito. A <u>autoridade policial</u> agiu rapidamente." (delegado = autoridade policial)</div>
+<p><strong>Elipse:</strong> omissão de um elemento que pode ser recuperado pelo contexto.</p>
+<div class="exemplo">"João foi à delegacia. [João] Prestou depoimento." (João foi omitido)</div>
+
+<h2 class="sub">Conectivos — Tabela completa</h2>
+<table>
+  <tr><th>Relação</th><th>Conectivos</th><th>Dica</th></tr>
+  <tr><td>Adição</td><td>e, também, além disso, ademais, ainda, outrossim, bem como</td><td>Acrescenta ideia</td></tr>
+  <tr><td>Oposição/Contraste</td><td>mas, porém, contudo, todavia, no entanto, entretanto, não obstante</td><td>Contradiz a ideia anterior</td></tr>
+  <tr><td>Causa</td><td>porque, pois (após vírgula), já que, visto que, uma vez que, por isso, em virtude de</td><td>Explica o motivo</td></tr>
+  <tr><td>Consequência</td><td>logo, portanto, assim, então, por isso, de modo que, tanto que</td><td>Resultado da ideia anterior</td></tr>
+  <tr><td>Conclusão</td><td>logo, portanto, assim, então, pois (antes do verbo)</td><td>Conclui o raciocínio</td></tr>
+  <tr><td>Condição</td><td>se, caso, desde que, contanto que, a menos que, salvo se</td><td>Impõe condição</td></tr>
+  <tr><td>Concessão</td><td>embora, apesar de, ainda que, mesmo que, conquanto, por mais que</td><td>Admite a ideia, mas opõe outra</td></tr>
+  <tr><td>Finalidade</td><td>para, a fim de, para que, com o intuito de, com o objetivo de</td><td>Indica objetivo</td></tr>
+  <tr><td>Tempo</td><td>quando, enquanto, depois que, antes que, assim que, logo que, desde que</td><td>Indica momento</td></tr>
+  <tr><td>Comparação</td><td>como, assim como, tanto quanto, bem como, tal qual</td><td>Compara duas ideias</td></tr>
+  <tr><td>Conformidade</td><td>conforme, segundo, de acordo com, como</td><td>Indica fonte ou referência</td></tr>
+  <tr><td>Proporção</td><td>à medida que, na medida em que, à proporção que</td><td>Duas coisas crescem juntas</td></tr>
+</table>
+<div class="atencao"><strong>Cuidado com "pois":</strong> depois de vírgula = causa ("Ele fugiu, pois tinha medo"). Antes do verbo = conclusão ("Estou satisfeito, pois consegui o objetivo").</div>
+<div class="atencao"><strong>"à medida que" vs. "na medida em que":</strong> à medida que = proporcionalidade. Na medida em que = causa/razão.</div>
+
+<div class="ex">
+  <h3>Exercícios — Coesão</h3>
+  <div class="q"><p>Q6. "O suspeito fugiu; _____, a polícia o perseguiu." O conectivo que indica CONSEQUÊNCIA é:</p>
+    <ul><li>A) embora</li><li>B) por isso</li><li>C) desde que</li><li>D) apesar disso</li></ul>
+  </div>
+  <div class="q"><p>Q7. "_____ o réu apresentasse álibi, o delegado manteve a prisão em flagrante." O conectivo de CONCESSÃO correto é:</p>
+    <ul><li>A) Porque</li><li>B) Logo</li><li>C) Embora</li><li>D) Então</li></ul>
+  </div>
+  <div class="q"><p>Q8. No trecho "A operação policial foi bem-sucedida. Esta foi planejada por semanas", o pronome "Esta" retoma:</p>
+    <ul><li>A) A polícia</li><li>B) A operação policial</li><li>C) O sucesso</li><li>D) O planejamento</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q6-B | Q7-C | Q8-B</div>
+</div>
+</div>
+
+<!-- ========================= -->
+<div class="secao">
+<h1 class="titulo">4. MORFOLOGIA — CLASSES DE PALAVRAS</h1>
+
+<h2 class="sub">As 10 classes gramaticais</h2>
+
+<h3 class="sub2">1. Substantivo</h3>
+<p>Nome de seres, lugares, sentimentos, ações. Pode ser: próprio (Brasil, João — maiúscula) ou comum (país, homem — minúscula); concreto (mesa, policial) ou abstrato (justiça, coragem); coletivo (bando, alcateia, frota).</p>
+<p><strong>Coletivos importantes:</strong> frota (veículos), alcateia (lobos), bando (ladrões/pássaros), esquadra (navios/policiais), acervo (obras de arte), arquivo (documentos).</p>
+
+<h3 class="sub2">2. Adjetivo</h3>
+<p>Caracteriza o substantivo. Concorda em gênero e número. Pode ser simples (bom) ou composto (azul-escuro). Graus: comparativo (mais corajoso que) e superlativo (o mais corajoso / corajosíssimo).</p>
+
+<h3 class="sub2">3. Verbo</h3>
+<p>Exprime ação, estado ou fenômeno. Tem pessoa, número, tempo, modo e voz.</p>
+<p><strong>Vozes verbais:</strong></p>
+<ul>
+  <li><strong>Ativa:</strong> sujeito pratica a ação. "A polícia prendeu o suspeito."</li>
+  <li><strong>Passiva analítica:</strong> sujeito recebe a ação. "O suspeito foi preso pela polícia."</li>
+  <li><strong>Passiva sintética (partícula se):</strong> "Prendeu-se o suspeito."</li>
+</ul>
+<p><strong>Como passar de ativa para passiva:</strong> objeto direto vira sujeito paciente + verbo "ser" + particípio + "por" + sujeito agente.</p>
+
+<h3 class="sub2">4. Advérbio</h3>
+<p>Modifica verbo, adjetivo ou outro advérbio. Indica circunstância:</p>
+<table>
+  <tr><th>Tipo</th><th>Exemplos</th></tr>
+  <tr><td>Modo</td><td>bem, mal, rapidamente, assim, depressa</td></tr>
+  <tr><td>Tempo</td><td>hoje, ontem, amanhã, sempre, nunca, logo, já</td></tr>
+  <tr><td>Lugar</td><td>aqui, ali, lá, atrás, perto, longe, dentro</td></tr>
+  <tr><td>Intensidade</td><td>muito, pouco, mais, menos, bastante, demais</td></tr>
+  <tr><td>Negação</td><td>não, nunca, jamais, tampouco</td></tr>
+  <tr><td>Dúvida</td><td>talvez, quiçá, provavelmente</td></tr>
+  <tr><td>Afirmação</td><td>sim, certamente, realmente</td></tr>
+</table>
+
+<h3 class="sub2">5. Pronome</h3>
+<p>Substitui ou acompanha o substantivo. Tipos principais:</p>
+<ul>
+  <li><strong>Pessoais do caso reto:</strong> eu, tu, ele/ela, nós, vós, eles/elas (sujeito)</li>
+  <li><strong>Pessoais oblíquos átonos:</strong> me, te, se, o, a, lhe, nos, vos, os, as, lhes (complemento, sem preposição)</li>
+  <li><strong>Pessoais oblíquos tônicos:</strong> mim, ti, si, ele, ela, nós, vós, eles (com preposição)</li>
+  <li><strong>Possessivos:</strong> meu, teu, seu, nosso, vosso, seus (referem-se ao possuidor)</li>
+  <li><strong>Demonstrativos:</strong> este/esse/aquele (e variações) — este = próximo de quem fala; esse = próximo de quem ouve; aquele = distante dos dois.</li>
+  <li><strong>Relativos:</strong> que, quem, o qual, cujo, onde, quando, como, quanto — ligam orações e se referem a um antecedente.</li>
+  <li><strong>Indefinidos:</strong> alguém, ninguém, tudo, nada, cada, todo, qualquer, algum, nenhum.</li>
+</ul>
+
+<h3 class="sub2">6. Artigo</h3>
+<p>Definido (o, a, os, as) — especifica o ser. Indefinido (um, uma, uns, umas) — generaliza.</p>
+
+<h3 class="sub2">7. Numeral</h3>
+<p>Cardinal (um, dois), ordinal (primeiro, segundo), multiplicativo (dobro, triplo), fracionário (metade, terço), coletivo (dezena, dúzia, centena).</p>
+
+<h3 class="sub2">8. Preposição</h3>
+<p>Liga palavras estabelecendo relação entre elas. Essenciais: a, ante, até, após, com, contra, de, desde, em, entre, para, perante, por, sem, sob, sobre, trás. Locução prepositiva: "em frente a, a partir de, por causa de, em virtude de".</p>
+
+<h3 class="sub2">9. Conjunção — ver seção de conectivos.</h3>
+
+<h3 class="sub2">10. Interjeição</h3>
+<p>Expressa emoção. "Ah! Ó! Ei! Cuidado! Parabéns!" Não tem função sintática.</p>
+
+<div class="ex">
+  <h3>Exercícios — Morfologia</h3>
+  <div class="q"><p>Q9. Em "O delegado determinou que o inquérito fosse concluído rapidamente", a palavra "rapidamente" é um advérbio de:</p>
+    <ul><li>A) Tempo</li><li>B) Lugar</li><li>C) Modo</li><li>D) Intensidade</li></ul>
+  </div>
+  <div class="q"><p>Q10. Passe para a voz passiva: "A Polícia Civil solucionou o crime." A forma correta é:</p>
+    <ul><li>A) O crime foi solucionado pela Polícia Civil.</li><li>B) O crime solucionou-se pela Polícia Civil.</li><li>C) A Polícia Civil foi solucionada pelo crime.</li><li>D) O crime foi solucionado da Polícia Civil.</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q9-C | Q10-A</div>
+</div>
+</div>
+
+<!-- ========================= -->
+<div class="secao">
+<h1 class="titulo">5. SINTAXE — TERMOS DA ORAÇÃO E PERÍODO</h1>
+
+<h2 class="sub">Termos essenciais da oração</h2>
+<p><strong>Sujeito:</strong> sobre quem ou o que se fala. Concorda com o verbo.</p>
+<ul>
+  <li>Simples: um núcleo. "O policial chegou."</li>
+  <li>Composto: dois ou mais núcleos. "O delegado e o promotor conversaram."</li>
+  <li>Indeterminado: não identificado. "Venderam o terreno." / "Fala-se muito nisso."</li>
+  <li>Inexistente (oração sem sujeito): verbos impessoais. "Choveu ontem." / "Há dois suspeitos."</li>
+  <li>Oculto/elíptico: identificado pela desinência verbal. "[Ele] Chegou cedo."</li>
+</ul>
+<p><strong>Predicado:</strong> o que se diz do sujeito. Pode ser verbal (ação), nominal (estado) ou verbo-nominal (ação + estado).</p>
+
+<h2 class="sub">Termos integrantes (complementam o verbo ou nome)</h2>
+<ul>
+  <li><strong>Objeto direto:</strong> complementa verbo transitivo direto, sem preposição. "Ele viu o suspeito."</li>
+  <li><strong>Objeto indireto:</strong> complementa verbo transitivo indireto, com preposição. "Ele obedeceu ao delegado."</li>
+  <li><strong>Complemento nominal:</strong> complementa nome (substantivo, adjetivo ou advérbio), com preposição. "Ele tem necessidade de apoio."</li>
+  <li><strong>Agente da passiva:</strong> introduzido por "por" na voz passiva. "O suspeito foi preso <u>pela polícia</u>."</li>
+</ul>
+
+<h2 class="sub">Termos acessórios</h2>
+<ul>
+  <li><strong>Adjunto adnominal:</strong> caracteriza o substantivo (artigos, adjetivos, pronomes). "A <u>nova</u> delegacia é <u>grande</u>."</li>
+  <li><strong>Adjunto adverbial:</strong> modifica o verbo, indicando circunstância. Pode ser deslocado para o início da frase. "<u>Ontem</u>, o policial chegou <u>cedo</u>."</li>
+  <li><strong>Aposto:</strong> explica ou detalha um termo. "O delegado, <u>chefe da delegacia</u>, assinou o documento."</li>
+  <li><strong>Vocativo:</strong> chama ou interpela alguém. "<u>Agente</u>, por favor, feche a porta."</li>
+</ul>
+
+<h2 class="sub">Orações coordenadas — tipos</h2>
+<table>
+  <tr><th>Tipo</th><th>Conjunções</th><th>Exemplo</th></tr>
+  <tr><td>Aditiva</td><td>e, nem, não só...mas também</td><td>Chegou cedo <u>e</u> trabalhou muito.</td></tr>
+  <tr><td>Adversativa</td><td>mas, porém, contudo, todavia, entretanto</td><td>Chegou cedo <u>mas</u> saiu tarde.</td></tr>
+  <tr><td>Alternativa</td><td>ou, ora...ora, quer...quer, seja...seja</td><td><u>Ou</u> ele confessa <u>ou</u> será indiciado.</td></tr>
+  <tr><td>Conclusiva</td><td>logo, portanto, então, assim, por isso</td><td>Havia evidências, <u>portanto</u> foi preso.</td></tr>
+  <tr><td>Explicativa</td><td>pois (antes do verbo), que, porque, porquanto</td><td>Cuidado, <u>pois</u> há câmeras.</td></tr>
+</table>
+
+<h2 class="sub">Orações subordinadas — tipos</h2>
+<p><strong>Substantivas:</strong> exercem função de substantivo (sujeito, objeto, complemento nominal).</p>
+<div class="exemplo">Subjetiva: "É necessário <u>que o réu compareça</u>." (que o réu compareça = sujeito)</div>
+<div class="exemplo">Objetiva direta: "O delegado disse <u>que o caso estava resolvido</u>."</div>
+<div class="exemplo">Completiva nominal: "Havia necessidade <u>de que ele fosse ouvido</u>."</div>
+
+<p><strong>Adjetivas:</strong> exercem função de adjetivo, modificando um substantivo. Introduzidas por pronomes relativos.</p>
+<div class="exemplo">Restritiva (sem vírgula): "O suspeito <u>que fugiu</u> foi recapturado." (não todos, apenas o que fugiu)</div>
+<div class="exemplo">Explicativa (com vírgula): "O suspeito, <u>que estava armado</u>, foi detido." (acrescenta informação sobre o único suspeito)</div>
+
+<p><strong>Adverbiais:</strong> exercem função de advérbio, indicando circunstância.</p>
+<ul>
+  <li>Causal: "Ele foi preso <u>porque resistiu</u>."</li>
+  <li>Concessiva: "Ele foi preso <u>embora tivesse álibi</u>."</li>
+  <li>Condicional: "Ele será solto <u>se pagar fiança</u>."</li>
+  <li>Final: "O juiz agiu <u>para que a justiça fosse feita</u>."</li>
+  <li>Temporal: "A operação começou <u>quando a noite caiu</u>."</li>
+  <li>Consecutiva: "O crime foi tão grave <u>que chocou a cidade</u>."</li>
+  <li>Comparativa: "A delegacia estava mais movimentada <u>do que o normal</u>."</li>
+  <li>Conformativa: "Tudo foi feito <u>conforme o procedimento</u>."</li>
+  <li>Proporcional: "<u>À medida que</u> as provas apareciam, o caso se fortalecia."</li>
+</ul>
+
+<div class="ex">
+  <h3>Exercícios — Sintaxe</h3>
+  <div class="q"><p>Q11. Em "O delegado que conduziu o caso foi elogiado", a oração "que conduziu o caso" é:</p>
+    <ul><li>A) Subordinada substantiva objetiva direta</li><li>B) Subordinada adjetiva restritiva</li><li>C) Subordinada adjetiva explicativa</li><li>D) Coordenada aditiva</li></ul>
+  </div>
+  <div class="q"><p>Q12. "Trabalhou muito, <u>logo</u> merece a promoção." O conectivo indica:</p>
+    <ul><li>A) Adição</li><li>B) Concessão</li><li>C) Conclusão</li><li>D) Causa</li></ul>
+  </div>
+  <div class="q"><p>Q13. Identifique o objeto indireto em: "O agente obedeceu às ordens do delegado":</p>
+    <ul><li>A) O agente</li><li>B) às ordens do delegado</li><li>C) do delegado</li><li>D) às ordens</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q11-B | Q12-C | Q13-B</div>
+</div>
+</div>
+
+<!-- ========================= -->
+<div class="secao">
+<h1 class="titulo">6. CONCORDÂNCIA VERBAL E NOMINAL</h1>
+
+<h2 class="sub">Concordância Verbal — casos especiais</h2>
+<table>
+  <tr><th>Situação</th><th>Regra</th><th>Exemplo</th></tr>
+  <tr><td>Sujeito coletivo</td><td>Verbo no singular</td><td>A equipe <u>chegou</u>.</td></tr>
+  <tr><td>Coletivo + complemento no plural</td><td>Verbo singular ou plural</td><td>A maioria dos policiais <u>chegou/chegaram</u>.</td></tr>
+  <tr><td>Sujeito composto antes do verbo</td><td>Verbo no plural</td><td>João e Maria <u>foram</u>.</td></tr>
+  <tr><td>Sujeito composto após o verbo</td><td>Pode ficar singular (concorda com o mais próximo)</td><td>Foram presos o suspeito e a cúmplice. / Foi preso o suspeito e a cúmplice.</td></tr>
+  <tr><td>"Um dos que"</td><td>Verbo no plural</td><td>Ela é uma das que <u>mais trabalham</u>.</td></tr>
+  <tr><td>"Mais de um" + singular</td><td>Verbo singular</td><td>Mais de um agente <u>foi</u> convocado.</td></tr>
+  <tr><td>Verbos impessoais: haver (existir), fazer (tempo)</td><td>Sempre singular, sem sujeito</td><td><u>Há</u> dois anos. <u>Faz</u> três dias.</td></tr>
+  <tr><td>Pronome "se" como índice de indeterminação</td><td>Verbo na 3ª pessoa singular</td><td>Vende-<u>se</u> apartamento.</td></tr>
+  <tr><td>Pronome "se" como partícula apassivadora</td><td>Verbo concorda com o sujeito</td><td>Vende<u>m</u>-se apartamentos.</td></tr>
+</table>
+
+<h2 class="sub">Concordância Nominal — casos especiais</h2>
+<table>
+  <tr><th>Situação</th><th>Regra</th><th>Exemplo</th></tr>
+  <tr><td>Adjetivo pós-posto a dois substantivos de gêneros diferentes</td><td>Plural masculino</td><td>Comprou carro e moto <u>novos</u>.</td></tr>
+  <tr><td>Adjetivo ante-posto a dois substantivos</td><td>Concorda com o mais próximo</td><td>Boa reputação e comportamento.</td></tr>
+  <tr><td>"Mesmo", "próprio", "quite", "só" (= sozinho)</td><td>Concordam com o substantivo</td><td>Elas mesmas resolveram. / Ela está só.</td></tr>
+  <tr><td>"Só" (= somente) — advérbio</td><td>Invariável</td><td>Ela <u>só</u> trabalha à noite.</td></tr>
+  <tr><td>"Anexo", "incluso"</td><td>Concordam com o substantivo</td><td>Seguem <u>anexas</u> as fotos.</td></tr>
+  <tr><td>"Obrigado/a"</td><td>Concorda com quem fala</td><td>Ele disse "obrigado". Ela disse "obrigada".</td></tr>
+  <tr><td>"Meio" (= metade) — numeral</td><td>Concorda: meio litro, meia hora</td><td>Chegou meia hora atrasado.</td></tr>
+  <tr><td>"Meio" (= um pouco) — advérbio</td><td>Invariável</td><td>Ela estava <u>meio</u> nervosa.</td></tr>
+</table>
+
+<div class="ex">
+  <h3>Exercícios — Concordância</h3>
+  <div class="q"><p>Q14. Assinale a alternativa com concordância verbal CORRETA:</p>
+    <ul><li>A) Haviam muitas testemunhas no local.</li><li>B) Fazem cinco anos que ele está na corporação.</li><li>C) A maioria dos agentes chegou na hora certa.</li><li>D) Um dos que mais trabalharam foi promovido.</li></ul>
+  </div>
+  <div class="q"><p>Q15. "Seguem _____ as cópias do relatório." A forma correta de "anexo" é:</p>
+    <ul><li>A) Anexo</li><li>B) Anexas</li><li>C) Anexo (invariável)</li><li>D) Anexados</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q14-C | Q15-B</div>
+</div>
+</div>
+
+<!-- ========================= -->
+<div class="secao">
+<h1 class="titulo">7. REGÊNCIA, CRASE E COLOCAÇÃO PRONOMINAL</h1>
+
+<h2 class="sub">Regência Verbal — os mais cobrados</h2>
+<table>
+  <tr><th>Verbo</th><th>Regência</th><th>Exemplo correto</th></tr>
+  <tr><td>assistir (ver/presenciar)</td><td>a</td><td>Assisti <u>ao</u> interrogatório.</td></tr>
+  <tr><td>assistir (auxiliar)</td><td>Direto (sem prep.)</td><td>O advogado <u>assistiu</u> o réu.</td></tr>
+  <tr><td>obedecer / desobedecer</td><td>a</td><td>Obedeceu <u>ao</u> comando.</td></tr>
+  <tr><td>responder (cargo/processo)</td><td>por / a</td><td>Responde <u>por</u> improbidade.</td></tr>
+  <tr><td>visar (ter como meta)</td><td>a</td><td>Visa <u>à</u> promoção.</td></tr>
+  <tr><td>visar (assinar/rubricar)</td><td>Direto</td><td>Visou o documento.</td></tr>
+  <tr><td>aspirar (almejar)</td><td>a</td><td>Aspira <u>ao</u> cargo.</td></tr>
+  <tr><td>aspirar (inalar)</td><td>Direto</td><td>Aspirou o ar.</td></tr>
+  <tr><td>implicar (acarretar)</td><td>Direto (sem prep.)</td><td>Isso implica <u>responsabilidade</u>.</td></tr>
+  <tr><td>proceder (dar início a)</td><td>a</td><td>Procedeu <u>à</u> investigação.</td></tr>
+  <tr><td>chegar / ir</td><td>a</td><td>Chegou <u>à</u> delegacia.</td></tr>
+  <tr><td>custar (ser difícil)</td><td>a</td><td>Custou <u>ao</u> delegado agir.</td></tr>
+</table>
+
+<h2 class="sub">Crase — quando usar</h2>
+<p>Crase = preposição "a" + artigo "a" (ou pronome "aquela/aquilo"). Usa-se o acento grave (à).</p>
+<p><strong>Teste do "ao":</strong> substitua a palavra feminina por uma masculina. Se usar "ao" no masculino, usa crase no feminino.</p>
+<div class="exemplo">Fui <u>à</u> delegacia. → Fui <u>ao</u> posto. ✓ usa crase.</div>
+<div class="exemplo">Fui <u>a</u> Brasília. → Fui <u>a</u> São Paulo. Brasília não tem artigo. NÃO usa crase.</div>
+
+<table>
+  <tr><th>USA crase</th><th>NÃO usa crase</th></tr>
+  <tr><td>Antes de palavras femininas com artigo: à escola, à lei, à polícia</td><td>Antes de verbos: Começou a investigar</td></tr>
+  <tr><td>Locuções prepositivas femininas: à vista, à toa, às vezes, à medida que</td><td>Antes de palavras masculinas: a pé, a prazo</td></tr>
+  <tr><td>Antes de "aquela, aquele, aquilo" → àquela, àquele, àquilo</td><td>Antes de pronomes pessoais: a ela, a mim</td></tr>
+  <tr><td>Horas determinadas: às 8h, às 15h</td><td>Antes de pronomes indefinidos: a qualquer, a nenhuma</td></tr>
+  <tr><td></td><td>Antes de nome de cidade sem artigo: a Curitiba, a Brasília</td></tr>
+</table>
+<div class="dica"><strong>Sempre usa crase:</strong> "às" (plural), "àquela/àquele/àquilo", locuções femininas fixas (à toa, às vezes, à medida que, à beira de, à espera de).</div>
+
+<h2 class="sub">Colocação Pronominal</h2>
+<p><strong>Próclise</strong> (pronome ANTES do verbo): obrigatória nas situações abaixo.</p>
+<ul>
+  <li>Palavra de negação: "Não <u>me</u> lembro."</li>
+  <li>Advérbio antes do verbo: "Sempre <u>se</u> dedicou."</li>
+  <li>Pronomes relativos: "Quem <u>me</u> disse isso?"</li>
+  <li>Orações subordinadas: "Espero que <u>te</u> ajude."</li>
+  <li>Pronomes indefinidos: "Ninguém <u>me</u> avisou." / "Alguém <u>te</u> ligou."</li>
+  <li>Orações exclamativas e optativas: "Que Deus <u>te</u> abençoe!"</li>
+</ul>
+<p><strong>Ênclise</strong> (pronome DEPOIS do verbo): usada no início de oração e com infinitivo/gerúndio (sem palavra atrativa).</p>
+<div class="exemplo">Início absoluto de frase: "Diga-<u>me</u> a verdade." (nunca "Me diga" no início)</div>
+<div class="exemplo">Imperativo afirmativo: "Identifique-<u>se</u>!"</div>
+<div class="exemplo">Infinitivo: "É preciso dizê-<u>lo</u>."</div>
+<p><strong>Mesóclise</strong> (pronome NO MEIO do verbo): usada com futuro do presente e futuro do pretérito, quando não há palavra atrativa.</p>
+<div class="exemplo">"Dir-<u>te</u>-ei a verdade." (futuro — direi) — uso literário/formal.</div>
+
+<div class="ex">
+  <h3>Exercícios — Regência, Crase e Pronome</h3>
+  <div class="q"><p>Q16. Assinale a opção com crase CORRETA:</p>
+    <ul><li>A) Ele foi à pé até a delegacia.</li><li>B) Entregou o ofício à ela diretamente.</li><li>C) O agente aspira à promoção.</li><li>D) Chegou à Brasília ontem à noite.</li></ul>
+  </div>
+  <div class="q"><p>Q17. Assinale a colocação pronominal correta na norma culta escrita:</p>
+    <ul><li>A) Me disseram que a investigação foi concluída.</li><li>B) Ninguém me informou sobre o resultado.</li><li>C) Trouxe-me boas notícias ao chegar.</li><li>D) Já me falaram sobre o caso.</li></ul>
+  </div>
+  <div class="q"><p>Q18. "O policial que mais _____ aos superiores foi promovido." O verbo correto é:</p>
+    <ul><li>A) agradou</li><li>B) agradou a</li><li>C) desagradou a</li><li>D) obedeceu</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q16-C | Q17-B | Q18-D (todos obedecem a — Q18 testava regência de "obedecer")</div>
+</div>
+</div>
+
+<!-- ========================= -->
+<div class="secao">
+<h1 class="titulo">8. SEMÂNTICA — SIGNIFICADO DAS PALAVRAS</h1>
+
+<h2 class="sub">Relações entre palavras</h2>
+<ul>
+  <li><strong>Sinonímia:</strong> palavras com sentido semelhante. prender = capturar; inquerir = interrogar.</li>
+  <li><strong>Antonímia:</strong> sentidos opostos. culpado ≠ inocente; liberdade ≠ prisão.</li>
+  <li><strong>Polissemia:</strong> uma palavra com vários sentidos. "Banco" = mobília / instituição financeira / banco de dados.</li>
+  <li><strong>Homonímia:</strong> palavras iguais na forma mas com sentidos diferentes sem relação. "manga" = fruta / parte da roupa.</li>
+  <li><strong>Hiponímia/Hiperonímia:</strong> relação de inclusão. Animal (hiperônimo) inclui cão, gato (hipônimos).</li>
+</ul>
+
+<h2 class="sub">Sentido denotativo e conotativo</h2>
+<p><strong>Denotação:</strong> sentido literal, dicionarizado. "O policial estava com as mãos frias."</p>
+<p><strong>Conotação:</strong> sentido figurado, metafórico. "O investigador tinha mãos de ferro." (= era severo)</p>
+
+<h2 class="sub">Figuras de linguagem</h2>
+<table>
+  <tr><th>Figura</th><th>Definição</th><th>Exemplo</th></tr>
+  <tr><td>Metáfora</td><td>Comparação implícita (sem "como")</td><td>"O agente é uma pedra." (= resistente)</td></tr>
+  <tr><td>Comparação/Símile</td><td>Comparação explícita (com "como")</td><td>"Rápido como uma bala."</td></tr>
+  <tr><td>Metonímia</td><td>Troca de um termo por outro com relação lógica</td><td>"Ler Machado de Assis" (= ler obra de)</td></tr>
+  <tr><td>Antítese</td><td>Oposição de ideias</td><td>"A lei é fria, mas a justiça é humana."</td></tr>
+  <tr><td>Ironia</td><td>Diz o contrário do que quer dizer</td><td>"Que bela investigação!" (quando foi péssima)</td></tr>
+  <tr><td>Hipérbole</td><td>Exagero intencional</td><td>"Trabalhou mil anos nesse caso."</td></tr>
+  <tr><td>Eufemismo</td><td>Suaviza ideia desagradável</td><td>"Ele passou desta para melhor." (morreu)</td></tr>
+  <tr><td>Pleonasmo vicioso</td><td>Repetição desnecessária</td><td>"subir para cima", "entrar dentro"</td></tr>
+</table>
+
+<div class="ex">
+  <h3>Exercícios — Semântica</h3>
+  <div class="q"><p>Q19. "O delegado tem pulso firme na condução dos inquéritos." A expressão "pulso firme" usa:</p>
+    <ul><li>A) Denotação</li><li>B) Pleonasmo</li><li>C) Conotação / metáfora</li><li>D) Eufemismo</li></ul>
+  </div>
+  <div class="q"><p>Q20. Qual alternativa apresenta palavras sinônimas no contexto policial?</p>
+    <ul><li>A) indiciado / absolvido</li><li>B) interrogatório / depoimento</li><li>C) mandado / sentença</li><li>D) réu / vítima</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q19-C | Q20-B</div>
+</div>
+</div>
+
+<!-- ========================= -->
+<div class="secao">
+<h1 class="titulo">9. REDAÇÃO OFICIAL</h1>
+
+<h2 class="sub">Princípios da redação oficial</h2>
+<p>Todo documento oficial deve ter:</p>
+<ul>
+  <li><strong>Clareza:</strong> o leitor deve entender na primeira leitura. Frases simples, sem ambiguidade.</li>
+  <li><strong>Precisão:</strong> use a palavra certa, no sentido exato.</li>
+  <li><strong>Concisão:</strong> economize palavras. Não use três onde um basta.</li>
+  <li><strong>Impessoalidade:</strong> o texto é do órgão, não do servidor. Evite "eu acho", "na minha opinião".</li>
+  <li><strong>Formalidade:</strong> linguagem culta. Sem gírias, abreviações informais ou emoticons.</li>
+  <li><strong>Padronização:</strong> seguir o formato estabelecido para cada tipo de documento.</li>
+</ul>
+
+<h2 class="sub">Documentos oficiais — características</h2>
+<table>
+  <tr><th>Documento</th><th>Uso</th><th>Pronome de tratamento</th></tr>
+  <tr><td>Ofício</td><td>Comunicação entre órgãos ou com cidadãos (externos)</td><td>Vossa Senhoria (V.S.ª)</td></tr>
+  <tr><td>Memorando</td><td>Comunicação interna — mais ágil e informal</td><td>Cargo (Senhor Chefe, Senhor Delegado)</td></tr>
+  <tr><td>Relatório</td><td>Descrição de atividades, fatos ou resultados de investigação</td><td>Terceira pessoa</td></tr>
+  <tr><td>Requerimento</td><td>Pedido formal do cidadão ao poder público</td><td>Vossa Senhoria / Vossa Excelência</td></tr>
+  <tr><td>Portaria</td><td>Ato normativo interno expedido por autoridade</td><td>Terceira pessoa</td></tr>
+  <tr><td>Ata</td><td>Registro de reunião — deve ser fiel ao que ocorreu</td><td>Terceira pessoa, passado</td></tr>
+  <tr><td>Despacho</td><td>Decisão ou instrução exarada em processo administrativo</td><td>Primeira pessoa ou terceira</td></tr>
+</table>
+
+<h2 class="sub">Pronomes de tratamento — resumo</h2>
+<table>
+  <tr><th>Pronome</th><th>Usado para</th><th>Abreviatura</th></tr>
+  <tr><td>Vossa Excelência</td><td>Presidente, Vice, Ministros, Governadores, Senadores, Deputados, Magistrados, Procuradores</td><td>V. Ex.ª</td></tr>
+  <tr><td>Vossa Senhoria</td><td>Demais autoridades: delegados, coronéis, diretores, servidores em geral</td><td>V. S.ª</td></tr>
+  <tr><td>Vossa Magnificência</td><td>Reitores de universidades</td><td>V. Mag.ª</td></tr>
+  <tr><td>Vossa Santidade</td><td>Papa</td><td>V. S.</td></tr>
+</table>
+<div class="atencao"><strong>Concordância com pronomes de tratamento:</strong> o pronome é "Vossa" (segunda pessoa) mas o verbo e os adjetivos vão para a terceira pessoa. "Vossa Excelência <u>assinou</u> o documento <u>ontem</u>." (não "assinastes")</div>
+
+<div class="ex">
+  <h3>Exercícios — Redação Oficial</h3>
+  <div class="q"><p>Q21. O documento oficial usado para comunicação INTERNA entre setores de um mesmo órgão é o:</p>
+    <ul><li>A) Ofício</li><li>B) Memorando</li><li>C) Requerimento</li><li>D) Edital</li></ul>
+  </div>
+  <div class="q"><p>Q22. O pronome de tratamento correto para se dirigir a um Delegado de Polícia é:</p>
+    <ul><li>A) Vossa Excelência</li><li>B) Vossa Magnificência</li><li>C) Vossa Senhoria</li><li>D) Vossa Majestade</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q21-B | Q22-C</div>
+</div>
+</div>
+
+<!-- ========================= -->
+<div class="secao">
+<h1 class="titulo">10. TEMPOS E MODOS VERBAIS — PONTO CRÍTICO DO IDECAN</h1>
+
+<h2 class="sub">Modos verbais</h2>
+<table>
+  <tr><th>Modo</th><th>O que expressa</th><th>Exemplos</th></tr>
+  <tr><td><strong>Indicativo</strong></td><td>Certeza, fato real</td><td>Eu fui, tu foste, ele vai</td></tr>
+  <tr><td><strong>Subjuntivo</strong></td><td>Incerteza, hipótese, desejo</td><td>Se eu fosse, espero que vá</td></tr>
+  <tr><td><strong>Imperativo</strong></td><td>Ordem, pedido</td><td>Vá! Fique! Não saia!</td></tr>
+</table>
+
+<h2 class="sub">Tempos do indicativo — os mais cobrados</h2>
+<table>
+  <tr><th>Tempo</th><th>Uso</th><th>Exemplo</th></tr>
+  <tr><td>Pretérito perfeito</td><td>Ação concluída no passado</td><td>O agente prendeu o suspeito.</td></tr>
+  <tr><td>Pretérito imperfeito</td><td>Ação contínua/habitual no passado</td><td>O delegado investigava todos os dias.</td></tr>
+  <tr><td>Pretérito mais-que-perfeito</td><td>Ação anterior a outra ação passada</td><td>Quando a polícia chegou, o suspeito já havia fugido.</td></tr>
+  <tr><td>Futuro do presente</td><td>Ação futura em relação ao presente</td><td>O inquérito será concluído amanhã.</td></tr>
+  <tr><td>Futuro do pretérito</td><td>Ação futura em relação ao passado; hipótese; cortesia</td><td>Ele seria preso se tivesse resistido. / Poderia me ajudar?</td></tr>
+</table>
+<div class="dica"><strong>Futuro do pretérito para cortesia:</strong> em redação oficial, use "poderia" e "gostaria" em vez de "pode" e "quero" — mais formal e educado.</div>
+
+<h2 class="sub">Infinitivo, Gerúndio e Particípio — formas nominais do verbo</h2>
+<ul>
+  <li><strong>Infinitivo:</strong> forma básica (andar, correr). Usado com preposição em orações reduzidas.</li>
+  <li><strong>Gerúndio</strong> (terminação -ando, -endo, -indo): ação em progresso. "O policial está investigando." Cuidado: gerundismo desnecessário em comunicação oficial ("vou estar enviando" → "enviarei").</li>
+  <li><strong>Particípio:</strong> dois tipos — regular (andado, corrido) e irregular (preso, feito, posto). Usado na voz passiva e com verbos auxiliares.</li>
+</ul>
+<div class="alerta"><strong>Particípio duplo — muito cobrado:</strong> Alguns verbos têm dois particípios. O regular usa-se com ter/haver; o irregular com ser/estar.
+  <ul>
+    <li>acender: acendido (ter/haver) / aceso (ser/estar)</li>
+    <li>prender: prendido (ter/haver) / preso (ser/estar)</li>
+    <li>soltar: soltado (ter/haver) / solto (ser/estar)</li>
+    <li>matar: matado (ter/haver) / morto (ser/estar)</li>
+    <li>salvar: salvado (ter/haver) / salvo (ser/estar)</li>
+  </ul>
+  Ex.: "A polícia havia <u>prendido</u> o suspeito" (prendido = aux. havia) | "O suspeito foi <u>preso</u>" (preso = voz passiva com ser)
+</div>
+
+<h2 class="sub">Pontuação — regras essenciais</h2>
+<table>
+  <tr><th>Sinal</th><th>Quando usar</th><th>Exemplo</th></tr>
+  <tr><td>Vírgula</td><td>Isolar aposto, vocativo, adjunto adverbial deslocado, orações intercaladas, enumerações</td><td>"O agente, cansado, continuou." / "Ontem, choveu."</td></tr>
+  <tr><td>Vírgula proibida</td><td>Entre sujeito e predicado; entre verbo e complemento sem inversão</td><td>❌ "O policial, prendeu o suspeito."</td></tr>
+  <tr><td>Ponto e vírgula</td><td>Separar orações coordenadas longas; separar itens de enumeração com vírgulas internas</td><td>"João estudou muito; Maria, pouco."</td></tr>
+  <tr><td>Dois-pontos</td><td>Antes de citação, enumeração, explicação</td><td>"O delegado determinou: arquivar o caso."</td></tr>
+  <tr><td>Aspas</td><td>Citação direta, ironia, palavras em sentido especial</td><td>"Ele é um 'gênio' da investigação." (ironia)</td></tr>
+</table>
+
+<div class="ex">
+  <h3>Exercícios — Verbos e Pontuação</h3>
+  <div class="q"><p>Q21-A. "Quando o delegado chegou, o suspeito já _____ fugido." O tempo verbal correto é:</p>
+    <ul><li>A) tinha (pretérito imperfeito do indicativo)</li><li>B) teria (futuro do pretérito)</li><li>C) tinha (pretérito mais-que-perfeito composto)</li><li>D) tem (presente)</li></ul>
+  </div>
+  <div class="q"><p>Q21-B. Assinale a frase com uso CORRETO do particípio:</p>
+    <ul><li>A) O suspeito foi prendido pelo agente.</li><li>B) O inquérito havia sido abrido.</li><li>C) O suspeito tinha prendido o cúmplice antes de fugir.</li><li>D) O delegado foi elegido pela corporação.</li></ul>
+  </div>
+  <div class="q"><p>Q21-C. Em qual alternativa a vírgula está INCORRETAMENTE usada?</p>
+    <ul><li>A) O delegado, exausto, concluiu o inquérito.</li><li>B) João estudou muito; Maria, pouco.</li><li>C) O policial, prendeu o suspeito ontem.</li><li>D) Ontem, a operação foi bem-sucedida.</li></ul>
+  </div>
+  <div class="gab">Q21-A: C (pretérito mais-que-perfeito — ação anterior à outra passada) | Q21-B: C (com ter/haver = particípio regular "prendido"; com ser/estar = irregular "preso") | Q21-C: C (vírgula entre sujeito e predicado é errada)</div>
+</div>
+</div>
+
+<!-- GABARITO GERAL -->
+<div class="secao">
+<h1 class="titulo">GABARITO GERAL — LÍNGUA PORTUGUESA</h1>
+<table>
+  <tr><th>Q</th><th>Resp.</th><th>Tema</th></tr>
+  <tr><td>Q1</td><td>B</td><td>Interpretação — inferência</td></tr>
+  <tr><td>Q2</td><td>C</td><td>Interpretação — conectivo de tempo</td></tr>
+  <tr><td>Q3</td><td>A</td><td>Ortografia — hífen (anti-inflamatório)</td></tr>
+  <tr><td>Q4</td><td>B</td><td>Ortografia — parônimos (discrição)</td></tr>
+  <tr><td>Q5</td><td>B</td><td>Ortografia — parônimos (iminente)</td></tr>
+  <tr><td>Q6</td><td>B</td><td>Coesão — consequência (por isso)</td></tr>
+  <tr><td>Q7</td><td>C</td><td>Coesão — concessão (embora)</td></tr>
+  <tr><td>Q8</td><td>B</td><td>Coesão — referência (Esta = a operação)</td></tr>
+  <tr><td>Q9</td><td>C</td><td>Morfologia — advérbio de modo</td></tr>
+  <tr><td>Q10</td><td>A</td><td>Morfologia — voz passiva</td></tr>
+  <tr><td>Q11</td><td>B</td><td>Sintaxe — adjetiva restritiva</td></tr>
+  <tr><td>Q12</td><td>C</td><td>Sintaxe — conclusão (logo)</td></tr>
+  <tr><td>Q13</td><td>B</td><td>Sintaxe — objeto indireto</td></tr>
+  <tr><td>Q14</td><td>C</td><td>Concordância verbal — maioria</td></tr>
+  <tr><td>Q15</td><td>B</td><td>Concordância nominal — anexas</td></tr>
+  <tr><td>Q16</td><td>C</td><td>Crase — aspirar à</td></tr>
+  <tr><td>Q17</td><td>B</td><td>Pronome — próclise com "ninguém"</td></tr>
+  <tr><td>Q18</td><td>D</td><td>Regência — obedecer a</td></tr>
+  <tr><td>Q19</td><td>C</td><td>Semântica — conotação</td></tr>
+  <tr><td>Q20</td><td>B</td><td>Semântica — sinônimos</td></tr>
+  <tr><td>Q21</td><td>B</td><td>Redação oficial — memorando</td></tr>
+  <tr><td>Q22</td><td>C</td><td>Redação oficial — Vossa Senhoria</td></tr>
+  <tr><td>Q21-A</td><td>C</td><td>Pretérito mais-que-perfeito composto</td></tr>
+  <tr><td>Q21-B</td><td>C</td><td>Particípio regular com ter/haver</td></tr>
+  <tr><td>Q21-C</td><td>C</td><td>Vírgula entre sujeito e predicado = errado</td></tr>
+</table>
+</div>
+
+
+<div class="contracapa">
+  <div class="logo-sc">Polícia Civil</div>
+  <div class="logo-pc">PC-SC</div>
+  <div class="logo-sc">Santa Catarina</div>
+  <div class="stripe"></div>
+  <h2>Bons estudos!</h2>
+  <p>Concurso Público — Edital 01/2025</p>
+  <p>Cargo: Agente de Polícia Civil</p>
+  <p>Organizadora: IDECAN</p>
+  <p style="margin-top:4mm; color:#fff; font-weight:bold;">Elaborado por: Dani Kaloi</p>
+  <div class="stripe"></div>
+  <div class="data">PROVA: 21 DE MARÇO DE 2026</div>
+  <div class="rodape">Material de estudo — uso pessoal</div>
+</div>
+
+</body>
+</html>

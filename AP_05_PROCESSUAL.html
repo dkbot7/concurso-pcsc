@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Apostila PC-SC — Direito Processual Penal</title>
+<style>
+  @page { size: A5; margin: 12mm 10mm 16mm 10mm; @bottom-center { content: "Página " counter(page) " de " counter(pages); font-size: 7pt; color: #555; font-family: Arial, sans-serif; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 8.5pt; color: #111; line-height: 1.4; background: #fff; }
+  .capa { text-align: center; padding: 40mm 20mm; page-break-after: always; }
+  .capa h1 { font-size: 22pt; color: #1a3560; margin-bottom: 8px; }
+  .capa h2 { font-size: 15pt; color: #c0392b; margin-bottom: 20px; }
+  .capa .info { font-size: 11pt; margin: 5px 0; }
+  .capa .num { font-size: 48pt; color: #1a3560; font-weight: bold; margin: 20px 0; }
+  .capa .prova { font-size: 12pt; font-weight: bold; color: #c0392b; border: 2px solid #c0392b; padding: 10px 20px; display: inline-block; margin-top: 20px; }
+  .secao { page-break-before: always; }
+  .secao:first-of-type { page-break-before: avoid; }
+  h1.titulo { background: #1a3560; color: #fff; font-size: 13pt; padding: 8px 12px; margin-bottom: 14px; }
+  h2.sub { font-size: 11pt; color: #1a3560; border-left: 4px solid #1a3560; padding-left: 8px; margin: 14px 0 7px; }
+  h3.sub2 { font-size: 10pt; color: #c0392b; margin: 10px 0 4px; font-weight: bold; }
+  p { margin-bottom: 7px; }
+  ul, ol { padding-left: 18px; margin-bottom: 8px; }
+  li { margin-bottom: 3px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 9.5pt; }
+  th { background: #1a3560; color: #fff; padding: 5px 7px; text-align: left; }
+  td { padding: 4px 7px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  .alerta { background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .dica { background: #d4edda; border-left: 4px solid #28a745; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .atencao { background: #f8d7da; border-left: 4px solid #c0392b; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .ex { background: #f4f7fb; border: 1px solid #1a3560; border-radius: 4px; padding: 12px 14px; margin: 16px 0; }
+  .ex h3 { color: #1a3560; font-size: 11pt; margin-bottom: 10px; border-bottom: 1px solid #1a3560; padding-bottom: 4px; }
+  .q { margin-bottom: 14px; }
+  .q p { font-weight: bold; margin-bottom: 5px; font-size: 9.5pt; }
+  .q ul { font-size: 9.5pt; padding-left: 10px; }
+  .q ul li { list-style: none; margin-bottom: 2px; }
+  .gab { background: #1a3560; color: #fff; border-radius: 4px; padding: 8px 14px; margin-top: 10px; font-size: 9pt; }
+  .art { background: #f0f8ff; border: 1px solid #aad4f5; padding: 6px 10px; margin: 6px 0; font-size: 9pt; border-radius: 3px; }
+  /* === CAPA REDESIGN === */
+  .capa { text-align: center; background: #1a3560; color: #fff; padding: 8mm 8mm 10mm 8mm; page-break-after: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .capa .num { font-size: 52pt; color: #fff; font-weight: bold; margin: 0 0 2mm 0; line-height: 1; }
+  .capa h1 { font-size: 14pt; color: #fff; margin-bottom: 4px; font-weight: bold; }
+  .capa h2 { font-size: 10pt; color: #aad4f5; margin-bottom: 6px; font-weight: normal; }
+  .capa .info { font-size: 8.5pt; color: #ccc; margin: 2px 0; }
+  .capa .stripe { width: 100%; height: 3px; background: #c0392b; margin: 5mm 0; }
+  .capa .prova { font-size: 9.5pt; font-weight: bold; color: #fff; background: #c0392b; padding: 6px 16px; display: inline-block; margin-top: 5mm; border-radius: 2px; }
+  /* === CONTRACAPA === */
+  .contracapa { text-align: center; background: #1a3560; color: #fff; padding: 10mm 8mm; page-break-before: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .contracapa .logo-pc { font-size: 48pt; font-weight: bold; color: #c0392b; line-height: 1; letter-spacing: 4px; }
+  .contracapa .logo-sc { font-size: 8.5pt; color: #aad4f5; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 1mm; }
+  .contracapa .stripe { width: 60%; height: 3px; background: #c0392b; margin: 6mm auto; }
+  .contracapa h2 { font-size: 14pt; color: #fff; margin: 0 0 4mm 0; }
+  .contracapa p { font-size: 8.5pt; color: #aad4f5; margin: 2px 0; line-height: 1.6; }
+  .contracapa .data { font-size: 10pt; color: #fff; font-weight: bold; margin-top: 5mm; border: 2px solid #c0392b; padding: 5px 14px; display: inline-block; letter-spacing: 1px; }
+  .contracapa .rodape { font-size: 7pt; color: #444; margin-top: 10mm; }
+</style>
+</head>
+<body>
+<div class="capa">
+  <div class="num">5</div>
+  <div class="stripe"></div>
+  <h1>NOÇÕES DE DIREITO PROCESSUAL PENAL</h1>
+  <h2>Apostila Completa — PC-SC 2026</h2>
+  <div class="info">Polícia Civil de Santa Catarina | Edital 01/2025</div>
+  <div class="info"><strong>8 questões na prova</strong></div>
+  <div class="prova">PROVA: 21 DE MARÇO DE 2026</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">1. PRINCÍPIOS E SISTEMAS PROCESSUAIS</h1>
+<h2 class="sub">Princípios do Processo Penal</h2>
+<table>
+  <tr><th>Princípio</th><th>Conceito</th></tr>
+  <tr><td>Presunção de inocência</td><td>Ninguém é culpado até sentença condenatória transitada em julgado (art. 5°, LVII CF)</td></tr>
+  <tr><td>Contraditório</td><td>Toda prova ou alegação deve ser comunicada à outra parte, que tem direito de responder</td></tr>
+  <tr><td>Ampla defesa</td><td>O réu tem direito a todos os meios de defesa possíveis (técnica + autodefesa)</td></tr>
+  <tr><td>Devido processo legal</td><td>Ninguém será privado de liberdade ou bens sem o processo estabelecido em lei</td></tr>
+  <tr><td>Verdade real</td><td>Busca-se o que realmente aconteceu, não apenas o formalmente provado</td></tr>
+  <tr><td>In dubio pro reo</td><td>Na dúvida sobre a culpa, decide-se em favor do acusado</td></tr>
+  <tr><td>Ne bis in idem</td><td>Ninguém pode ser processado duas vezes pelo mesmo fato</td></tr>
+  <tr><td>Publicidade</td><td>Processos são públicos (exceto segredo de justiça)</td></tr>
+  <tr><td>Nemo tenetur se detegere</td><td>Ninguém é obrigado a produzir prova contra si mesmo (direito ao silêncio)</td></tr>
+  <tr><td>Juiz natural</td><td>Ninguém pode ser julgado por tribunal de exceção criado após o fato</td></tr>
+</table>
+<h2 class="sub">Sistemas processuais penais</h2>
+<ul>
+  <li><strong>Inquisitório:</strong> as funções de investigar, acusar e julgar estão concentradas num mesmo órgão. Sem contraditório. Segredo. Histórico.</li>
+  <li><strong>Acusatório:</strong> funções separadas: polícia investiga → MP acusa → juiz julga de forma imparcial. Sistema adotado pela CF/88 e confirmado pelo art. 3°-A CPP (Lei 13.964/2019).</li>
+  <li><strong>Misto:</strong> investigação inquisitória + julgamento acusatório.</li>
+</ul>
+<div class="ex">
+  <h3>Exercícios — Princípios</h3>
+  <div class="q"><p>Q1. O princípio que garante que o réu não é obrigado a confessar ou produzir provas contra si é chamado de:</p>
+    <ul><li>A) Contraditório</li><li>B) Ne bis in idem</li><li>C) Nemo tenetur se detegere</li><li>D) In dubio pro reo</li></ul>
+  </div>
+  <div class="q"><p>Q2. No sistema acusatório adotado pelo Brasil, a função de investigação criminal cabe:</p>
+    <ul><li>A) Ao Ministério Público</li><li>B) Ao juiz de instrução</li><li>C) À Polícia Judiciária</li><li>D) Ao juiz das garantias</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q1-C | Q2-C</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">2. INQUÉRITO POLICIAL</h1>
+<h2 class="sub">Natureza e características</h2>
+<p>O inquérito policial (IP) é um <strong>procedimento administrativo</strong> de natureza inquisitória, conduzido pelo delegado de polícia para apurar autoria e materialidade de infração penal.</p>
+<table>
+  <tr><th>Característica</th><th>Explicação</th></tr>
+  <tr><td>Escrito</td><td>Todas as peças são documentadas no papel/sistema</td></tr>
+  <tr><td>Sigiloso</td><td>Pode ser sigiloso para não prejudicar investigação (art. 20 CPP)</td></tr>
+  <tr><td>Inquisitório</td><td>Não há contraditório amplo — investigado não tem direito à ampla defesa nesta fase</td></tr>
+  <tr><td>Dispensável</td><td>O MP pode oferecer denúncia sem IP se tiver provas suficientes</td></tr>
+  <tr><td>Indisponível</td><td>Uma vez instaurado, só o juiz pode arquivá-lo (a pedido do MP)</td></tr>
+  <tr><td>Discricionário</td><td>O delegado decide como conduzir a investigação</td></tr>
+  <tr><td>Oficial</td><td>Conduzido por autoridade pública (delegado)</td></tr>
+</table>
+<h2 class="sub">Formas de instauração</h2>
+<ul>
+  <li><strong>De ofício:</strong> o delegado toma iniciativa própria ao ter notícia do crime.</li>
+  <li><strong>Por portaria:</strong> documento formal que instaura o IP (crimes de ação pública).</li>
+  <li><strong>Por auto de prisão em flagrante:</strong> o flagrante já instaura automaticamente.</li>
+  <li><strong>Por requisição:</strong> do MP, juiz ou ministro da Justiça.</li>
+  <li><strong>Por requerimento:</strong> da vítima ou seu representante legal.</li>
+</ul>
+<h2 class="sub">Prazos de conclusão</h2>
+<table>
+  <tr><th>Situação</th><th>Polícia Civil (estadual)</th><th>Polícia Federal</th></tr>
+  <tr><td>Réu PRESO</td><td>10 dias (improrrogável)</td><td>15 dias (prorrogável por mais 15)</td></tr>
+  <tr><td>Réu SOLTO</td><td>30 dias (prorrogável)</td><td>30 dias (prorrogável)</td></tr>
+</table>
+<h2 class="sub">Lei 12.830/2013 — Investigação pelo Delegado</h2>
+<ul>
+  <li>Investigação criminal é atividade exclusiva de polícia judiciária.</li>
+  <li>Delegado de polícia é autoridade policial de carreira, bacharel em Direito.</li>
+  <li><strong>Indiciamento é ato privativo do delegado</strong> — feito mediante análise técnico-jurídica da autoria e materialidade.</li>
+  <li>MP e juiz não podem requisitar diretamente a instauração de IP ou o indiciamento.</li>
+  <li>O delegado pode requerer ao juiz medidas cautelares, prisão preventiva, busca e apreensão.</li>
+</ul>
+<div class="ex">
+  <h3>Exercícios — Inquérito</h3>
+  <div class="q"><p>Q3. O prazo para conclusão do inquérito policial estadual quando o investigado está PRESO é:</p>
+    <ul><li>A) 5 dias</li><li>B) 10 dias</li><li>C) 15 dias</li><li>D) 30 dias</li></ul>
+  </div>
+  <div class="q"><p>Q4. Segundo a Lei 12.830/2013, o indiciamento é ato privativo:</p>
+    <ul><li>A) Do juiz</li><li>B) Do Ministério Público</li><li>C) Do delegado de polícia</li><li>D) Do escrivão de polícia</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q3-B | Q4-C</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">3. AÇÃO PENAL E PROVAS</h1>
+<h2 class="sub">Tipos de ação penal</h2>
+<table>
+  <tr><th>Tipo</th><th>Quem promove</th><th>Quando</th><th>Exemplos</th></tr>
+  <tr><td>Pública incondicionada</td><td>Ministério Público</td><td>Independe de autorização da vítima</td><td>Homicídio, roubo, tráfico</td></tr>
+  <tr><td>Pública condicionada à representação</td><td>MP — mas vítima precisa "representar" (pedir)</td><td>Após representação da vítima</td><td>Lesão leve, ameaça, estelionato (regra geral)</td></tr>
+  <tr><td>Pública condicionada à requisição do Ministro da Justiça</td><td>MP</td><td>Após requisição</td><td>Crimes cometidos por estrangeiro contra brasileiro no exterior</td></tr>
+  <tr><td>Privada</td><td>Vítima (por advogado)</td><td>No prazo de 6 meses após saber o autor</td><td>Calúnia, difamação, injúria (regra)</td></tr>
+</table>
+
+<h2 class="sub">Provas — princípios</h2>
+<ul>
+  <li><strong>Livre convencimento motivado:</strong> o juiz aprecia livremente as provas mas deve fundamentar.</li>
+  <li><strong>Prova ilícita:</strong> obtida com violação a direito fundamental (busca sem mandado). Inadmissível (art. 5°, LVI CF).</li>
+  <li><strong>Prova ilícita por derivação (frutos da árvore envenenada):</strong> prova lícita que derivou de uma prova ilícita também é contaminada.</li>
+  <li><strong>Prova emprestada:</strong> prova produzida em outro processo — admissível se a parte contra quem se usa participou do processo original.</li>
+</ul>
+
+<h2 class="sub">Meios de prova — detalhados</h2>
+<p><strong>Perícia (arts. 158-184 CPP):</strong> exame técnico realizado por perito oficial ou ad hoc. O exame de corpo de delito é obrigatório para crimes que deixam vestígios — a confissão não o substitui.</p>
+<p><strong>Interrogatório (arts. 185-196 CPP):</strong> o acusado tem direito ao silêncio, à presença de advogado e a ser interrogado antes do julgamento. Silêncio não pode ser interpretado como confissão.</p>
+<p><strong>Reconhecimento de pessoas (art. 226 CPP):</strong> procedimento formal — a testemunha descreve primeiro, depois visualiza o suspeito entre outras pessoas. Deve ser documentado em auto.</p>
+<p><strong>Busca e apreensão (arts. 240-250 CPP):</strong></p>
+<ul>
+  <li>Domiciliar: EXIGE mandado judicial. Sem mandado: só em flagrante, catástrofe ou com consentimento.</li>
+  <li>Pessoal: não exige mandado — fundada suspeita de posse de objeto ilícito ou arma.</li>
+</ul>
+
+<h2 class="sub">Interceptação telefônica (Lei 9.296/1996)</h2>
+<ul>
+  <li>Exige ordem judicial fundamentada.</li>
+  <li>Só cabe em crime punível com reclusão.</li>
+  <li>Outros meios de prova devem ser insuficientes.</li>
+  <li>Prazo: 15 dias, renovável por mais 15 indefinidamente, se houver fundamento.</li>
+  <li>Interceptação = captura em tempo real da comunicação.</li>
+  <li>Gravação ambiental / clandestina: gravada por um dos interlocutores sem conhecimento do outro — pode ser prova lícita (não é interceptação).</li>
+</ul>
+
+<h2 class="sub">Cadeia de custódia (arts. 158-A a 158-F CPP)</h2>
+<p>Conjunto de procedimentos para preservar a integridade da prova. Fases: reconhecimento → isolamento → fixação → coleta → acondicionamento → transporte → recebimento → processamento → armazenamento → descarte.</p>
+<div class="atencao">Violação da cadeia de custódia não acarreta necessariamente nulidade da prova, mas o juiz deve avaliar o impacto na confiabilidade.</div>
+
+<div class="ex">
+  <h3>Exercícios — Ação Penal e Provas</h3>
+  <div class="q"><p>Q5. Em crime de lesão corporal leve, o Ministério Público só pode oferecer denúncia se a vítima:</p>
+    <ul><li>A) Constituir advogado</li><li>B) Apresentar representação</li><li>C) Concordar com o arquivamento</li><li>D) Apresentar boletim de ocorrência</li></ul>
+  </div>
+  <div class="q"><p>Q6. A interceptação telefônica, sem autorização judicial, configura prova:</p>
+    <ul><li>A) Válida se realizada pela polícia</li><li>B) Ilícita, inadmissível no processo</li><li>C) Válida com autorização do Ministério Público</li><li>D) Válida apenas em crimes hediondos</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q5-B | Q6-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">4. PRISÃO E MEDIDAS CAUTELARES</h1>
+<h2 class="sub">Prisão em flagrante (arts. 301-310 CPP)</h2>
+<p>Captura no ato ou logo após a prática do crime.</p>
+<table>
+  <tr><th>Espécie</th><th>Quando</th></tr>
+  <tr><td>Flagrante próprio (art. 302, I e II)</td><td>Está cometendo ou acaba de cometer o crime</td></tr>
+  <tr><td>Flagrante impróprio/quase flagrante (art. 302, III)</td><td>Perseguido logo após pela autoridade, vítima ou qualquer pessoa</td></tr>
+  <tr><td>Flagrante presumido/ficto (art. 302, IV)</td><td>Encontrado logo depois com instrumentos, armas, objetos ou papéis que façam presumir ser o autor</td></tr>
+  <tr><td>Flagrante preparado/provocado</td><td>Armado pelo próprio policial — INVÁLIDO (Súmula 145 STF)</td></tr>
+  <tr><td>Flagrante esperado</td><td>Policial aguarda o crime para prender no ato — VÁLIDO</td></tr>
+</table>
+<p>Após a prisão em flagrante: em 24h o preso deve ser apresentado ao juiz, que pode: relaxar a prisão (ilegal), conceder liberdade provisória com ou sem fiança, converter em preventiva.</p>
+
+<h2 class="sub">Prisão temporária — Lei 7.960/1989</h2>
+<ul>
+  <li>Decretada pelo juiz a pedido do delegado ou MP — delegado não pode decretar sozinho.</li>
+  <li>Só cabe durante a investigação (IP).</li>
+  <li>Crimes: lista taxativa do art. 1°, III (homicídio doloso, sequestro, roubo, tráfico, estupro, etc.).</li>
+  <li>Prazo: <strong>5 dias + 5 dias</strong> (crimes comuns) | <strong>30 dias + 30 dias</strong> (crimes hediondos).</li>
+</ul>
+
+<h2 class="sub">Prisão preventiva (arts. 311-316 CPP)</h2>
+<p>Decretada em qualquer fase — inquérito ou processo. Sem prazo fixo (deve ser revista periodicamente).</p>
+<p><strong>Pressupostos:</strong> prova da existência do crime (materialidade) + indício suficiente de autoria.</p>
+<p><strong>Fundamentos (pelo menos um):</strong></p>
+<ul>
+  <li>Garantia da ordem pública (riscos se o agente permanecer solto)</li>
+  <li>Garantia da ordem econômica</li>
+  <li>Conveniência da instrução criminal (não perturbar coleta de provas)</li>
+  <li>Assegurar a aplicação da lei penal (risco de fuga)</li>
+</ul>
+<div class="atencao"><strong>Não cabe preventiva para:</strong> contravenções penais, crimes culposos, crimes com pena máxima ≤ 4 anos (em regra), agente com mais de 80 anos, mulher grávida ou com filho menor de 12 anos (podem usar prisão domiciliar).</div>
+
+<h2 class="sub">Medidas cautelares diversas da prisão (art. 319 CPP)</h2>
+<p>O juiz pode aplicar, em vez de prender: comparecimento periódico em juízo; proibição de acesso a determinados lugares; proibição de contato com determinadas pessoas; proibição de se ausentar do país; recolhimento domiciliar no período noturno; suspensão de função pública; internação provisória; fiança; monitoramento eletrônico (tornozeleira).</p>
+
+<h2 class="sub">Fiança</h2>
+<p>Valor depositado para garantir que o preso em flagrante aguarde em liberdade.</p>
+<ul>
+  <li>Delegado pode conceder fiança: crime com pena máxima ≤ 4 anos.</li>
+  <li>Juiz concede nos demais casos.</li>
+  <li>Não cabe fiança em: crimes hediondos, tráfico, terrorismo, tortura, resistência com violência, crimes cometidos em violência doméstica.</li>
+</ul>
+
+<h2 class="sub">Súmula Vinculante 11 — Uso de Algemas</h2>
+<p>Somente é lícito usar algemas em caso de resistência e de fundado receio de fuga ou de perigo à integridade física própria ou alheia. O emprego fora dessas hipóteses configura abuso de autoridade (Lei 13.869/2019).</p>
+
+<div class="ex">
+  <h3>Exercícios — Prisão</h3>
+  <div class="q"><p>Q7. O prazo máximo da prisão temporária em crime hediondo é de:</p>
+    <ul><li>A) 5 dias prorrogáveis por mais 5</li><li>B) 10 dias improrrogáveis</li><li>C) 30 dias prorrogáveis por mais 30</li><li>D) 60 dias improrrogáveis</li></ul>
+  </div>
+  <div class="q"><p>Q8. A busca domiciliar SEM mandado judicial é admitida em caso de:</p>
+    <ul><li>A) Crime hediondo</li><li>B) Ordem do delegado de polícia</li><li>C) Flagrante delito</li><li>D) Investigação de tráfico de drogas</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q7-C | Q8-C</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">5. LEI 12.850/2013 — ORGANIZAÇÕES CRIMINOSAS</h1>
+
+<h2 class="sub">Conceito legal de organização criminosa</h2>
+<p>4 (quatro) ou mais pessoas, estruturalmente ordenada e caracterizada pela divisão de tarefas, ainda que informalmente, com objetivo de obter, direta ou indiretamente, vantagem de qualquer natureza, mediante a prática de infrações penais cujas penas máximas sejam superiores a 4 anos ou sejam de caráter transnacional.</p>
+<p><strong>Pena:</strong> reclusão de 3 a 8 anos + multa, para quem participar da organização.</p>
+<p><strong>Agravante:</strong> pena aumenta para líder, fundador, cooptador de novos membros, ou envolvimento de servidor público.</p>
+
+<h2 class="sub">Meios especiais de investigação</h2>
+<table>
+  <tr><th>Meio</th><th>O que é</th><th>Autorização</th></tr>
+  <tr><td><strong>Colaboração premiada</strong></td><td>Acordo do investigado/réu com o MP: fornece informações em troca de benefícios penais</td><td>Homologada pelo juiz</td></tr>
+  <tr><td><strong>Captação ambiental</strong></td><td>Gravação de conversas em ambientes físicos sem conhecimento dos participantes</td><td>Judicial</td></tr>
+  <tr><td><strong>Ação controlada</strong></td><td>Retardamento da prisão em flagrante para identificar mais integrantes e ampliar a eficiência</td><td>Comunicação ao juiz (ou consentimento judicial)</td></tr>
+  <tr><td><strong>Acesso a registros bancários e fiscais</strong></td><td>Quebra de sigilo bancário e fiscal</td><td>Judicial</td></tr>
+  <tr><td><strong>Agente infiltrado</strong></td><td>Policial que se infiltra na organização usando identidade falsa</td><td>Judicial (prazo: 6 meses, renovável)</td></tr>
+  <tr><td><strong>Agente infiltrado virtual</strong></td><td>Policial que cria perfis falsos online para investigar crimes digitais em organizações</td><td>Judicial — inserido pelo Pacote Anticrime (Lei 13.964/2019)</td></tr>
+</table>
+
+<h2 class="sub">Colaboração premiada — detalhes</h2>
+<p>A colaboração (delação premiada) permite ao investigado firmar acordo com o Ministério Público para:</p>
+<ul>
+  <li>Identificar os coautores e partícipes</li>
+  <li>Revelar infrações praticadas pela organização</li>
+  <li>Recuperar produtos ou proveitos do crime</li>
+  <li>Localizar vítimas</li>
+  <li>Prevenir infrações futuras da organização</li>
+</ul>
+<p><strong>Benefícios possíveis:</strong> perdão judicial, redução de 2/3 da pena, substituição por restritiva de direitos, regime aberto, não persecução penal.</p>
+<div class="atencao"><strong>Atenção:</strong> a colaboração premiada, por si só, não é suficiente para condenar — precisa ser corroborada por outras provas. O colaborador não pode ser o único fundamento da condenação dos delatados.</div>
+
+<h2 class="sub">Interceptação das comunicações em organização criminosa</h2>
+<p>Além da Lei 9.296/96 (interceptação telefônica), na investigação de organizações criminosas também se admite:</p>
+<ul>
+  <li>Captação ambiental de sinais eletromagnéticos, ópticos ou acústicos</li>
+  <li>Monitoramento de e-mails, redes sociais e aplicativos de mensagens (com ordem judicial)</li>
+</ul>
+
+<div class="ex">
+  <h3>Exercícios — Organizações Criminosas</h3>
+  <div class="q"><p>Q7-A (complementar). Segundo a Lei 12.850/2013, para configurar organização criminosa é necessário, dentre outros requisitos, no mínimo:</p>
+    <ul><li>A) 2 pessoas</li><li>B) 3 pessoas</li><li>C) 4 pessoas</li><li>D) 5 pessoas</li></ul>
+  </div>
+  <div class="q"><p>Q7-B (complementar). A ação controlada consiste em:</p>
+    <ul><li>A) Agente policial que se infiltra na organização com identidade falsa</li><li>B) Retardamento da prisão em flagrante para identificar mais integrantes da organização</li><li>C) Acordo do investigado com o Ministério Público em troca de benefícios penais</li><li>D) Gravação de conversas em ambientes físicos sem conhecimento dos participantes</li></ul>
+  </div>
+  <div class="gab">Q7-A: C | Q7-B: B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">GABARITO GERAL — PROCESSUAL PENAL</h1>
+<table>
+  <tr><th>Q</th><th>Resp.</th><th>Tema</th></tr>
+  <tr><td>Q1</td><td>C</td><td>Nemo tenetur — direito ao silêncio</td></tr>
+  <tr><td>Q2</td><td>C</td><td>Sistema acusatório — polícia investiga</td></tr>
+  <tr><td>Q3</td><td>B</td><td>IP preso = 10 dias</td></tr>
+  <tr><td>Q4</td><td>C</td><td>Indiciamento = ato do delegado</td></tr>
+  <tr><td>Q5</td><td>B</td><td>Ação pública condicionada = representação</td></tr>
+  <tr><td>Q6</td><td>B</td><td>Interceptação sem judicial = prova ilícita</td></tr>
+  <tr><td>Q7</td><td>C</td><td>Temporária hediondo = 30+30</td></tr>
+  <tr><td>Q8</td><td>C</td><td>Busca domiciliar sem mandado = flagrante</td></tr>
+</table>
+</div>
+
+<div class="contracapa">
+  <div class="logo-sc">Polícia Civil</div>
+  <div class="logo-pc">PC-SC</div>
+  <div class="logo-sc">Santa Catarina</div>
+  <div class="stripe"></div>
+  <h2>Bons estudos!</h2>
+  <p>Concurso Público — Edital 01/2025</p>
+  <p>Cargo: Agente de Polícia Civil</p>
+  <p>Organizadora: IDECAN</p>
+  <p style="margin-top:4mm; color:#fff; font-weight:bold;">Elaborado por: Dani Kaloi</p>
+  <div class="stripe"></div>
+  <div class="data">PROVA: 21 DE MARÇO DE 2026</div>
+  <div class="rodape">Material de estudo — uso pessoal</div>
+</div>
+
+</body>
+</html>

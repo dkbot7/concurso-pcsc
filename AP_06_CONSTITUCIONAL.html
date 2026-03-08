@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Apostila PC-SC — Direito Constitucional</title>
+<style>
+  @page { size: A5; margin: 12mm 10mm 16mm 10mm; @bottom-center { content: "Página " counter(page) " de " counter(pages); font-size: 7pt; color: #555; font-family: Arial, sans-serif; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 8.5pt; color: #111; line-height: 1.4; background: #fff; }
+  .capa { text-align: center; padding: 40mm 20mm; page-break-after: always; }
+  .capa h1 { font-size: 22pt; color: #1a3560; margin-bottom: 8px; }
+  .capa h2 { font-size: 15pt; color: #c0392b; margin-bottom: 20px; }
+  .capa .info { font-size: 11pt; margin: 5px 0; }
+  .capa .num { font-size: 48pt; color: #1a3560; font-weight: bold; margin: 20px 0; }
+  .capa .prova { font-size: 12pt; font-weight: bold; color: #c0392b; border: 2px solid #c0392b; padding: 10px 20px; display: inline-block; margin-top: 20px; }
+  .secao { page-break-before: always; }
+  .secao:first-of-type { page-break-before: avoid; }
+  h1.titulo { background: #1a3560; color: #fff; font-size: 13pt; padding: 8px 12px; margin-bottom: 14px; }
+  h2.sub { font-size: 11pt; color: #1a3560; border-left: 4px solid #1a3560; padding-left: 8px; margin: 14px 0 7px; }
+  h3.sub2 { font-size: 10pt; color: #c0392b; margin: 10px 0 4px; font-weight: bold; }
+  p { margin-bottom: 7px; }
+  ul, ol { padding-left: 18px; margin-bottom: 8px; }
+  li { margin-bottom: 3px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 9.5pt; }
+  th { background: #1a3560; color: #fff; padding: 5px 7px; text-align: left; }
+  td { padding: 4px 7px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  .alerta { background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .dica { background: #d4edda; border-left: 4px solid #28a745; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .atencao { background: #f8d7da; border-left: 4px solid #c0392b; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .ex { background: #f4f7fb; border: 1px solid #1a3560; border-radius: 4px; padding: 12px 14px; margin: 16px 0; }
+  .ex h3 { color: #1a3560; font-size: 11pt; margin-bottom: 10px; border-bottom: 1px solid #1a3560; padding-bottom: 4px; }
+  .q { margin-bottom: 14px; }
+  .q p { font-weight: bold; margin-bottom: 5px; font-size: 9.5pt; }
+  .q ul { font-size: 9.5pt; padding-left: 10px; }
+  .q ul li { list-style: none; margin-bottom: 2px; }
+  .gab { background: #1a3560; color: #fff; border-radius: 4px; padding: 8px 14px; margin-top: 10px; font-size: 9pt; }
+  /* === CAPA REDESIGN === */
+  .capa { text-align: center; background: #1a3560; color: #fff; padding: 8mm 8mm 10mm 8mm; page-break-after: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .capa .num { font-size: 52pt; color: #fff; font-weight: bold; margin: 0 0 2mm 0; line-height: 1; }
+  .capa h1 { font-size: 14pt; color: #fff; margin-bottom: 4px; font-weight: bold; }
+  .capa h2 { font-size: 10pt; color: #aad4f5; margin-bottom: 6px; font-weight: normal; }
+  .capa .info { font-size: 8.5pt; color: #ccc; margin: 2px 0; }
+  .capa .stripe { width: 100%; height: 3px; background: #c0392b; margin: 5mm 0; }
+  .capa .prova { font-size: 9.5pt; font-weight: bold; color: #fff; background: #c0392b; padding: 6px 16px; display: inline-block; margin-top: 5mm; border-radius: 2px; }
+  /* === CONTRACAPA === */
+  .contracapa { text-align: center; background: #1a3560; color: #fff; padding: 10mm 8mm; page-break-before: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .contracapa .logo-pc { font-size: 48pt; font-weight: bold; color: #c0392b; line-height: 1; letter-spacing: 4px; }
+  .contracapa .logo-sc { font-size: 8.5pt; color: #aad4f5; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 1mm; }
+  .contracapa .stripe { width: 60%; height: 3px; background: #c0392b; margin: 6mm auto; }
+  .contracapa h2 { font-size: 14pt; color: #fff; margin: 0 0 4mm 0; }
+  .contracapa p { font-size: 8.5pt; color: #aad4f5; margin: 2px 0; line-height: 1.6; }
+  .contracapa .data { font-size: 10pt; color: #fff; font-weight: bold; margin-top: 5mm; border: 2px solid #c0392b; padding: 5px 14px; display: inline-block; letter-spacing: 1px; }
+  .contracapa .rodape { font-size: 7pt; color: #444; margin-top: 10mm; }
+</style>
+</head>
+<body>
+<div class="capa">
+  <div class="num">6</div>
+  <div class="stripe"></div>
+  <h1>NOÇÕES DE DIREITO CONSTITUCIONAL</h1>
+  <h2>Apostila Completa — PC-SC 2026</h2>
+  <div class="info">Polícia Civil de Santa Catarina | Edital 01/2025</div>
+  <div class="info"><strong>6 questões na prova</strong></div>
+  <div class="prova">PROVA: 21 DE MARÇO DE 2026</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">1. CONSTITUIÇÃO — CONCEITO E CLASSIFICAÇÃO</h1>
+<h2 class="sub">O que é Constituição</h2>
+<p>A Constituição é a lei fundamental e suprema do Estado — a "lei mãe". Todas as demais leis devem obedecê-la. Quando uma lei contraria a Constituição, ela é inconstitucional e pode ser declarada nula.</p>
+<h2 class="sub">Classificações da Constituição Federal de 1988</h2>
+<table>
+  <tr><th>Critério</th><th>CF/88 é...</th><th>Por quê</th></tr>
+  <tr><td>Origem</td><td>Promulgada (democrática)</td><td>Elaborada por Assembleia Constituinte eleita pelo povo</td></tr>
+  <tr><td>Forma</td><td>Escrita (codificada)</td><td>Texto único e sistematizado</td></tr>
+  <tr><td>Extensão</td><td>Analítica (prolixa)</td><td>Trata de muitos temas — não só organização do Estado</td></tr>
+  <tr><td>Rigidez</td><td>Rígida (super-rígida em partes)</td><td>Emenda exige 3/5 em dois turnos em cada Casa. Cláusulas pétreas são imutáveis.</td></tr>
+  <tr><td>Ideologia</td><td>Eclética</td><td>Combina valores liberais, sociais e democráticos</td></tr>
+</table>
+<h2 class="sub">Cláusulas pétreas (art. 60 §4°)</h2>
+<p>Não podem ser abolidas nem por Emenda Constitucional: forma federativa de Estado; voto direto, secreto, universal e periódico; separação dos poderes; direitos e garantias individuais.</p>
+
+<div class="ex">
+  <h3>Exercícios — Classificação</h3>
+  <div class="q"><p>Q1. A Constituição de 1988 é classificada como "rígida" pois:</p>
+    <ul><li>A) Não pode ser alterada por nenhum meio</li><li>B) Exige processo especial mais dificultoso para sua alteração</li><li>C) Foi elaborada por ditadura militar</li><li>D) Tem poucos artigos e é objetiva</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q1-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">2. PRINCÍPIOS FUNDAMENTAIS (ARTS. 1°-4°)</h1>
+<h2 class="sub">Fundamentos da República — art. 1° (SCDVP)</h2>
+<ul>
+  <li><strong>S</strong>oberania — poder supremo do Estado</li>
+  <li><strong>C</strong>idadania — participação política do povo</li>
+  <li><strong>D</strong>ignidade da pessoa humana — valor central de tudo</li>
+  <li><strong>V</strong>alores sociais do trabalho e da livre iniciativa</li>
+  <li><strong>P</strong>luralismo político — diversidade de partidos e ideias</li>
+</ul>
+<h2 class="sub">Objetivos fundamentais — art. 3° (CEED)</h2>
+<ul>
+  <li><strong>C</strong>onstruir uma sociedade livre, justa e solidária</li>
+  <li><strong>E</strong>rradicar a pobreza e a marginalização</li>
+  <li><strong>E</strong>rradicar as desigualdades sociais e regionais</li>
+  <li><strong>D</strong>esenvolvimento nacional</li>
+  <li>Promover o bem de todos, sem preconceitos</li>
+</ul>
+<h2 class="sub">Princípios das relações internacionais — art. 4°</h2>
+<p>Independência nacional; prevalência dos direitos humanos; autodeterminação dos povos; não-intervenção; igualdade entre os Estados; defesa da paz; solução pacífica de conflitos; repúdio ao terrorismo e ao racismo; cooperação entre povos; concessão de asilo político; integração da América Latina.</p>
+<div class="dica"><strong>Distinção importante:</strong> Art. 1° = FUNDAMENTOS (o que o Brasil É). Art. 3° = OBJETIVOS (o que o Brasil QUER SER). Art. 4° = RELAÇÕES INTERNACIONAIS (como o Brasil age no mundo).</div>
+
+<div class="ex">
+  <h3>Exercícios — Princípios Fundamentais</h3>
+  <div class="q"><p>Q2. "Dignidade da pessoa humana" é um dos FUNDAMENTOS da República, previsto no art.:</p>
+    <ul><li>A) Art. 3° CF</li><li>B) Art. 1° CF</li><li>C) Art. 4° CF</li><li>D) Art. 5° CF</li></ul>
+  </div>
+  <div class="q"><p>Q3. "Erradicar a pobreza e a marginalização" é um dos OBJETIVOS fundamentais, enquanto "soberania" é um FUNDAMENTO. Essa afirmativa é:</p>
+    <ul><li>A) Falsa — ambos são objetivos</li><li>B) Verdadeira</li><li>C) Falsa — ambos são fundamentos</li><li>D) Falsa — soberania é objetivo e erradicação da pobreza é fundamento</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q2-B | Q3-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">3. DIREITOS E GARANTIAS FUNDAMENTAIS — ART. 5°</h1>
+<h2 class="sub">Principais direitos individuais</h2>
+<table>
+  <tr><th>Inciso</th><th>Direito</th></tr>
+  <tr><td>caput</td><td>Vida, liberdade, igualdade, segurança, propriedade</td></tr>
+  <tr><td>I</td><td>Igualdade entre homens e mulheres</td></tr>
+  <tr><td>III</td><td>Proibição de tortura e tratamento desumano</td></tr>
+  <tr><td>IV</td><td>Liberdade de manifestação do pensamento</td></tr>
+  <tr><td>VI</td><td>Liberdade de consciência e crença</td></tr>
+  <tr><td>X</td><td>Inviolabilidade da intimidade, vida privada, honra e imagem</td></tr>
+  <tr><td>XI</td><td>Inviolabilidade do domicílio</td></tr>
+  <tr><td>XII</td><td>Sigilo de correspondência, comunicações telegráficas, dados e telefônicas</td></tr>
+  <tr><td>XIII</td><td>Liberdade de exercício profissional</td></tr>
+  <tr><td>XV</td><td>Liberdade de locomoção</td></tr>
+  <tr><td>XXXIV</td><td>Direito de petição e obtenção de certidões</td></tr>
+  <tr><td>XXXV</td><td>Inafastabilidade do controle jurisdicional (acesso à Justiça)</td></tr>
+  <tr><td>XXXVII</td><td>Proibição de tribunal de exceção</td></tr>
+  <tr><td>XXXVIII</td><td>Tribunal do Júri (crimes dolosos contra a vida)</td></tr>
+  <tr><td>XXXIX</td><td>Princípio da legalidade penal (nullum crimen)</td></tr>
+  <tr><td>XL</td><td>Lei penal mais benéfica retroage</td></tr>
+  <tr><td>XLIII</td><td>Crimes inafiançáveis e insuscetíveis de graça: tortura, tráfico, terrorismo, hediondos</td></tr>
+  <tr><td>XLIV</td><td>Imprescritibilidade: racismo e ação de grupos armados contra Estado Democrático</td></tr>
+  <tr><td>XLVI</td><td>Individualização da pena</td></tr>
+  <tr><td>XLVII</td><td>Penas proibidas: morte (exceto guerra), perpétua, trabalho forçado, banimento, cruéis</td></tr>
+  <tr><td>LIV</td><td>Devido processo legal</td></tr>
+  <tr><td>LV</td><td>Contraditório e ampla defesa</td></tr>
+  <tr><td>LVI</td><td>Inadmissibilidade de provas ilícitas</td></tr>
+  <tr><td>LVII</td><td>Presunção de inocência</td></tr>
+  <tr><td>LXIII</td><td>Direito ao silêncio e à assistência de advogado ao preso</td></tr>
+  <tr><td>LXVI</td><td>Ninguém será levado à prisão ou nela mantido quando a lei admitir liberdade provisória</td></tr>
+</table>
+
+<h2 class="sub">Remédios Constitucionais — tabela completa</h2>
+<table>
+  <tr><th>Remédio</th><th>Art. CF</th><th>Protege</th><th>Legitimidade</th></tr>
+  <tr><td>Habeas Corpus</td><td>5°, LXVIII</td><td>Liberdade de locomoção ameaçada ou violada</td><td>Qualquer pessoa (sem advogado)</td></tr>
+  <tr><td>Habeas Data</td><td>5°, LXXII</td><td>Acesso/retificação de dados pessoais em registros públicos</td><td>Pessoa física ou jurídica — sobre seus próprios dados</td></tr>
+  <tr><td>Mandado de Segurança</td><td>5°, LXIX</td><td>Direito líquido e certo não amparado por HC ou HD, violado por autoridade pública</td><td>Pessoa física ou jurídica (com advogado)</td></tr>
+  <tr><td>Mandado de Seg. Coletivo</td><td>5°, LXX</td><td>Mesmo que MS, mas em prol de coletividade</td><td>Partido político com representação no CN, organização sindical, entidade de classe, associação</td></tr>
+  <tr><td>Mandado de Injunção</td><td>5°, LXXI</td><td>Falta de norma regulamentadora que inviabilize exercício de direito</td><td>Qualquer pessoa prejudicada</td></tr>
+  <tr><td>Ação Popular</td><td>5°, LXXIII</td><td>Anulação de ato lesivo ao patrimônio público, moralidade, meio ambiente, patrimônio histórico</td><td>Cidadão brasileiro (eleitor)</td></tr>
+</table>
+<div class="atencao"><strong>Diferença HC x HD:</strong> HC = liberdade de ir e vir. HD = dados pessoais. Fácil de confundir na prova!</div>
+
+<div class="ex">
+  <h3>Exercícios — Art. 5°</h3>
+  <div class="q"><p>Q4. Um cidadão quer corrigir informações incorretas sobre si em cadastro de órgão público. O remédio constitucional adequado é:</p>
+    <ul><li>A) Habeas Corpus</li><li>B) Mandado de Injunção</li><li>C) Habeas Data</li><li>D) Ação Popular</li></ul>
+  </div>
+  <div class="q"><p>Q5. Crimes de TORTURA são, nos termos da CF:</p>
+    <ul><li>A) Inafiançáveis, insuscetíveis de graça e imprescritíveis</li><li>B) Inafiançáveis e insuscetíveis de graça, mas prescritíveis</li><li>C) Imprescritíveis apenas</li><li>D) Insuscetíveis de anistia somente</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q4-C | Q5-B (tortura é inafiançável e insuscetível de graça pelo art. 5°, XLIII — imprescritibilidade é só para racismo e grupos armados)</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">4. ORGANIZAÇÃO DO ESTADO E SEGURANÇA PÚBLICA</h1>
+<h2 class="sub">Separação dos Poderes (art. 2°)</h2>
+<p>O poder é uno, mas exercido por três funções independentes e harmônicas: Legislativo (fazer leis), Executivo (administrar), Judiciário (julgar).</p>
+<p><strong>Sistema de freios e contrapesos (checks and balances):</strong> cada poder controla os outros. Ex.: o Executivo veta leis; o Legislativo derruba o veto; o Judiciário declara leis inconstitucionais.</p>
+<h2 class="sub">Poderes da União</h2>
+<table>
+  <tr><th>Poder</th><th>Federal</th><th>Estadual</th><th>Municipal</th></tr>
+  <tr><td>Legislativo</td><td>Congresso Nacional (Câmara + Senado)</td><td>Assembleia Legislativa</td><td>Câmara Municipal</td></tr>
+  <tr><td>Executivo</td><td>Presidente da República</td><td>Governador</td><td>Prefeito</td></tr>
+  <tr><td>Judiciário</td><td>STF, STJ, TST, TSE, STM, TRFs</td><td>TJ (Tribunal de Justiça)</td><td>—</td></tr>
+</table>
+<h2 class="sub">Segurança pública — art. 144 CF</h2>
+<table>
+  <tr><th>Órgão</th><th>Atuação principal</th></tr>
+  <tr><td>Polícia Federal</td><td>Crimes contra a União, tráfico internacional, imigração. Polícia judiciária da União.</td></tr>
+  <tr><td>Polícia Rodoviária Federal</td><td>Patrulha ostensiva das rodovias federais</td></tr>
+  <tr><td>Polícia Ferroviária Federal</td><td>Patrulha de ferrovias federais</td></tr>
+  <tr><td>Polícias Civis</td><td>Polícia judiciária dos estados. Apura crimes comuns (exceto militares). Dirigida por delegados de carreira.</td></tr>
+  <tr><td>Polícias Militares</td><td>Policiamento ostensivo e preservação da ordem pública nos estados</td></tr>
+  <tr><td>Corpos de Bombeiros Militares</td><td>Defesa civil, incêndios, salvamentos</td></tr>
+  <tr><td>Polícias Penais (EC 104/2019)</td><td>Segurança dos estabelecimentos penais</td></tr>
+  <tr><td>Guardas Municipais</td><td>Proteção de bens, serviços e instalações do município</td></tr>
+</table>
+<div class="atencao"><strong>Distinção crucial para a prova — Polícia Civil vs. Polícia Militar:</strong>
+  <ul>
+    <li><strong>Polícia Civil:</strong> polícia JUDICIÁRIA (investigação, inquérito policial, apuração de crimes) — função repressiva. Subordinada ao Governador. Dirigida por Delegado de carreira.</li>
+    <li><strong>Polícia Militar:</strong> policiamento OSTENSIVO e preservação da ordem pública — função preventiva. Força auxiliar e reserva do Exército. Subordinada ao Governador.</li>
+    <li><strong>Polícia Federal:</strong> crimes contra a União + polícia judiciária da União + controle migratório + combate ao tráfico internacional.</li>
+    <li><strong>Polícia Penal (EC 104/2019):</strong> segurança dos estabelecimentos penais — federal, estadual e distrital. Nova nomenclatura do antigo agente penitenciário.</li>
+    <li><strong>Guarda Municipal:</strong> protege bens, serviços e instalações do MUNICÍPIO — não é polícia judiciária nem ostensiva em sentido pleno.</li>
+  </ul>
+</div>
+
+<h2 class="sub">Defesa do Estado — Estado de Defesa e Sítio</h2>
+<table>
+  <tr><th>Medida</th><th>Art.</th><th>Prazo</th><th>Aprovação CN</th></tr>
+  <tr><td>Estado de Defesa</td><td>136</td><td>30 dias + 30 (máx. 60 dias)</td><td>Posterior (maioria absoluta)</td></tr>
+  <tr><td>Estado de Sítio — comoção grave</td><td>137, I</td><td>30 dias + renovações</td><td>Prévia (maioria absoluta)</td></tr>
+  <tr><td>Estado de Sítio — guerra/resposta a agressão estrangeira</td><td>137, II</td><td>Duração da guerra</td><td>Prévia (maioria absoluta)</td></tr>
+</table>
+
+<div class="ex">
+  <h3>Exercícios — Organização e Segurança</h3>
+  <div class="q"><p>Q6. A Polícia Civil tem função de polícia judiciária dos estados. Essa função é prevista no art.:</p>
+    <ul><li>A) 37 CF</li><li>B) 144 CF</li><li>C) 5° CF</li><li>D) 127 CF</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q6-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">GABARITO GERAL — CONSTITUCIONAL</h1>
+<table>
+  <tr><th>Q</th><th>Resp.</th><th>Tema</th></tr>
+  <tr><td>Q1</td><td>B</td><td>Rigidez constitucional</td></tr>
+  <tr><td>Q2</td><td>B</td><td>Dignidade = fundamento art. 1°</td></tr>
+  <tr><td>Q3</td><td>B</td><td>Objetivos vs. fundamentos</td></tr>
+  <tr><td>Q4</td><td>C</td><td>Habeas Data = dados pessoais</td></tr>
+  <tr><td>Q5</td><td>B</td><td>Tortura = inafiançável, insuscetível de graça (não imprescritível)</td></tr>
+  <tr><td>Q6</td><td>B</td><td>Polícia Civil = art. 144 CF</td></tr>
+</table>
+</div>
+
+<div class="contracapa">
+  <div class="logo-sc">Polícia Civil</div>
+  <div class="logo-pc">PC-SC</div>
+  <div class="logo-sc">Santa Catarina</div>
+  <div class="stripe"></div>
+  <h2>Bons estudos!</h2>
+  <p>Concurso Público — Edital 01/2025</p>
+  <p>Cargo: Agente de Polícia Civil</p>
+  <p>Organizadora: IDECAN</p>
+  <p style="margin-top:4mm; color:#fff; font-weight:bold;">Elaborado por: Dani Kaloi</p>
+  <div class="stripe"></div>
+  <div class="data">PROVA: 21 DE MARÇO DE 2026</div>
+  <div class="rodape">Material de estudo — uso pessoal</div>
+</div>
+
+</body>
+</html>

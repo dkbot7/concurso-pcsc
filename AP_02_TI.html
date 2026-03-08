@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Apostila PC-SC — TI, Segurança e Crimes Digitais</title>
+<style>
+  @page { size: A5; margin: 12mm 10mm 16mm 10mm; @bottom-center { content: "Página " counter(page) " de " counter(pages); font-size: 7pt; color: #555; font-family: Arial, sans-serif; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 8.5pt; color: #111; line-height: 1.4; background: #fff; }
+  .capa { text-align: center; padding: 40mm 20mm; page-break-after: always; }
+  .capa h1 { font-size: 22pt; color: #1a3560; margin-bottom: 8px; }
+  .capa h2 { font-size: 15pt; color: #c0392b; margin-bottom: 20px; }
+  .capa .info { font-size: 11pt; margin: 5px 0; }
+  .capa .num { font-size: 48pt; color: #1a3560; font-weight: bold; margin: 20px 0; }
+  .capa .prova { font-size: 12pt; font-weight: bold; color: #c0392b; border: 2px solid #c0392b; padding: 10px 20px; display: inline-block; margin-top: 20px; }
+  .secao { page-break-before: always; }
+  .secao:first-of-type { page-break-before: avoid; }
+  h1.titulo { background: #1a3560; color: #fff; font-size: 13pt; padding: 8px 12px; margin-bottom: 14px; }
+  h2.sub { font-size: 11pt; color: #1a3560; border-left: 4px solid #1a3560; padding-left: 8px; margin: 14px 0 7px; }
+  h3.sub2 { font-size: 10pt; color: #c0392b; margin: 10px 0 4px; font-weight: bold; }
+  p { margin-bottom: 7px; }
+  ul, ol { padding-left: 18px; margin-bottom: 8px; }
+  li { margin-bottom: 3px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 9.5pt; }
+  th { background: #1a3560; color: #fff; padding: 5px 7px; text-align: left; }
+  td { padding: 4px 7px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  .alerta { background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .dica { background: #d4edda; border-left: 4px solid #28a745; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .atencao { background: #f8d7da; border-left: 4px solid #c0392b; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .ex { background: #f4f7fb; border: 1px solid #1a3560; border-radius: 4px; padding: 12px 14px; margin: 16px 0; }
+  .ex h3 { color: #1a3560; font-size: 11pt; margin-bottom: 10px; border-bottom: 1px solid #1a3560; padding-bottom: 4px; }
+  .q { margin-bottom: 14px; }
+  .q p { font-weight: bold; margin-bottom: 5px; font-size: 9.5pt; }
+  .q ul { font-size: 9.5pt; padding-left: 10px; }
+  .q ul li { list-style: none; margin-bottom: 2px; }
+  .gab { background: #1a3560; color: #fff; border-radius: 4px; padding: 8px 14px; margin-top: 10px; font-size: 9pt; }
+  /* === CAPA REDESIGN === */
+  .capa { text-align: center; background: #1a3560; color: #fff; padding: 8mm 8mm 10mm 8mm; page-break-after: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .capa .num { font-size: 52pt; color: #fff; font-weight: bold; margin: 0 0 2mm 0; line-height: 1; }
+  .capa h1 { font-size: 14pt; color: #fff; margin-bottom: 4px; font-weight: bold; }
+  .capa h2 { font-size: 10pt; color: #aad4f5; margin-bottom: 6px; font-weight: normal; }
+  .capa .info { font-size: 8.5pt; color: #ccc; margin: 2px 0; }
+  .capa .stripe { width: 100%; height: 3px; background: #c0392b; margin: 5mm 0; }
+  .capa .prova { font-size: 9.5pt; font-weight: bold; color: #fff; background: #c0392b; padding: 6px 16px; display: inline-block; margin-top: 5mm; border-radius: 2px; }
+  /* === CONTRACAPA === */
+  .contracapa { text-align: center; background: #1a3560; color: #fff; padding: 10mm 8mm; page-break-before: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .contracapa .logo-pc { font-size: 48pt; font-weight: bold; color: #c0392b; line-height: 1; letter-spacing: 4px; }
+  .contracapa .logo-sc { font-size: 8.5pt; color: #aad4f5; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 1mm; }
+  .contracapa .stripe { width: 60%; height: 3px; background: #c0392b; margin: 6mm auto; }
+  .contracapa h2 { font-size: 14pt; color: #fff; margin: 0 0 4mm 0; }
+  .contracapa p { font-size: 8.5pt; color: #aad4f5; margin: 2px 0; line-height: 1.6; }
+  .contracapa .data { font-size: 10pt; color: #fff; font-weight: bold; margin-top: 5mm; border: 2px solid #c0392b; padding: 5px 14px; display: inline-block; letter-spacing: 1px; }
+  .contracapa .rodape { font-size: 7pt; color: #444; margin-top: 10mm; }
+</style>
+</head>
+<body>
+
+<div class="capa">
+  <div class="num">2</div>
+  <div class="stripe"></div>
+  <h1>TI, SEGURANÇA CIBERNÉTICA E CRIMES DIGITAIS</h1>
+  <h2>Apostila Completa — PC-SC 2026</h2>
+  <div class="info">Polícia Civil de Santa Catarina | Edital 01/2025</div>
+  <div class="info"><strong>20 questões na prova</strong> — maior peso junto com Português</div>
+  <div class="prova">PROVA: 21 DE MARÇO DE 2026</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">1. REDES DE COMPUTADORES</h1>
+<h2 class="sub">Tipos de rede</h2>
+<table>
+  <tr><th>Tipo</th><th>Extensão</th><th>Exemplo</th></tr>
+  <tr><td>LAN (Local)</td><td>Sala, prédio, campus</td><td>Rede da delegacia</td></tr>
+  <tr><td>MAN (Metropolitana)</td><td>Cidade</td><td>Rede que liga delegacias da capital</td></tr>
+  <tr><td>WAN (Mundial)</td><td>País, continente, mundo</td><td>Internet</td></tr>
+  <tr><td>P2P (Ponto a ponto)</td><td>Qualquer tamanho</td><td>BitTorrent, compartilhamento direto</td></tr>
+</table>
+<h2 class="sub">Endereçamento IP</h2>
+<ul>
+  <li><strong>IPv4:</strong> 4 octetos (0-255) separados por ponto. Ex: 192.168.1.1. Total: ~4,3 bilhões de endereços.</li>
+  <li><strong>IPv6:</strong> 128 bits em hexadecimal. Ex: 2001:0db8::1. Total: 340 undecilhões de endereços.</li>
+  <li><strong>IP público:</strong> visível na internet. <strong>IP privado:</strong> usado dentro de redes locais (192.168.x.x, 10.x.x.x, 172.16.x.x).</li>
+  <li><strong>NAT (Network Address Translation):</strong> traduz IPs privados para um IP público. Vários dispositivos compartilham um IP.</li>
+  <li><strong>CGNAT:</strong> NAT em escala do provedor — vários assinantes compartilham um IP público. Dificulta a identificação individual: é necessário IP + data + hora + porta lógica.</li>
+</ul>
+<h2 class="sub">Portas lógicas</h2>
+<table>
+  <tr><th>Porta</th><th>Protocolo/Serviço</th></tr>
+  <tr><td>20/21</td><td>FTP (transferência de arquivos)</td></tr>
+  <tr><td>22</td><td>SSH / SFTP (acesso seguro / FTP criptografado)</td></tr>
+  <tr><td>25</td><td>SMTP (envio de e-mail)</td></tr>
+  <tr><td>53</td><td>DNS (resolução de nomes)</td></tr>
+  <tr><td>80</td><td>HTTP (navegação sem criptografia)</td></tr>
+  <tr><td>110</td><td>POP3 (recebimento de e-mail)</td></tr>
+  <tr><td>143</td><td>IMAP (e-mail sincronizado)</td></tr>
+  <tr><td>443</td><td>HTTPS (navegação com criptografia)</td></tr>
+  <tr><td>3389</td><td>RDP (área de trabalho remota Windows)</td></tr>
+</table>
+<h2 class="sub">Protocolos essenciais</h2>
+<table>
+  <tr><th>Protocolo</th><th>Função</th></tr>
+  <tr><td>TCP</td><td>Confiável — garante entrega e ordem dos pacotes. Handshake (SYN-SYN/ACK-ACK).</td></tr>
+  <tr><td>UDP</td><td>Rápido mas não confiável — sem confirmação. Usado em vídeo ao vivo, jogos, VoIP.</td></tr>
+  <tr><td>DNS</td><td>Traduz nomes (google.com) em IPs. É a "agenda telefônica da internet".</td></tr>
+  <tr><td>DHCP</td><td>Distribui IPs automaticamente na rede local.</td></tr>
+  <tr><td>VPN</td><td>Cria túnel criptografado — "esconde" o tráfego e mascara o IP real.</td></tr>
+  <tr><td>VoIP</td><td>Voz sobre IP — ligações pela internet (WhatsApp, Skype).</td></tr>
+  <tr><td>SNMP</td><td>Gerenciamento de dispositivos de rede.</td></tr>
+</table>
+<div class="ex">
+  <h3>Exercícios — Redes</h3>
+  <div class="q"><p>Q1. A porta padrão do protocolo HTTPS é:</p>
+    <ul><li>A) 80</li><li>B) 21</li><li>C) 443</li><li>D) 22</li></ul>
+  </div>
+  <div class="q"><p>Q2. O CGNAT dificulta a identificação do usuário pois:</p>
+    <ul><li>A) Usa criptografia de ponta a ponta</li><li>B) Vários assinantes compartilham o mesmo IP público</li><li>C) Mascara o MAC address do dispositivo</li><li>D) Oculta o DNS do usuário</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q1-C | Q2-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">2. DEEP WEB, DARK WEB E NAVEGAÇÃO ANÔNIMA</h1>
+<h2 class="sub">As camadas da internet</h2>
+<ul>
+  <li><strong>Surface Web:</strong> indexada por buscadores (Google, Bing). Estima-se ~4% da internet.</li>
+  <li><strong>Deep Web:</strong> não indexada por buscadores — não é ilegal. Inclui: e-mail, homebanking, prontuários médicos, sistemas corporativos internos. Estima-se ~96% da internet.</li>
+  <li><strong>Dark Web:</strong> subconjunto da Deep Web acessado por software especial (Tor, I2P). Propositalmente anônima. Contém mercados ilegais, mas também uso legítimo (jornalismo em países autoritários).</li>
+</ul>
+<h2 class="sub">Tor (The Onion Router)</h2>
+<p>Navegador que roteia o tráfego por múltiplos nós (relays), criptografando cada camada. Cada nó conhece apenas o anterior e o próximo — nenhum nó conhece origem e destino ao mesmo tempo.</p>
+<p>Sites da Dark Web usam o domínio <strong>.onion</strong> (não acessível por navegador comum).</p>
+<div class="atencao"><strong>Para investigação:</strong> o Tor não é impenetrável. Técnicas de correlação de tráfego, comprometimento de nós de saída e erros operacionais dos usuários podem revelar sua identidade.</div>
+<h2 class="sub">Identificação de usuários na internet</h2>
+<ol>
+  <li><strong>IP + data + hora + porta:</strong> identifica o assinante no provedor de acesso.</li>
+  <li><strong>Conta + login:</strong> identifica o usuário no provedor de aplicação (Facebook, Google).</li>
+  <li><strong>Cookies:</strong> arquivos armazenados no navegador que identificam o usuário em visitas futuras.</li>
+  <li><strong>Fingerprinting:</strong> identificação pelo conjunto de características do navegador/sistema.</li>
+  <li><strong>Geolocalização:</strong> por GPS, IP, ERB celular ou Wi-Fi próximo.</li>
+</ol>
+<div class="ex">
+  <h3>Exercícios — Deep/Dark Web</h3>
+  <div class="q"><p>Q3. A Deep Web é:</p>
+    <ul><li>A) Exclusivamente usada para fins criminosos</li><li>B) A parte da internet não indexada por buscadores, incluindo conteúdos privados e legítimos</li><li>C) Sinônimo de Dark Web</li><li>D) Acessível apenas com o navegador Tor</li></ul>
+  </div>
+  <div class="q"><p>Q4. O navegador Tor oferece anonimato por meio de:</p>
+    <ul><li>A) Criptografia simétrica de chave única</li><li>B) Roteamento do tráfego por múltiplos nós com criptografia em camadas</li><li>C) Uso de endereços IPv6 exclusivos</li><li>D) Bloqueio automático de cookies</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q3-B | Q4-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">3. SEGURANÇA DA INFORMAÇÃO</h1>
+<h2 class="sub">Pilares — CIA / CID</h2>
+<ul>
+  <li><strong>Confidencialidade:</strong> só quem tem autorização acessa a informação.</li>
+  <li><strong>Integridade:</strong> a informação não é alterada sem autorização.</li>
+  <li><strong>Disponibilidade:</strong> a informação está acessível quando necessário.</li>
+</ul>
+<h2 class="sub">Malwares — guia completo</h2>
+<table>
+  <tr><th>Malware</th><th>Como age</th><th>Propagação</th></tr>
+  <tr><td>Vírus</td><td>Infecta arquivos e se replica quando executados</td><td>Precisa de ação do usuário</td></tr>
+  <tr><td>Worm</td><td>Se replica sozinho pela rede</td><td>Automática — explora vulnerabilidades</td></tr>
+  <tr><td>Trojan (Cavalo de Troia)</td><td>Parece legítimo; cria backdoor</td><td>Download de software falso</td></tr>
+  <tr><td>Ransomware</td><td>Criptografa arquivos; pede resgate em criptomoeda</td><td>Phishing, anexos, exploits</td></tr>
+  <tr><td>Spyware</td><td>Monitora e envia dados da vítima</td><td>Downloads, software bundled</td></tr>
+  <tr><td>Adware</td><td>Exibe propagandas indesejadas</td><td>Software gratuito com anúncios</td></tr>
+  <tr><td>Rootkit</td><td>Esconde-se no sistema; dá acesso root ao atacante</td><td>Exploits, Trojans</td></tr>
+  <tr><td>Keylogger</td><td>Registra teclas digitadas (senhas, mensagens)</td><td>Spyware, hardware físico</td></tr>
+  <tr><td>Botnet</td><td>Rede de zumbis controlados remotamente</td><td>Worms, Trojans</td></tr>
+  <tr><td>Exploit</td><td>Código que explora vulnerabilidade específica</td><td>Ataques direcionados</td></tr>
+</table>
+<h2 class="sub">Tipos de ataque</h2>
+<ul>
+  <li><strong>Phishing:</strong> e-mail/site falso que imita real para roubar credenciais. Spear phishing = direcionado a alvo específico.</li>
+  <li><strong>DDoS (Distributed Denial of Service):</strong> sobrecarga de servidor com tráfego de múltiplas fontes (botnet).</li>
+  <li><strong>SQL Injection:</strong> inserção de código SQL malicioso em campos de formulário para manipular banco de dados.</li>
+  <li><strong>XSS (Cross-Site Scripting):</strong> injeção de script malicioso em página web vista por outros usuários.</li>
+  <li><strong>Man-in-the-Middle (MitM):</strong> atacante intercepta comunicação entre dois pontos.</li>
+  <li><strong>Brute Force:</strong> tentativa sistemática de senhas até encontrar a correta.</li>
+  <li><strong>Engenharia social:</strong> manipulação psicológica — o "hacking humano".</li>
+  <li><strong>Zero-day:</strong> ataque que explora vulnerabilidade desconhecida pelo fabricante.</li>
+</ul>
+<h2 class="sub">Ferramentas de defesa</h2>
+<ul>
+  <li><strong>Firewall:</strong> filtra tráfego de rede (entrada e saída) conforme regras. Pode ser software ou hardware.</li>
+  <li><strong>IDS/IPS:</strong> detecta (IDS) ou previne (IPS) intrusões automaticamente.</li>
+  <li><strong>Antivírus:</strong> detecta, bloqueia e remove malware.</li>
+  <li><strong>Autenticação Multifator (MFA/2FA):</strong> exige 2+ fatores: algo que você sabe (senha), tem (token/celular) ou é (biometria).</li>
+  <li><strong>Criptografia em trânsito (TLS/SSL):</strong> protege dados durante a transmissão (HTTPS).</li>
+  <li><strong>VPN corporativa:</strong> criptografa conexão de funcionários remotos.</li>
+</ul>
+<div class="ex">
+  <h3>Exercícios — Segurança</h3>
+  <div class="q"><p>Q5. Um malware que criptografa os arquivos da vítima e exige pagamento para descriptografá-los é um:</p>
+    <ul><li>A) Spyware</li><li>B) Worm</li><li>C) Ransomware</li><li>D) Adware</li></ul>
+  </div>
+  <div class="q"><p>Q6. A autenticação multifator aumenta a segurança porque:</p>
+    <ul><li>A) Exige senhas mais longas e complexas</li><li>B) Requer dois ou mais fatores de verificação distintos, dificultando o acesso não autorizado mesmo com a senha comprometida</li><li>C) Criptografa os dados do usuário automaticamente</li><li>D) Bloqueia ataques de phishing</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q5-C | Q6-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">4. TELECOMUNICAÇÕES E IDENTIFICAÇÃO CELULAR</h1>
+<h2 class="sub">Arquitetura de redes celulares</h2>
+<p>O território é dividido em células hexagonais. Cada célula tem uma <strong>ERB (Estação Rádio Base)</strong> — a "torre de celular" — que gerencia a comunicação dos dispositivos móveis na sua área.</p>
+<p>Quando você se move, seu celular faz o <strong>handover</strong> (handoff) — transferência automática de uma ERB para outra, sem interrupção.</p>
+<h2 class="sub">Gerações da telefonia celular</h2>
+<table>
+  <tr><th>Geração</th><th>Característica</th><th>Tecnologia</th></tr>
+  <tr><td>1G</td><td>Voz analógica</td><td>AMPS</td></tr>
+  <tr><td>2G</td><td>Voz digital + SMS</td><td>GSM, CDMA</td></tr>
+  <tr><td>3G</td><td>Internet básica</td><td>UMTS, HSPA</td></tr>
+  <tr><td>4G/LTE</td><td>Internet rápida, vídeo streaming</td><td>LTE-Advanced</td></tr>
+  <tr><td>5G</td><td>Ultra-rápido, IoT, baixíssima latência</td><td>NR (New Radio)</td></tr>
+</table>
+<h2 class="sub">Identificação de usuários em celulares</h2>
+<ul>
+  <li><strong>IMEI (International Mobile Equipment Identity):</strong> 15 dígitos que identificam o APARELHO. Único por dispositivo — não muda com a troca de chip.</li>
+  <li><strong>IMSI (International Mobile Subscriber Identity):</strong> identifica o SIM card (chip). Associado ao número do assinante.</li>
+  <li><strong>MSISDN:</strong> o número de telefone do assinante (+55 48 9999-9999).</li>
+  <li><strong>Localização por ERB:</strong> operadora registra qual ERB o celular estava conectado. Precisão: raio de centenas de metros a alguns km (depende da densidade de torres).</li>
+  <li><strong>Localização por GPS:</strong> muito mais precisa (metros). Requer que o dispositivo tenha GPS ativo.</li>
+</ul>
+<div class="dica"><strong>Na investigação:</strong> com o IMEI é possível rastrear um aparelho mesmo com o chip trocado. Com o IMSI rastreia-se o chip mesmo com aparelho trocado. Ambos podem ser solicitados à operadora com ordem judicial.</div>
+<div class="ex">
+  <h3>Exercícios — Telecom</h3>
+  <div class="q"><p>Q7. O número que identifica unicamente o aparelho celular, independentemente do chip, é o:</p>
+    <ul><li>A) IMSI</li><li>B) MSISDN</li><li>C) IMEI</li><li>D) ERB</li></ul>
+  </div>
+  <div class="q"><p>Q8. A localização aproximada de um suspeito pode ser determinada verificando-se:</p>
+    <ul><li>A) O número IMEI do aparelho</li><li>B) A qual ERB (Estação Rádio Base) o celular estava conectado</li><li>C) O modelo do aparelho utilizado</li><li>D) O plano de serviço contratado</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q7-C | Q8-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">5. INVESTIGAÇÃO DIGITAL E CRIPTOGRAFIA</h1>
+<h2 class="sub">Hash criptográfico</h2>
+<p>Função matemática que transforma qualquer dado em uma sequência de tamanho fixo (impressão digital digital). Propriedades:</p>
+<ul>
+  <li>Determinístico: o mesmo dado sempre gera o mesmo hash.</li>
+  <li>Irreversível: não dá para recuperar o dado original a partir do hash.</li>
+  <li>Efeito avalanche: qualquer mínima alteração no dado muda completamente o hash.</li>
+</ul>
+<table>
+  <tr><th>Algoritmo</th><th>Tamanho do hash</th><th>Status</th></tr>
+  <tr><td>MD5</td><td>128 bits (32 hex)</td><td>Obsoleto (colisões conhecidas), ainda usado em forense</td></tr>
+  <tr><td>SHA-1</td><td>160 bits (40 hex)</td><td>Obsoleto para segurança</td></tr>
+  <tr><td>SHA-256</td><td>256 bits (64 hex)</td><td>Amplamente usado, seguro</td></tr>
+  <tr><td>SHA-3</td><td>Variável</td><td>Mais recente, muito seguro</td></tr>
+</table>
+<div class="dica"><strong>Uso na forense:</strong> o perito calcula o hash do dispositivo original e da cópia forense. Se os hashes forem iguais, a cópia é idêntica ao original — prova de integridade.</div>
+
+<h2 class="sub">Metadados</h2>
+<p>"Dados sobre os dados" — não são o conteúdo, mas informações sobre ele.</p>
+<table>
+  <tr><th>Arquivo</th><th>Metadados típicos</th></tr>
+  <tr><td>Fotografia (EXIF)</td><td>Data/hora, localização GPS, modelo da câmera, configurações (ISO, abertura)</td></tr>
+  <tr><td>Documento Word/PDF</td><td>Autor, data de criação, data de modificação, software usado, histórico de edições</td></tr>
+  <tr><td>E-mail</td><td>IP de origem, servidores por onde passou (cabeçalho), data/hora, cliente de e-mail</td></tr>
+  <tr><td>Vídeo</td><td>Duração, codec, resolução, data de criação, dispositivo</td></tr>
+</table>
+<div class="atencao"><strong>Cuidado:</strong> metadados podem ser apagados ou falsificados. O perito deve verificar a consistência entre metadados e outros indicadores.</div>
+
+<h2 class="sub">Criptografia</h2>
+<p><strong>Simétrica:</strong> mesma chave para criptografar e descriptografar. Rápida, mas o desafio é compartilhar a chave com segurança. Algoritmos: AES, DES, 3DES.</p>
+<p><strong>Assimétrica (chave pública):</strong> par de chaves — pública (todos podem saber) e privada (só o dono). O que uma criptografa, só a outra descriptografa. Algoritmos: RSA, ECC.</p>
+<ul>
+  <li>Para enviar mensagem secreta: use a chave PÚBLICA do destinatário → só ele (com a chave privada) pode ler.</li>
+  <li>Para assinar digitalmente: use sua chave PRIVADA → todos podem verificar com sua chave pública.</li>
+</ul>
+<p><strong>End-to-End Encryption (E2EE):</strong> as chaves ficam nos dispositivos dos usuários — o servidor intermediário não tem acesso. Usado no WhatsApp (Protocolo Signal), Signal, iMessage.</p>
+<p><strong>Implicação investigativa:</strong> provedores como WhatsApp não conseguem fornecer o conteúdo das mensagens, apenas metadados (quem falou com quem, quando, frequência).</p>
+
+<h2 class="sub">Cadeia de custódia digital</h2>
+<p>Conjunto de procedimentos que documenta cada passo do manuseio da evidência digital:</p>
+<ol>
+  <li>Reconhecimento e identificação</li>
+  <li>Isolamento (evitar contaminação — modo avião, bloqueador de Faraday para celulares)</li>
+  <li>Fixação (fotografar, filmar o estado original)</li>
+  <li>Coleta (cópia forense bit a bit — preserva deletados, metadados)</li>
+  <li>Hash do original e da cópia</li>
+  <li>Acondicionamento (embalagem antiestática)</li>
+  <li>Transporte e recebimento com documentação</li>
+  <li>Processamento em laboratório forense</li>
+  <li>Armazenamento em local seguro</li>
+  <li>Descarte conforme normas</li>
+</ol>
+
+<div class="ex">
+  <h3>Exercícios — Investigação Digital</h3>
+  <div class="q"><p>Q9. Na forense digital, o código hash é utilizado para:</p>
+    <ul><li>A) Criptografar as provas durante o transporte</li><li>B) Verificar que a cópia forense é idêntica ao original, garantindo a integridade</li><li>C) Identificar o suspeito pelo IP</li><li>D) Descriptografar mensagens do WhatsApp</li></ul>
+  </div>
+  <div class="q"><p>Q10. Os metadados EXIF de uma fotografia podem revelar:</p>
+    <ul><li>A) Apenas o autor da foto</li><li>B) O conteúdo do arquivo em formato legível</li><li>C) Data, hora, localização GPS e modelo do dispositivo que capturou a imagem</li><li>D) O nome do arquivo criptografado</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q9-B | Q10-C</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">6. IA, CRIPTOATIVOS E CRIMES DIGITAIS</h1>
+<h2 class="sub">Inteligência Artificial aplicada à investigação</h2>
+<ul>
+  <li><strong>Machine Learning:</strong> sistemas que aprendem com dados sem programação explícita para cada tarefa.</li>
+  <li><strong>Deep Learning:</strong> redes neurais profundas — reconhecimento de faces, voz, padrões em imagens.</li>
+  <li><strong>LLM (Large Language Model):</strong> modelos de linguagem gigantes treinados com trilhões de palavras. Ex.: GPT, Claude, Gemini.</li>
+  <li><strong>Deepfakes:</strong> mídia sintética — vídeos/áudios falsos criados por IA. Riscos: desinformação, fraude, extorsão, pornografia de vingança falsa.</li>
+  <li><strong>IA na investigação:</strong> reconhecimento facial, análise de redes sociais, correlação de dados, detecção de deepfakes.</li>
+</ul>
+
+<h2 class="sub">Bitcoin e Blockchain</h2>
+<p><strong>Bitcoin (BTC):</strong> criado em 2009. Moeda descentralizada — sem banco central, sem intermediários.</p>
+<p><strong>Blockchain:</strong> livro-razão distribuído e imutável. Cada bloco contém transações + hash do bloco anterior. Para alterar um bloco seria necessário recalcular todos os seguintes — computacionalmente inviável.</p>
+<ul>
+  <li><strong>Carteira (wallet):</strong> software/hardware que guarda as chaves. Tipos: hot wallet (conectada à internet) e cold wallet (offline, mais segura).</li>
+  <li><strong>Chave pública:</strong> como um IBAN — pode ser compartilhada para receber.</li>
+  <li><strong>Chave privada:</strong> como a senha do cofre — nunca compartilhar.</li>
+  <li><strong>Endereço:</strong> hash da chave pública — identificador público na blockchain.</li>
+  <li><strong>Explorer de blocos:</strong> site que permite visualizar todas as transações (blockchain.com, etherscan.io). A blockchain é PÚBLICA — qualquer um pode ver as transações, mas os endereços são pseudônimos (não necessariamente ligados a identidades reais).</li>
+</ul>
+
+<h2 class="sub">Crimes com criptoativos e rastreamento</h2>
+<ul>
+  <li><strong>Mixing/Tumbling:</strong> serviço que embaralha criptomoedas de vários usuários para dificultar rastreamento.</li>
+  <li><strong>Monero (XMR):</strong> criptomoeda focada em privacidade — transações rastreáveis são extremamente difíceis.</li>
+  <li><strong>Exchange (corretora):</strong> ponto de entrada/saída do dinheiro real. Exchanges reguladas exigem KYC (Know Your Customer) — identificação do usuário. São obrigadas a fornecer dados com ordem judicial.</li>
+  <li><strong>Análise de blockchain:</strong> ferramentas como Chainalysis, CipherTrace rastreiam fluxo de criptoativos.</li>
+</ul>
+
+<h2 class="sub">Marco Civil da Internet — Lei 12.965/2014</h2>
+<ul>
+  <li>Garante liberdade de expressão, privacidade e neutralidade de rede.</li>
+  <li><strong>Provedor de conexão:</strong> guarda registros de conexão por <strong>1 ano</strong>.</li>
+  <li><strong>Provedor de aplicação:</strong> guarda registros de acesso por <strong>6 meses</strong>.</li>
+  <li>Dados só podem ser acessados por <strong>ordem judicial</strong>.</li>
+  <li>Neutralidade de rede: todos os pacotes devem ser tratados igualmente.</li>
+  <li>Responsabilidade dos provedores: não respondem por conteúdo de terceiros, exceto após notificação judicial e não remoção.</li>
+</ul>
+
+<h2 class="sub">Crimes digitais — tipos e legislação</h2>
+<table>
+  <tr><th>Crime</th><th>Lei/Art.</th><th>Pena</th></tr>
+  <tr><td>Invasão de dispositivo informático</td><td>Art. 154-A CP (Lei 12.737/2012)</td><td>1 a 4 anos + multa. Com divulgação: até 5 anos.</td></tr>
+  <tr><td>Interrupção de serviço informático</td><td>Art. 266 §1° CP</td><td>1 a 5 anos</td></tr>
+  <tr><td>Falsidade informática</td><td>Art. 313-A CP</td><td>3 a 12 anos (funcionário público)</td></tr>
+  <tr><td>Estelionato digital</td><td>Art. 171 CP</td><td>1 a 5 anos</td></tr>
+</table>
+
+<div class="ex">
+  <h3>Exercícios — Crimes Digitais e Marco Civil</h3>
+  <div class="q"><p>Q11. Pelo Marco Civil da Internet, o prazo que os provedores de APLICAÇÃO devem manter os registros de acesso é de:</p>
+    <ul><li>A) 1 ano</li><li>B) 6 meses</li><li>C) 2 anos</li><li>D) 90 dias</li></ul>
+  </div>
+  <div class="q"><p>Q12. A técnica de "tumbling" de criptomoedas é utilizada para:</p>
+    <ul><li>A) Converter Bitcoin em dinheiro físico</li><li>B) Criar novas criptomoedas</li><li>C) Dificultar o rastreamento da origem dos criptoativos</li><li>D) Aumentar a velocidade das transações</li></ul>
+  </div>
+  <div class="q"><p>Q13. Um deepfake é:</p>
+    <ul><li>A) Um tipo de malware que clona perfis em redes sociais</li><li>B) Conteúdo de vídeo ou áudio sintético criado por inteligência artificial para simular uma pessoa real</li><li>C) Uma técnica de phishing por vídeo</li><li>D) Um protocolo de anonimização de tráfego</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q11-B | Q12-C | Q13-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">7. CLOUD, IoT, LGPD E REDES SOCIAIS NA INVESTIGAÇÃO</h1>
+
+<h2 class="sub">Computação em Nuvem (Cloud Computing)</h2>
+<table>
+  <tr><th>Modelo de serviço</th><th>O que oferece</th><th>Exemplo</th></tr>
+  <tr><td><strong>IaaS</strong> (Infrastructure as a Service)</td><td>Infraestrutura de TI — servidores, armazenamento, rede</td><td>AWS EC2, Google Compute, Azure</td></tr>
+  <tr><td><strong>PaaS</strong> (Platform as a Service)</td><td>Plataforma para desenvolver/implantar apps</td><td>Google App Engine, Heroku</td></tr>
+  <tr><td><strong>SaaS</strong> (Software as a Service)</td><td>Software pronto via internet</td><td>Gmail, Office 365, Salesforce</td></tr>
+</table>
+<table>
+  <tr><th>Tipo de nuvem</th><th>Descrição</th></tr>
+  <tr><td>Pública</td><td>Infraestrutura compartilhada — gerida pelo provedor, acesso por internet</td></tr>
+  <tr><td>Privada</td><td>Exclusiva de uma organização — maior controle e segurança</td></tr>
+  <tr><td>Híbrida</td><td>Combinação de pública + privada</td></tr>
+  <tr><td>Comunitária</td><td>Compartilhada entre organizações com interesses comuns</td></tr>
+</table>
+<div class="dica"><strong>Na investigação:</strong> dados na nuvem estão sob jurisdição do país onde o servidor está hospedado. Para obter dados de provedores estrangeiros, pode ser necessário MLAT (Tratado de Assistência Jurídica Mútua) ou ordens judiciais reconhecidas internacionalmente.</div>
+
+<h2 class="sub">IoT — Internet das Coisas</h2>
+<p>Objetos do cotidiano conectados à internet: câmeras IP, smart TVs, geladeiras, carros conectados, wearables, fechaduras inteligentes.</p>
+<ul>
+  <li><strong>Na investigação:</strong> dispositivos IoT podem registrar dados valiosos — câmeras domésticas, assistentes virtuais (Alexa, Google Home) podem conter registros de áudio/vídeo.</li>
+  <li><strong>Vulnerabilidades IoT:</strong> frequentemente têm senha padrão fraca, firmware desatualizado, comunicação sem criptografia — alvos fáceis para ataques.</li>
+  <li><strong>Botnet IoT:</strong> dispositivos IoT comprometidos usados em ataques DDoS (ex.: Mirai botnet, 2016).</li>
+</ul>
+
+<h2 class="sub">LGPD (Lei 13.709/2018) aplicada à investigação policial</h2>
+<ul>
+  <li>A LGPD tem exceção para <strong>segurança pública, defesa nacional, segurança do Estado e atividades de investigação e repressão de infrações penais</strong> (art. 4°, III) — regidas por legislação específica.</li>
+  <li>Dados pessoais tratados para fins de segurança pública devem ser usados <strong>apenas para a finalidade prevista em lei</strong>.</li>
+  <li>O <strong>controlador</strong> dos dados na polícia deve garantir medidas de segurança e só compartilhar com autoridades competentes.</li>
+  <li>Dados biométricos, genéticos e de saúde são <strong>dados sensíveis</strong> — tratamento exige cuidados especiais mesmo nas investigações.</li>
+</ul>
+
+<h2 class="sub">Golpes digitais mais comuns — conhecimento para a investigação</h2>
+<table>
+  <tr><th>Golpe</th><th>Como funciona</th><th>Enquadramento penal</th></tr>
+  <tr><td><strong>Phishing</strong></td><td>E-mail/site falso imita banco ou empresa para roubar dados</td><td>Estelionato (art. 171 CP) / Invasão de dispositivo</td></tr>
+  <tr><td><strong>Golpe do WhatsApp</strong></td><td>Criminoso clona número e pede dinheiro aos contatos</td><td>Estelionato + falsa identidade (art. 307)</td></tr>
+  <tr><td><strong>Golpe do Pix</strong></td><td>Transferência sob pressão/coação ou site falso de banco</td><td>Estelionato / Extorsão</td></tr>
+  <tr><td><strong>Sextorsão</strong></td><td>Criminoso obtém foto/vídeo íntimo e extorque a vítima</td><td>Extorsão (art. 158) + Exposição de nudez (Marco Civil)</td></tr>
+  <tr><td><strong>Golpe do amor/romance scam</strong></td><td>Cria relacionamento falso online para obter dinheiro</td><td>Estelionato</td></tr>
+  <tr><td><strong>Ransomware corporativo</strong></td><td>Criptografa dados de empresa, exige resgate em cripto</td><td>Extorsão + Dano / Interrupção de serviço (art. 266)</td></tr>
+  <tr><td><strong>Fake news com crime</strong></td><td>Desinformação para manipulação eleitoral/institucional</td><td>Lei 14.197/2021 (crimes contra o Estado Democrático)</td></tr>
+</table>
+
+<h2 class="sub">Investigação em redes sociais</h2>
+<ul>
+  <li><strong>OSINT (Open Source Intelligence):</strong> coleta de informações de fontes abertas — posts públicos, perfis, grupos. Não exige autorização judicial.</li>
+  <li><strong>Dados cadastrais do usuário:</strong> exigem requisição com base legal (art. 10, §3° Marco Civil).</li>
+  <tr><td>Conteúdo de mensagens privadas: exige ordem judicial.</td></tr>
+  <li><strong>Geolocalização por redes sociais:</strong> check-ins, histórico de localização — dados do usuário disponíveis via ordem judicial à plataforma.</li>
+  <li><strong>Preservação de evidências digitais:</strong> screenshot com hash + metadados ou laudo pericial — simples print pode ser contestado.</li>
+  <li><strong>Lei 12.737/2012 (Lei Carolina Dieckmann):</strong> tipificou invasão de dispositivo informático (art. 154-A CP). Pena de 1 a 4 anos + multa. Agravada quando praticada por funcionário público ou contra criança/adolescente.</li>
+</ul>
+
+<div class="ex">
+  <h3>Exercícios — Cloud, IoT e Golpes Digitais</h3>
+  <div class="q"><p>Q14. No modelo de computação em nuvem, o Gmail é um exemplo de:</p>
+    <ul><li>A) IaaS</li><li>B) PaaS</li><li>C) SaaS</li><li>D) Nuvem privada</li></ul>
+  </div>
+  <div class="q"><p>Q15. A LGPD prevê exceção ao tratamento de dados pessoais para fins de segurança pública e investigação criminal. Isso significa que:</p>
+    <ul><li>A) A polícia pode tratar qualquer dado sem nenhuma restrição</li><li>B) Os dados tratados para fins de segurança devem ser usados apenas para as finalidades previstas em lei</li><li>C) A LGPD não se aplica ao serviço público</li><li>D) Dados biométricos podem ser coletados livremente pela polícia</li></ul>
+  </div>
+  <div class="q"><p>Q16. A técnica de OSINT (Open Source Intelligence) na investigação digital consiste em:</p>
+    <ul><li>A) Interceptação de mensagens privadas mediante ordem judicial</li><li>B) Acesso ao histórico de conversas no servidor da empresa</li><li>C) Coleta de informações de fontes abertas e públicas, sem necessidade de autorização judicial</li><li>D) Quebra de criptografia de dispositivos apreendidos</li></ul>
+  </div>
+  <div class="q"><p>Q17. A Lei 12.737/2012 (Lei Carolina Dieckmann) tipificou como crime:</p>
+    <ul><li>A) A falsificação de documentos digitais</li><li>B) A invasão de dispositivo informático alheio</li><li>C) O uso de deepfakes em crimes de extorsão</li><li>D) O compartilhamento de senhas</li></ul>
+  </div>
+  <div class="q"><p>Q18. Em um golpe de sextorsão, o criminoso que ameaça divulgar imagens íntimas para obter dinheiro comete o crime de:</p>
+    <ul><li>A) Furto qualificado</li><li>B) Difamação</li><li>C) Extorsão</li><li>D) Estelionato</li></ul>
+  </div>
+  <div class="q"><p>Q19. Dispositivos IoT (Internet das Coisas) são frequentemente vulneráveis porque:</p>
+    <ul><li>A) Usam sempre criptografia militar</li><li>B) Não se conectam à internet</li><li>C) Costumam ter senhas padrão fracas e firmware desatualizado, sendo alvos fáceis de ataques</li><li>D) Operam apenas em redes privadas isoladas</li></ul>
+  </div>
+  <div class="q"><p>Q20. Para obter dados de conteúdo de mensagens privadas armazenadas em servidor de empresa estrangeira, a polícia brasileira pode precisar de:</p>
+    <ul><li>A) Apenas requisição do delegado ao provedor</li><li>B) MLAT — Tratado de Assistência Jurídica Mútua — ou cooperação internacional</li><li>C) Autorização do Ministério Público federal</li><li>D) Requerimento da vítima ao provedor</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q14-C | Q15-B | Q16-C | Q17-B | Q18-C | Q19-C | Q20-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">GABARITO GERAL — TI</h1>
+<table>
+  <tr><th>Q</th><th>Resp.</th><th>Tema</th></tr>
+  <tr><td>Q1</td><td>C</td><td>Porta HTTPS = 443</td></tr>
+  <tr><td>Q2</td><td>B</td><td>CGNAT — compartilhamento de IP</td></tr>
+  <tr><td>Q3</td><td>B</td><td>Deep Web — conteúdos privados legítimos</td></tr>
+  <tr><td>Q4</td><td>B</td><td>Tor — roteamento em cebola</td></tr>
+  <tr><td>Q5</td><td>C</td><td>Ransomware</td></tr>
+  <tr><td>Q6</td><td>B</td><td>MFA — múltiplos fatores</td></tr>
+  <tr><td>Q7</td><td>C</td><td>IMEI = aparelho</td></tr>
+  <tr><td>Q8</td><td>B</td><td>ERB = localização</td></tr>
+  <tr><td>Q9</td><td>B</td><td>Hash = integridade da prova</td></tr>
+  <tr><td>Q10</td><td>C</td><td>EXIF = metadados da foto</td></tr>
+  <tr><td>Q11</td><td>B</td><td>Marco Civil — aplicação = 6 meses</td></tr>
+  <tr><td>Q12</td><td>C</td><td>Tumbling = dificultar rastreamento</td></tr>
+  <tr><td>Q13</td><td>B</td><td>Deepfake = IA sintética</td></tr>
+  <tr><td>Q14</td><td>C</td><td>Gmail = SaaS</td></tr>
+  <tr><td>Q15</td><td>B</td><td>LGPD — finalidade legal na segurança pública</td></tr>
+  <tr><td>Q16</td><td>C</td><td>OSINT = fontes abertas, sem ordem judicial</td></tr>
+  <tr><td>Q17</td><td>B</td><td>Lei 12.737 = invasão de dispositivo</td></tr>
+  <tr><td>Q18</td><td>C</td><td>Sextorsão = extorsão</td></tr>
+  <tr><td>Q19</td><td>C</td><td>IoT = senhas padrão fracas, firmware desatualizado</td></tr>
+  <tr><td>Q20</td><td>B</td><td>Dados no exterior = MLAT / cooperação internacional</td></tr>
+</table>
+</div>
+
+<div class="contracapa">
+  <div class="logo-sc">Polícia Civil</div>
+  <div class="logo-pc">PC-SC</div>
+  <div class="logo-sc">Santa Catarina</div>
+  <div class="stripe"></div>
+  <h2>Bons estudos!</h2>
+  <p>Concurso Público — Edital 01/2025</p>
+  <p>Cargo: Agente de Polícia Civil</p>
+  <p>Organizadora: IDECAN</p>
+  <p style="margin-top:4mm; color:#fff; font-weight:bold;">Elaborado por: Dani Kaloi</p>
+  <div class="stripe"></div>
+  <div class="data">PROVA: 21 DE MARÇO DE 2026</div>
+  <div class="rodape">Material de estudo — uso pessoal</div>
+</div>
+
+</body>
+</html>

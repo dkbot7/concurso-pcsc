@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Apostila PC-SC — Legislação Institucional</title>
+<style>
+  @page { size: A5; margin: 12mm 10mm 16mm 10mm; @bottom-center { content: "Página " counter(page) " de " counter(pages); font-size: 7pt; color: #555; font-family: Arial, sans-serif; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 8.5pt; color: #111; line-height: 1.4; background: #fff; }
+  .capa { text-align: center; padding: 40mm 20mm; page-break-after: always; }
+  .capa .num { font-size: 48pt; color: #1a3560; font-weight: bold; margin: 20px 0; }
+  .capa h1 { font-size: 22pt; color: #1a3560; margin-bottom: 8px; }
+  .capa h2 { font-size: 15pt; color: #c0392b; margin-bottom: 20px; }
+  .capa .info { font-size: 11pt; margin: 5px 0; }
+  .capa .prova { font-size: 12pt; font-weight: bold; color: #c0392b; border: 2px solid #c0392b; padding: 10px 20px; display: inline-block; margin-top: 20px; }
+  .secao { page-break-before: always; }
+  .secao:first-of-type { page-break-before: avoid; }
+  h1.titulo { background: #1a3560; color: #fff; font-size: 13pt; padding: 8px 12px; margin-bottom: 14px; }
+  h2.sub { font-size: 11pt; color: #1a3560; border-left: 4px solid #1a3560; padding-left: 8px; margin: 14px 0 7px; }
+  h3.sub2 { font-size: 10pt; color: #c0392b; margin: 10px 0 4px; font-weight: bold; }
+  p { margin-bottom: 7px; }
+  ul, ol { padding-left: 18px; margin-bottom: 8px; }
+  li { margin-bottom: 3px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 9.5pt; }
+  th { background: #1a3560; color: #fff; padding: 5px 7px; text-align: left; }
+  td { padding: 4px 7px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  .alerta { background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .dica { background: #d4edda; border-left: 4px solid #28a745; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .atencao { background: #f8d7da; border-left: 4px solid #c0392b; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .ex { background: #f4f7fb; border: 1px solid #1a3560; border-radius: 4px; padding: 12px 14px; margin: 16px 0; }
+  .ex h3 { color: #1a3560; font-size: 11pt; margin-bottom: 10px; border-bottom: 1px solid #1a3560; padding-bottom: 4px; }
+  .q { margin-bottom: 14px; }
+  .q p { font-weight: bold; margin-bottom: 5px; }
+  .q ul { font-size: 9.5pt; padding-left: 10px; }
+  .q ul li { list-style: none; margin-bottom: 2px; }
+  .gab { background: #1a3560; color: #fff; border-radius: 4px; padding: 8px 14px; margin-top: 10px; font-size: 9pt; }
+  /* === CAPA REDESIGN === */
+  .capa { text-align: center; background: #1a3560; color: #fff; padding: 8mm 8mm 10mm 8mm; page-break-after: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .capa .num { font-size: 52pt; color: #fff; font-weight: bold; margin: 0 0 2mm 0; line-height: 1; }
+  .capa h1 { font-size: 14pt; color: #fff; margin-bottom: 4px; font-weight: bold; }
+  .capa h2 { font-size: 10pt; color: #aad4f5; margin-bottom: 6px; font-weight: normal; }
+  .capa .info { font-size: 8.5pt; color: #ccc; margin: 2px 0; }
+  .capa .stripe { width: 100%; height: 3px; background: #c0392b; margin: 5mm 0; }
+  .capa .prova { font-size: 9.5pt; font-weight: bold; color: #fff; background: #c0392b; padding: 6px 16px; display: inline-block; margin-top: 5mm; border-radius: 2px; }
+  /* === CONTRACAPA === */
+  .contracapa { text-align: center; background: #1a3560; color: #fff; padding: 10mm 8mm; page-break-before: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .contracapa .logo-pc { font-size: 48pt; font-weight: bold; color: #c0392b; line-height: 1; letter-spacing: 4px; }
+  .contracapa .logo-sc { font-size: 8.5pt; color: #aad4f5; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 1mm; }
+  .contracapa .stripe { width: 60%; height: 3px; background: #c0392b; margin: 6mm auto; }
+  .contracapa h2 { font-size: 14pt; color: #fff; margin: 0 0 4mm 0; }
+  .contracapa p { font-size: 8.5pt; color: #aad4f5; margin: 2px 0; line-height: 1.6; }
+  .contracapa .data { font-size: 10pt; color: #fff; font-weight: bold; margin-top: 5mm; border: 2px solid #c0392b; padding: 5px 14px; display: inline-block; letter-spacing: 1px; }
+  .contracapa .rodape { font-size: 7pt; color: #444; margin-top: 10mm; }
+</style>
+</head>
+<body>
+<div class="capa">
+  <div class="num">10</div>
+  <div class="stripe"></div>
+  <h1>LEGISLAÇÃO INSTITUCIONAL</h1>
+  <h2>Apostila Completa — PC-SC 2026</h2>
+  <div class="info">Polícia Civil de Santa Catarina | Edital 01/2025</div>
+  <div class="info"><strong>4 questões na prova</strong></div>
+  <div class="prova">PROVA: 21 DE MARÇO DE 2026</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">1. LEI 14.735/2023 — LEI ORGÂNICA NACIONAL DAS POLÍCIAS CIVIS</h1>
+<h2 class="sub">Estrutura e finalidade</h2>
+<ul>
+  <li>Lei nacional (não estadual) que estabelece normas gerais para organização de TODAS as Polícias Civis do Brasil.</li>
+  <li>As Polícias Civis são <strong>permanentes</strong> e <strong>essenciais à segurança pública</strong>.</li>
+  <li><strong>Funções:</strong> exercício das funções de polícia judiciária + apuração de infrações penais (exceto militares).</li>
+  <li><strong>Subordinação:</strong> ao Governador do Estado (ou DF).</li>
+  <li><strong>Direção:</strong> pelo Delegado-Geral de Polícia Civil, que deve ser Delegado de Polícia de carreira.</li>
+</ul>
+<h2 class="sub">Delegado de Polícia</h2>
+<ul>
+  <li>Cargo privativo de bacharel em Direito.</li>
+  <li>Provimento mediante concurso público de provas e títulos.</li>
+  <li>Carreira jurídica — os atos do delegado têm natureza jurídico-administrativa.</li>
+  <li>Presidência do inquérito policial e condução da investigação são funções exclusivas.</li>
+</ul>
+<h2 class="sub">Agente de Polícia Civil</h2>
+<ul>
+  <li>Cargo de nível superior.</li>
+  <li>Provimento por concurso público.</li>
+  <li>Curso de formação obrigatório após a aprovação no concurso.</li>
+  <li>Dedica-se exclusivamente às atividades de polícia civil (regime de dedicação exclusiva, com possibilidade de exercer magistério).</li>
+</ul>
+<div class="atencao">A Lei 14.735/2023 foi publicada em 23/11/2023. É a primeira Lei Orgânica Nacional das Polícias Civis, unificando padrões mínimos para todos os estados.</div>
+
+<div class="ex">
+  <h3>Exercício</h3>
+  <div class="q"><p>Q1. Segundo a Lei 14.735/2023, as Polícias Civis estaduais são subordinadas ao:</p>
+    <ul><li>A) Presidente da República</li><li>B) Governador do Estado</li><li>C) Delegado-Geral</li><li>D) Secretário de Segurança Pública</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q1-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">2. ESTATUTO DA PC-SC — LEI 6.843/1986</h1>
+<h2 class="sub">Estrutura da Polícia Civil de SC</h2>
+<ul>
+  <li>Órgão máximo: <strong>Delegacia-Geral</strong> (dirigida pelo Delegado-Geral).</li>
+  <li>Órgãos de formação: <strong>ACADEPOL</strong> (Academia de Polícia Civil).</li>
+  <li>Órgãos técnicos: Instituto de Criminalística (IC), Instituto Médico Legal (IML), Instituto de Identificação (II).</li>
+</ul>
+<h2 class="sub">Deveres do policial civil</h2>
+<ul>
+  <li>Dedicação integral ao cargo e às funções.</li>
+  <li>Obediência hierárquica às ordens legais dos superiores.</li>
+  <li>Sigilo sobre assuntos de natureza reservada que conhecer em razão do cargo.</li>
+  <li>Urbanidade e cortesia no atendimento ao público.</li>
+  <li>Pontualidade e assiduidade.</li>
+  <li>Zelar pela conservação dos bens públicos.</li>
+  <li>Comunicar imediatamente ao superior sobre irregularidades de que tiver conhecimento.</li>
+</ul>
+<h2 class="sub">Proibições</h2>
+<ul>
+  <li>Exercer outra atividade remunerada pública ou privada, salvo o magistério (com compatibilidade de horários).</li>
+  <li>Participar de atividade político-partidária em serviço ou valendo-se do cargo.</li>
+  <li>Revelar segredo de que tenha conhecimento em razão do cargo.</li>
+  <li>Valer-se do cargo para obter vantagem pessoal.</li>
+  <li>Praticar atos de improbidade administrativa.</li>
+</ul>
+<h2 class="sub">Regime disciplinar</h2>
+<table>
+  <tr><th>Penalidade</th><th>Infrações</th></tr>
+  <tr><td>Advertência (escrita)</td><td>Infrações leves — desvios menores de conduta</td></tr>
+  <tr><td>Repreensão</td><td>Infrações médias</td></tr>
+  <tr><td>Suspensão (até 90 dias)</td><td>Infrações graves</td></tr>
+  <tr><td>Demissão</td><td>Infrações gravíssimas (corrupção, improbidade, abandono de cargo)</td></tr>
+  <tr><td>Cassação de aposentadoria</td><td>Infrações que, se em atividade, resultariam em demissão</td></tr>
+</table>
+<div class="dica"><strong>Processo disciplinar:</strong> Sindicância (investigação preliminar — até 30 dias) → PAD (Processo Administrativo Disciplinar — para infrações que podem resultar em suspensão ou demissão).</div>
+
+<div class="ex">
+  <h3>Exercício</h3>
+  <div class="q"><p>Q2. Um agente de polícia que revela segredo de investigação a terceiros não autorizados comete infração ao dever de:</p>
+    <ul><li>A) Urbanidade</li><li>B) Sigilo funcional</li><li>C) Assiduidade</li><li>D) Eficiência</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q2-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">3. LEIS COMPLEMENTARES ESTADUAIS E PLANO DE CARREIRA</h1>
+<h2 class="sub">LC 453/2009 — Reorganização das Carreiras</h2>
+<ul>
+  <li>Reorganiza os cargos de carreira da Polícia Civil de SC.</li>
+  <li>Define as classes e padrões da carreira de Agente de Polícia.</li>
+  <li>Progressão funcional: por antiguidade (tempo de serviço) e por merecimento (avaliação de desempenho).</li>
+  <li>Para progressão: cumprir interstício mínimo + frequência nos cursos da ACADEPOL.</li>
+</ul>
+<h2 class="sub">LC 491/2010 — Organização Básica da PC-SC</h2>
+<ul>
+  <li>Define a estrutura orgânica da Polícia Civil.</li>
+  <li>Órgãos de direção: Delegacia-Geral e delegacias regionais.</li>
+  <li>Órgãos de execução: delegacias de polícia, delegacias especializadas.</li>
+  <li>Órgãos técnico-científicos: IC (Criminalística), IML (Medicina Legal), Instituto de Identificação.</li>
+</ul>
+<h2 class="sub">Lei 16.774/2015 — Regime Disciplinar dos Servidores SC</h2>
+<ul>
+  <li>Aplica-se a todos os servidores públicos civis do Estado, inclusive policiais civis.</li>
+  <li>Define deveres, proibições, responsabilidades e penalidades.</li>
+  <li><strong>Sindicância:</strong> prazo de 30 dias (prorrogável por mais 30 dias). Pode resultar em: arquivamento, penalidade de advertência/repreensão, instauração de PAD.</li>
+  <li><strong>PAD (Processo Administrativo Disciplinar):</strong> prazo de 60 dias (prorrogável por igual período). Para penalidades mais graves (suspensão acima de 30 dias, demissão, cassação de aposentadoria).</li>
+  <li><strong>Prescrição disciplinar:</strong> a pretensão punitiva administrativa prescreve em 5 anos (para demissão), 2 anos (suspensão) e 180 dias (advertência).</li>
+  <li><strong>Comissão processante:</strong> o PAD é conduzido por comissão de 3 servidores estáveis, designados pela autoridade competente.</li>
+</ul>
+<div class="alerta"><strong>Questão-chave:</strong> a sindicância é procedimento <em>preparatório e investigativo</em>. O PAD é o procedimento <em>punitivo formal</em> com contraditório e ampla defesa. A sindicância pode preceder o PAD, mas não é obrigatória.</div>
+<h2 class="sub">LC 741/2019 — Plano de Carreira PC-SC</h2>
+<ul>
+  <li>Institui o Plano de Carreira dos servidores da Polícia Civil de SC.</li>
+  <li>Define os cargos do quadro de pessoal e seus requisitos.</li>
+  <li>Progressão por classe: requer cumprimento de interstício + capacitação na ACADEPOL.</li>
+  <li>Adicional de desempenho: avaliação periódica de metas e resultados.</li>
+</ul>
+<h2 class="sub">ACADEPOL — Academia de Polícia Civil de SC</h2>
+<ul>
+  <li>Responsável pela formação inicial (curso de formação obrigatório após aprovação no concurso) e continuada dos policiais civis catarinenses.</li>
+  <li>O curso de formação é requisito para o estágio probatório.</li>
+  <li>Cursos de especialização e atualização são considerados para promoção e progressão na carreira.</li>
+</ul>
+
+<div class="ex">
+  <h3>Exercícios</h3>
+  <div class="q"><p>Q3. A ACADEPOL tem como função principal:</p>
+    <ul><li>A) Dirigir as delegacias regionais da PC-SC</li><li>B) Formar e capacitar os policiais civis catarinenses</li><li>C) Realizar perícias técnico-científicas</li><li>D) Processar disciplinarmente os servidores</li></ul>
+  </div>
+  <div class="q"><p>Q4. A sindicância, no regime disciplinar da PC-SC, é:</p>
+    <ul><li>A) Equivalente ao processo administrativo disciplinar (PAD)</li><li>B) Uma investigação preliminar que pode resultar em arquivamento, penalidade leve ou instauração de PAD</li><li>C) Procedimento que sempre resulta em demissão</li><li>D) Utilizada apenas para crimes funcionais</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q3-B | Q4-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">RESUMO GERAL DAS LEIS</h1>
+<table>
+  <tr><th>Lei</th><th>Assunto principal</th><th>Ano</th></tr>
+  <tr><td>Lei 14.735</td><td>Lei Orgânica Nacional das Polícias Civis</td><td>2023</td></tr>
+  <tr><td>Lei 6.843</td><td>Estatuto da Polícia Civil de SC</td><td>1986</td></tr>
+  <tr><td>LC 453</td><td>Reorganização das carreiras PC-SC</td><td>2009</td></tr>
+  <tr><td>LC 491</td><td>Organização básica da PC-SC</td><td>2010</td></tr>
+  <tr><td>Lei 16.774</td><td>Regime disciplinar dos servidores SC</td><td>2015</td></tr>
+  <tr><td>LC 741</td><td>Plano de carreira PC-SC</td><td>2019</td></tr>
+</table>
+
+<h1 class="titulo" style="margin-top:20px;">GABARITO GERAL</h1>
+<table>
+  <tr><th>Q</th><th>Resp.</th><th>Tema</th></tr>
+  <tr><td>Q1</td><td>B</td><td>Subordinação ao Governador</td></tr>
+  <tr><td>Q2</td><td>B</td><td>Dever de sigilo funcional</td></tr>
+  <tr><td>Q3</td><td>B</td><td>ACADEPOL = formação</td></tr>
+  <tr><td>Q4</td><td>B</td><td>Sindicância = investigação preliminar</td></tr>
+</table>
+</div>
+
+<div class="contracapa">
+  <div class="logo-sc">Polícia Civil</div>
+  <div class="logo-pc">PC-SC</div>
+  <div class="logo-sc">Santa Catarina</div>
+  <div class="stripe"></div>
+  <h2>Bons estudos!</h2>
+  <p>Concurso Público — Edital 01/2025</p>
+  <p>Cargo: Agente de Polícia Civil</p>
+  <p>Organizadora: IDECAN</p>
+  <p style="margin-top:4mm; color:#fff; font-weight:bold;">Elaborado por: Dani Kaloi</p>
+  <div class="stripe"></div>
+  <div class="data">PROVA: 21 DE MARÇO DE 2026</div>
+  <div class="rodape">Material de estudo — uso pessoal</div>
+</div>
+
+</body>
+</html>

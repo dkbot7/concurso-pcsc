@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Apostila PC-SC — Contabilidade</title>
+<style>
+  @page { size: A5; margin: 12mm 10mm 16mm 10mm; @bottom-center { content: "Página " counter(page) " de " counter(pages); font-size: 7pt; color: #555; font-family: Arial, sans-serif; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 8.5pt; color: #111; line-height: 1.4; background: #fff; }
+  .capa { text-align: center; padding: 40mm 20mm; page-break-after: always; }
+  .capa .num { font-size: 48pt; color: #1a3560; font-weight: bold; margin: 20px 0; }
+  .capa h1 { font-size: 22pt; color: #1a3560; margin-bottom: 8px; }
+  .capa h2 { font-size: 15pt; color: #c0392b; margin-bottom: 20px; }
+  .capa .info { font-size: 11pt; margin: 5px 0; }
+  .capa .prova { font-size: 12pt; font-weight: bold; color: #c0392b; border: 2px solid #c0392b; padding: 10px 20px; display: inline-block; margin-top: 20px; }
+  .secao { page-break-before: always; }
+  .secao:first-of-type { page-break-before: avoid; }
+  h1.titulo { background: #1a3560; color: #fff; font-size: 13pt; padding: 8px 12px; margin-bottom: 14px; }
+  h2.sub { font-size: 11pt; color: #1a3560; border-left: 4px solid #1a3560; padding-left: 8px; margin: 14px 0 7px; }
+  p { margin-bottom: 7px; }
+  ul, ol { padding-left: 18px; margin-bottom: 8px; }
+  li { margin-bottom: 3px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 9.5pt; }
+  th { background: #1a3560; color: #fff; padding: 5px 7px; text-align: left; }
+  td { padding: 4px 7px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  .alerta { background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .dica { background: #d4edda; border-left: 4px solid #28a745; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .atencao { background: #f8d7da; border-left: 4px solid #c0392b; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .ex { background: #f4f7fb; border: 1px solid #1a3560; border-radius: 4px; padding: 12px 14px; margin: 16px 0; }
+  .ex h3 { color: #1a3560; font-size: 11pt; margin-bottom: 10px; border-bottom: 1px solid #1a3560; padding-bottom: 4px; }
+  .q { margin-bottom: 14px; }
+  .q p { font-weight: bold; margin-bottom: 5px; }
+  .q ul { font-size: 9.5pt; padding-left: 10px; }
+  .q ul li { list-style: none; margin-bottom: 2px; }
+  .gab { background: #1a3560; color: #fff; border-radius: 4px; padding: 8px 14px; margin-top: 10px; font-size: 9pt; }
+  /* === CAPA REDESIGN === */
+  .capa { text-align: center; background: #1a3560; color: #fff; padding: 8mm 8mm 10mm 8mm; page-break-after: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .capa .num { font-size: 52pt; color: #fff; font-weight: bold; margin: 0 0 2mm 0; line-height: 1; }
+  .capa h1 { font-size: 14pt; color: #fff; margin-bottom: 4px; font-weight: bold; }
+  .capa h2 { font-size: 10pt; color: #aad4f5; margin-bottom: 6px; font-weight: normal; }
+  .capa .info { font-size: 8.5pt; color: #ccc; margin: 2px 0; }
+  .capa .stripe { width: 100%; height: 3px; background: #c0392b; margin: 5mm 0; }
+  .capa .prova { font-size: 9.5pt; font-weight: bold; color: #fff; background: #c0392b; padding: 6px 16px; display: inline-block; margin-top: 5mm; border-radius: 2px; }
+  /* === CONTRACAPA === */
+  .contracapa { text-align: center; background: #1a3560; color: #fff; padding: 10mm 8mm; page-break-before: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .contracapa .logo-pc { font-size: 48pt; font-weight: bold; color: #c0392b; line-height: 1; letter-spacing: 4px; }
+  .contracapa .logo-sc { font-size: 8.5pt; color: #aad4f5; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 1mm; }
+  .contracapa .stripe { width: 60%; height: 3px; background: #c0392b; margin: 6mm auto; }
+  .contracapa h2 { font-size: 14pt; color: #fff; margin: 0 0 4mm 0; }
+  .contracapa p { font-size: 8.5pt; color: #aad4f5; margin: 2px 0; line-height: 1.6; }
+  .contracapa .data { font-size: 10pt; color: #fff; font-weight: bold; margin-top: 5mm; border: 2px solid #c0392b; padding: 5px 14px; display: inline-block; letter-spacing: 1px; }
+  .contracapa .rodape { font-size: 7pt; color: #444; margin-top: 10mm; }
+</style>
+</head>
+<body>
+<div class="capa">
+  <div class="num">8</div>
+  <div class="stripe"></div>
+  <h1>NOÇÕES DE CONTABILIDADE</h1>
+  <h2>Apostila Completa — PC-SC 2026</h2>
+  <div class="info">Polícia Civil de Santa Catarina | Edital 01/2025</div>
+  <div class="info"><strong>6 questões na prova</strong></div>
+  <div class="prova">PROVA: 21 DE MARÇO DE 2026</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">1. FUNDAMENTOS DA CONTABILIDADE</h1>
+<h2 class="sub">Princípios fundamentais (NBC PG 100)</h2>
+<table>
+  <tr><th>Princípio</th><th>Significado simples</th></tr>
+  <tr><td>Entidade</td><td>Finanças da empresa separadas das do dono</td></tr>
+  <tr><td>Continuidade</td><td>Pressupõe que a empresa vai continuar existindo</td></tr>
+  <tr><td>Oportunidade</td><td>Registra no momento em que ocorre o fato</td></tr>
+  <tr><td>Registro pelo valor original</td><td>Bens registrados pelo preço de aquisição</td></tr>
+  <tr><td>Competência</td><td>Receitas/despesas reconhecidas quando ocorrem, não quando recebe/paga dinheiro</td></tr>
+  <tr><td>Prudência</td><td>Na dúvida: menor receita / maior despesa</td></tr>
+</table>
+<h2 class="sub">Equação fundamental</h2>
+<p style="text-align:center;font-size:14pt;font-weight:bold;background:#e8f4fd;padding:10px;border-radius:4px;">ATIVO = PASSIVO + PATRIMÔNIO LÍQUIDO</p>
+<ul>
+  <li><strong>Ativo:</strong> tudo que a empresa tem (bens) e o que lhe devem (direitos).</li>
+  <li><strong>Passivo:</strong> dívidas e obrigações da empresa com terceiros.</li>
+  <li><strong>Patrimônio Líquido (PL):</strong> recursos dos sócios + lucros retidos. PL = Ativo − Passivo.</li>
+</ul>
+<h2 class="sub">Balanço Patrimonial</h2>
+<table>
+  <tr><th colspan="2">ATIVO</th><th colspan="2">PASSIVO + PL</th></tr>
+  <tr><td><strong>Circulante</strong></td><td>Caixa, contas a receber, estoques (até 1 ano)</td><td><strong>Circulante</strong></td><td>Fornecedores, salários, empréstimos (até 1 ano)</td></tr>
+  <tr><td><strong>Não Circulante</strong></td><td>Imóveis, máquinas, veículos, investimentos (mais de 1 ano)</td><td><strong>Não Circulante</strong></td><td>Financiamentos de longo prazo</td></tr>
+  <tr><td></td><td></td><td><strong>PL</strong></td><td>Capital social + reservas + lucros acumulados</td></tr>
+</table>
+<h2 class="sub">Demonstrações contábeis principais</h2>
+<ul>
+  <li><strong>Balanço Patrimonial (BP):</strong> fotografia do patrimônio em uma data. Ativo = Passivo + PL.</li>
+  <li><strong>DRE (Demonstração do Resultado):</strong> filme do lucro/prejuízo num período. Receita − Custos − Despesas = Resultado.</li>
+  <li><strong>DFC (Fluxo de Caixa — NBC TG 03):</strong> entradas e saídas reais de dinheiro. Atividades: operacionais + investimento + financiamento.</li>
+  <li><strong>DVA (Valor Adicionado — NBC TG 09):</strong> riqueza gerada e como foi distribuída.</li>
+</ul>
+<div class="ex">
+  <h3>Exercícios — Fundamentos</h3>
+  <div class="q"><p>Q1. Uma empresa tem Ativo de R$500.000 e Passivo de R$300.000. Seu Patrimônio Líquido é:</p>
+    <ul><li>A) R$800.000</li><li>B) R$300.000</li><li>C) R$200.000</li><li>D) R$150.000</li></ul>
+  </div>
+  <div class="q"><p>Q2. O princípio contábil que determina que receitas e despesas devem ser reconhecidas quando ocorrem (não quando o dinheiro entra/sai) é o princípio da:</p>
+    <ul><li>A) Prudência</li><li>B) Competência</li><li>C) Continuidade</li><li>D) Entidade</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q1-C (500.000 − 300.000) | Q2-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">2. PERÍCIA CONTÁBIL E LAVAGEM DE DINHEIRO</h1>
+<h2 class="sub">Perícia contábil (NBC TP 01)</h2>
+<ul>
+  <li><strong>Perito judicial:</strong> nomeado pelo juiz. Imparcial.</li>
+  <li><strong>Assistente técnico:</strong> indicado pela parte. Parcial (defende os interesses da parte).</li>
+  <li><strong>Laudo pericial contábil:</strong> documento final do perito — conclusão técnica.</li>
+  <li><strong>Parecer técnico contábil:</strong> documento do assistente técnico — opinião sobre o laudo.</li>
+</ul>
+<h2 class="sub">Lavagem de dinheiro — Lei 9.613/1998</h2>
+<p>Processo de transformar dinheiro de origem criminosa em dinheiro aparentemente lícito.</p>
+<table>
+  <tr><th>Fase</th><th>Descrição</th><th>Exemplo</th></tr>
+  <tr><td><strong>1. Colocação (placement)</strong></td><td>Inserção do dinheiro ilícito no sistema financeiro</td><td>Depósitos fracionados, compras em espécie</td></tr>
+  <tr><td><strong>2. Ocultação/Estratificação (layering)</strong></td><td>Movimentações complexas para dificultar rastreio</td><td>Transferências internacionais, criptomoedas, offshores</td></tr>
+  <tr><td><strong>3. Integração (integration)</strong></td><td>O dinheiro volta com aparência lícita</td><td>Investimento imobiliário, empresa com faturamento fictício</td></tr>
+</table>
+<h2 class="sub">Sinais de alerta na investigação financeira</h2>
+<ul>
+  <li><strong>Smurfing:</strong> vários depósitos menores para evitar o limite de reporte (no Brasil, acima de R$2.000 para pessoas físicas deve ser informado ao COAF).</li>
+  <li>Empresa com faturamento incompatível com o ramo ou localização.</li>
+  <li>Movimentação financeira incompatível com a renda declarada pelo suspeito.</li>
+  <li>Uso excessivo de espécie (dinheiro físico).</li>
+  <li>Compras e vendas de imóveis por valores muito diferentes do mercado.</li>
+  <li>Empresas criadas especificamente para intermediar pagamentos (empresas de fachada).</li>
+</ul>
+<h2 class="sub">COAF — Conselho de Controle de Atividades Financeiras</h2>
+<p>Órgão do Ministério da Fazenda responsável por receber, examinar e identificar ocorrências suspeitas de lavagem de dinheiro. Produz <strong>Relatórios de Inteligência Financeira (RIF)</strong> que podem embasar investigações policiais.</p>
+<ul>
+  <li><strong>Obrigados a comunicar ao COAF:</strong> bancos, corretoras, empresas de seguros, joalherias, imobiliárias, factoring, advogados (em determinadas transações), cartórios — quando operações suspeitas acima dos limites.</li>
+  <li><strong>Limite de comunicação (pessoa física):</strong> movimentações em espécie acima de R$2.000 devem ser comunicadas (em alguns casos).</li>
+  <li><strong>RIF:</strong> o relatório do COAF não é prova, mas é instrumento de inteligência — deve ser corroborado por investigação policial.</li>
+  <li><strong>Sigilo das comunicações:</strong> os dados do COAF têm sigilo bancário/fiscal — acesso pela polícia e MP depende de ordem judicial ou compartilhamento formal.</li>
+</ul>
+<h2 class="sub">Sinais de alerta (red flags) para lavagem de dinheiro</h2>
+<table>
+  <tr><th>Sinal</th><th>Por que suspeito</th></tr>
+  <tr><td>Movimentação financeira incompatível com a renda declarada</td><td>Enriquecimento sem origem comprovada</td></tr>
+  <tr><td>Pagamentos em espécie de alto valor</td><td>Espécie dificulta rastreamento</td></tr>
+  <tr><td>Smurfing: vários depósitos pequenos abaixo do limite</td><td>Fracionamento para evitar comunicação ao COAF</td></tr>
+  <tr><td>Uso de intermediários / laranjas para transações</td><td>Oculta o verdadeiro beneficiário</td></tr>
+  <tr><td>Empresa sem estrutura real com faturamento alto</td><td>Empresa de fachada para integração</td></tr>
+  <tr><td>Compra/venda de imóvel por valor muito diferente do mercado</td><td>Sobrepreço ou subpreço como mecanismo de lavagem</td></tr>
+  <tr><td>Transferências frequentes para offshores em paraísos fiscais</td><td>Estratificação — fase 2 da lavagem</td></tr>
+  <tr><td>Operações com criptomoedas sem relação com atividade econômica declarada</td><td>Criptomoedas usadas para ocultação</td></tr>
+</table>
+
+<div class="ex">
+  <h3>Exercícios — Perícia e Lavagem</h3>
+  <div class="q"><p>Q3. Na perícia contábil judicial, quem é nomeado pelo juiz para elaborar o laudo imparcial?</p>
+    <ul><li>A) Assistente técnico da acusação</li><li>B) Perito judicial</li><li>C) Auditor fiscal da Receita Federal</li><li>D) Delegado de polícia</li></ul>
+  </div>
+  <div class="q"><p>Q4. A fase da lavagem de dinheiro em que o criminoso utiliza transferências internacionais e empresas offshores para dificultar o rastreamento é a:</p>
+    <ul><li>A) Colocação</li><li>B) Integração</li><li>C) Ocultação/Estratificação</li><li>D) Dissimulação</li></ul>
+  </div>
+  <div class="q"><p>Q5. A prática de realizar vários depósitos bancários abaixo do limite de reporte para evitar a comunicação ao COAF é conhecida como:</p>
+    <ul><li>A) Tumbling</li><li>B) Smurfing</li><li>C) Mixing</li><li>D) Layering</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q3-B | Q4-C | Q5-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">3. LEGISLAÇÃO CONTÁBIL APLICADA</h1>
+<h2 class="sub">Código Civil — Pessoas Jurídicas (Arts. 44-69)</h2>
+<p>Pessoas jurídicas são entidades com personalidade jurídica própria (distintas das pessoas físicas que as compõem).</p>
+<ul>
+  <li><strong>Associações:</strong> fins não econômicos. Ex.: associações de moradores.</li>
+  <li><strong>Sociedades:</strong> fins econômicos. Simples (atividade não empresarial) ou Empresárias (atividade empresarial).</li>
+  <li><strong>Fundações:</strong> patrimônio destinado a fins sociais, religiosos, morais, culturais.</li>
+  <li><strong>Organizações religiosas e partidos políticos:</strong> também têm personalidade jurídica.</li>
+</ul>
+<p>A constituição de pessoa jurídica (empresa) é frequentemente usada para lavagem de dinheiro. O agente deve estar atento a empresas com capital social incompatível com as atividades ou sem estrutura operacional real.</p>
+
+<h2 class="sub">Lei Complementar 123/2006 — Simples Nacional</h2>
+<ul>
+  <li>Regime tributário simplificado para microempresas (ME) e empresas de pequeno porte (EPP).</li>
+  <li><strong>MEI:</strong> faturamento anual até R$81 mil. Contribuição mensal fixa baixa.</li>
+  <li><strong>ME:</strong> até R$360 mil/ano. <strong>EPP:</strong> até R$4,8 milhões/ano.</li>
+  <li>Facilidade de abertura e baixa carga tributária podem atrair uso para fins de lavagem.</li>
+  <li>Na investigação: compare o faturamento declarado com a movimentação bancária real.</li>
+</ul>
+
+<div class="ex">
+  <h3>Exercícios — Legislação</h3>
+  <div class="q"><p>Q6. Na investigação de lavagem de dinheiro, o agente de polícia deve estar atento a empresas criadas com capital incompatível com as atividades declaradas, pois isso pode indicar uso de:</p>
+    <ul><li>A) Sonegação fiscal</li><li>B) Empresa de fachada para integração de recursos ilícitos</li><li>C) Fraude trabalhista</li><li>D) Irregularidade ambiental</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q6-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">GABARITO GERAL — CONTABILIDADE</h1>
+<table>
+  <tr><th>Q</th><th>Resp.</th><th>Tema</th></tr>
+  <tr><td>Q1</td><td>C</td><td>PL = Ativo − Passivo</td></tr>
+  <tr><td>Q2</td><td>B</td><td>Princípio da competência</td></tr>
+  <tr><td>Q3</td><td>B</td><td>Perito judicial = nomeado pelo juiz</td></tr>
+  <tr><td>Q4</td><td>C</td><td>Ocultação/Estratificação</td></tr>
+  <tr><td>Q5</td><td>B</td><td>Smurfing</td></tr>
+  <tr><td>Q6</td><td>B</td><td>Empresa de fachada</td></tr>
+</table>
+</div>
+
+<div class="contracapa">
+  <div class="logo-sc">Polícia Civil</div>
+  <div class="logo-pc">PC-SC</div>
+  <div class="logo-sc">Santa Catarina</div>
+  <div class="stripe"></div>
+  <h2>Bons estudos!</h2>
+  <p>Concurso Público — Edital 01/2025</p>
+  <p>Cargo: Agente de Polícia Civil</p>
+  <p>Organizadora: IDECAN</p>
+  <p style="margin-top:4mm; color:#fff; font-weight:bold;">Elaborado por: Dani Kaloi</p>
+  <div class="stripe"></div>
+  <div class="data">PROVA: 21 DE MARÇO DE 2026</div>
+  <div class="rodape">Material de estudo — uso pessoal</div>
+</div>
+
+</body>
+</html>

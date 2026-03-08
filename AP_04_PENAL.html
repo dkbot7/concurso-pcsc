@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Apostila PC-SC — Direito Penal</title>
+<style>
+  @page { size: A5; margin: 12mm 10mm 16mm 10mm; @bottom-center { content: "Página " counter(page) " de " counter(pages); font-size: 7pt; color: #555; font-family: Arial, sans-serif; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 8.5pt; color: #111; line-height: 1.4; background: #fff; }
+  .capa { text-align: center; padding: 40mm 20mm; page-break-after: always; }
+  .capa h1 { font-size: 24pt; color: #1a3560; margin-bottom: 8px; }
+  .capa h2 { font-size: 16pt; color: #c0392b; margin-bottom: 20px; }
+  .capa .info { font-size: 11pt; margin: 5px 0; }
+  .capa .num { font-size: 48pt; color: #1a3560; font-weight: bold; margin: 20px 0; }
+  .capa .prova { font-size: 12pt; font-weight: bold; color: #c0392b; border: 2px solid #c0392b; padding: 10px 20px; display: inline-block; margin-top: 20px; }
+  .secao { page-break-before: always; }
+  .secao:first-of-type { page-break-before: avoid; }
+  h1.titulo { background: #1a3560; color: #fff; font-size: 13pt; padding: 8px 12px; margin-bottom: 14px; }
+  h2.sub { font-size: 11pt; color: #1a3560; border-left: 4px solid #1a3560; padding-left: 8px; margin: 14px 0 7px; }
+  h3.sub2 { font-size: 10pt; color: #c0392b; margin: 10px 0 4px; font-weight: bold; }
+  p { margin-bottom: 7px; }
+  ul, ol { padding-left: 18px; margin-bottom: 8px; }
+  li { margin-bottom: 3px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 9.5pt; }
+  th { background: #1a3560; color: #fff; padding: 5px 7px; text-align: left; }
+  td { padding: 4px 7px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  .alerta { background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .dica { background: #d4edda; border-left: 4px solid #28a745; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .atencao { background: #f8d7da; border-left: 4px solid #c0392b; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .ex { background: #f4f7fb; border: 1px solid #1a3560; border-radius: 4px; padding: 12px 14px; margin: 16px 0; }
+  .ex h3 { color: #1a3560; font-size: 11pt; margin-bottom: 10px; border-bottom: 1px solid #1a3560; padding-bottom: 4px; }
+  .q { margin-bottom: 14px; }
+  .q p { font-weight: bold; margin-bottom: 5px; font-size: 9.5pt; }
+  .q ul { font-size: 9.5pt; padding-left: 10px; }
+  .q ul li { list-style: none; margin-bottom: 2px; }
+  .gab { background: #1a3560; color: #fff; border-radius: 4px; padding: 8px 14px; margin-top: 10px; font-size: 9pt; }
+  .art { background: #f0f8ff; border: 1px solid #aad4f5; padding: 6px 10px; margin: 6px 0; font-size: 9pt; border-radius: 3px; }
+  /* === CAPA REDESIGN === */
+  .capa { text-align: center; background: #1a3560; color: #fff; padding: 8mm 8mm 10mm 8mm; page-break-after: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .capa .num { font-size: 52pt; color: #fff; font-weight: bold; margin: 0 0 2mm 0; line-height: 1; }
+  .capa h1 { font-size: 14pt; color: #fff; margin-bottom: 4px; font-weight: bold; }
+  .capa h2 { font-size: 10pt; color: #aad4f5; margin-bottom: 6px; font-weight: normal; }
+  .capa .info { font-size: 8.5pt; color: #ccc; margin: 2px 0; }
+  .capa .stripe { width: 100%; height: 3px; background: #c0392b; margin: 5mm 0; }
+  .capa .prova { font-size: 9.5pt; font-weight: bold; color: #fff; background: #c0392b; padding: 6px 16px; display: inline-block; margin-top: 5mm; border-radius: 2px; }
+  /* === CONTRACAPA === */
+  .contracapa { text-align: center; background: #1a3560; color: #fff; padding: 10mm 8mm; page-break-before: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .contracapa .logo-pc { font-size: 48pt; font-weight: bold; color: #c0392b; line-height: 1; letter-spacing: 4px; }
+  .contracapa .logo-sc { font-size: 8.5pt; color: #aad4f5; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 1mm; }
+  .contracapa .stripe { width: 60%; height: 3px; background: #c0392b; margin: 6mm auto; }
+  .contracapa h2 { font-size: 14pt; color: #fff; margin: 0 0 4mm 0; }
+  .contracapa p { font-size: 8.5pt; color: #aad4f5; margin: 2px 0; line-height: 1.6; }
+  .contracapa .data { font-size: 10pt; color: #fff; font-weight: bold; margin-top: 5mm; border: 2px solid #c0392b; padding: 5px 14px; display: inline-block; letter-spacing: 1px; }
+  .contracapa .rodape { font-size: 7pt; color: #444; margin-top: 10mm; }
+</style>
+</head>
+<body>
+
+<div class="capa">
+  <div class="num">4</div>
+  <div class="stripe"></div>
+  <h1>NOÇÕES DE DIREITO PENAL</h1>
+  <h2>Apostila Completa — PC-SC 2026</h2>
+  <div class="info">Polícia Civil de Santa Catarina | Edital 01/2025</div>
+  <div class="info"><strong>10 questões na prova</strong></div>
+  <div class="prova">PROVA: 21 DE MARÇO DE 2026</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">1. INTRODUÇÃO E PRINCÍPIOS DO DIREITO PENAL</h1>
+
+<h2 class="sub">Função do Direito Penal</h2>
+<p>O Direito Penal é o ramo do direito que define crimes, estabelece penas e regula o poder do Estado de punir. Sua função é proteger os bens jurídicos mais importantes (vida, liberdade, patrimônio, honra, fé pública, administração pública).</p>
+
+<h2 class="sub">Princípios fundamentais — MUITO COBRADOS</h2>
+<table>
+  <tr><th>Princípio</th><th>Significado prático</th></tr>
+  <tr><td><strong>Legalidade</strong> (art. 1° CP e art. 5°, XXXIX CF)</td><td>Não há crime sem lei anterior que o defina; não há pena sem prévia cominação legal. "nullum crimen, nulla poena sine lege."</td></tr>
+  <tr><td><strong>Anterioridade</strong></td><td>A lei penal só se aplica a fatos praticados após sua vigência. Lei mais benéfica retroage; mais gravosa não retroage.</td></tr>
+  <tr><td><strong>Irretroatividade</strong></td><td>A lei penal mais grave não pode ser aplicada a fatos do passado. Exceção: lei penal mais benéfica retroage para favorecer o réu (art. 5°, XL CF).</td></tr>
+  <tr><td><strong>Insignificância (bagatela)</strong></td><td>Infrações com lesão mínima não merecem punição penal. Requisitos STF: mínima ofensividade, ausência de periculosidade, reduzido grau de reprovabilidade, inexpressividade da lesão.</td></tr>
+  <tr><td><strong>Intervenção mínima</strong></td><td>O Direito Penal é a ultima ratio — só intervém quando outros ramos não resolvem.</td></tr>
+  <tr><td><strong>Humanidade das penas</strong></td><td>Proibição de penas cruéis, degradantes, de morte (exceto guerra declarada), perpétua, de trabalho forçado, de banimento e confisco (art. 5°, XLVII CF).</td></tr>
+  <tr><td><strong>Pessoalidade/Intransmissibilidade</strong></td><td>A pena não passa da pessoa do condenado. Obrigação de reparar danos pode passar aos herdeiros até o limite da herança.</td></tr>
+  <tr><td><strong>Culpabilidade</strong></td><td>Não há crime sem culpa — o agente responde conforme sua responsabilidade pessoal.</td></tr>
+  <tr><td><strong>Proporcionalidade</strong></td><td>A pena deve ser proporcional à gravidade do crime.</td></tr>
+</table>
+
+<h2 class="sub">Fontes do Direito Penal</h2>
+<ul>
+  <li><strong>Fonte formal imediata:</strong> lei (única fonte que cria crimes e penas).</li>
+  <li><strong>Fontes formais mediatas:</strong> costumes e princípios gerais do direito (auxiliam na interpretação, mas não criam crimes).</li>
+  <li>Medidas provisórias NÃO podem criar crimes ou penas.</li>
+</ul>
+
+<div class="ex">
+  <h3>Exercícios — Princípios</h3>
+  <div class="q"><p>Q1. O princípio que determina que a lei penal mais benéfica ao réu retroage é o princípio da:</p>
+    <ul><li>A) Legalidade</li><li>B) Irretroatividade absoluta</li><li>C) Retroatividade da lei mais benéfica</li><li>D) Anterioridade</li></ul>
+  </div>
+  <div class="q"><p>Q2. Segundo o princípio da insignificância, um furto de um pacote de bolacha de R$2,00 por pessoa sem antecedentes pode ter a tipicidade afastada porque:</p>
+    <ul><li>A) O autor é primário e de bons antecedentes.</li><li>B) A lesão ao bem jurídico é mínima e inexpressiva.</li><li>C) Furto simples tem pena menor que roubo.</li><li>D) A vítima não quis representar.</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q1-C | Q2-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">2. CONCEITO DE CRIME E SEUS ELEMENTOS</h1>
+
+<h2 class="sub">Teorias sobre o crime</h2>
+<p><strong>Teoria tripartite</strong> (adotada no Brasil): crime = fato típico + ilícito + culpável.</p>
+<ul>
+  <li><strong>Tipicidade:</strong> o comportamento se encaixa exatamente na descrição legal (tipo penal).</li>
+  <li><strong>Ilicitude:</strong> o comportamento é contrário ao ordenamento jurídico — não há causa que o justifique.</li>
+  <li><strong>Culpabilidade:</strong> o agente pode ser responsabilizado — tinha consciência e capacidade de agir diferente.</li>
+</ul>
+
+<h2 class="sub">Excludentes de ilicitude — causas justificantes (art. 23 CP)</h2>
+<div class="art">Art. 23 CP: "Não há crime quando o agente pratica o fato em estado de necessidade, em legítima defesa, em estrito cumprimento de dever legal ou no exercício regular de direito."</div>
+<table>
+  <tr><th>Excludente</th><th>Conceito</th><th>Requisitos</th></tr>
+  <tr><td><strong>Estado de necessidade</strong> (art. 24)</td><td>Sacrifica um bem jurídico para salvar outro de perigo atual</td><td>Perigo atual + não provocado + inevitabilidade + razoabilidade do sacrifício</td></tr>
+  <tr><td><strong>Legítima defesa</strong> (art. 25)</td><td>Repele agressão injusta usando os meios necessários</td><td>Agressão injusta + atual ou iminente + uso moderado dos meios necessários + proteção de direito próprio ou alheio</td></tr>
+  <tr><td><strong>Estrito cumprimento do dever legal</strong></td><td>Age em cumprimento de obrigação imposta por lei</td><td>Dever previsto em lei + ato nos limites do dever</td></tr>
+  <tr><td><strong>Exercício regular de direito</strong></td><td>Exerce faculdade reconhecida pelo ordenamento</td><td>Direito previsto em lei + exercício dentro dos limites</td></tr>
+</table>
+
+<div class="alerta"><strong>Excesso punível (art. 23, §único):</strong> quem, usando uma excludente, extrapola os limites necessários responde pelo excesso doloso ou culposo. Ex.: policial que continua agredindo suspeito já imobilizado.</div>
+
+<h2 class="sub">Excludentes de culpabilidade</h2>
+<ul>
+  <li><strong>Inimputabilidade por doença mental (art. 26):</strong> portador de doença mental que, ao tempo do crime, era inteiramente incapaz de entender o caráter ilícito. Consequência: absolvição imprópria + medida de segurança.</li>
+  <li><strong>Semi-imputabilidade (art. 26, §ún.):</strong> capacidade reduzida — pena pode ser reduzida de 1/3 a 2/3.</li>
+  <li><strong>Menoridade (art. 27 CP):</strong> menores de 18 anos são inimputáveis — tratados pelo ECA.</li>
+  <li><strong>Embriaguez completa involuntária (art. 28, §1°):</strong> exclui a culpabilidade se decorrente de caso fortuito ou força maior.</li>
+  <li><strong>Erro de proibição inevitável (art. 21):</strong> o agente desconhece a ilicitude do fato e não podia saber. Exclui a culpabilidade.</li>
+  <li><strong>Coação moral irresistível e obediência hierárquica:</strong> responsabilidade recai sobre o coator ou quem deu a ordem.</li>
+</ul>
+
+<h2 class="sub">Dolo e Culpa</h2>
+<table>
+  <tr><th>Tipo</th><th>Definição</th><th>Exemplo</th></tr>
+  <tr><td>Dolo direto</td><td>O agente quer diretamente o resultado</td><td>Atirou com intenção de matar</td></tr>
+  <tr><td>Dolo eventual</td><td>O agente prevê o resultado e assume o risco</td><td>Racha em via pública — atropela e mata</td></tr>
+  <tr><td>Culpa consciente</td><td>Prevê o resultado mas confia que não vai ocorrer</td><td>Motorista em velocidade excessiva: "não vou atropelar ninguém"</td></tr>
+  <tr><td>Culpa inconsciente</td><td>Não prevê o resultado que era previsível</td><td>Motorista não vê sinal vermelho por distração</td></tr>
+  <tr><td>Imprudência</td><td>Ação arriscada sem cautela</td><td>Dirigir alcoolizado</td></tr>
+  <tr><td>Negligência</td><td>Omissão de cautela devida</td><td>Médico não verifica alergias antes da cirurgia</td></tr>
+  <tr><td>Imperícia</td><td>Falta de capacidade técnica na profissão</td><td>Perito que usa método inadequado</td></tr>
+</table>
+
+<div class="ex">
+  <h3>Exercícios — Elementos do Crime</h3>
+  <div class="q"><p>Q3. Policial que, durante perseguição a criminoso, usa força necessária e proporcional para imobilizá-lo age acobertado por:</p>
+    <ul><li>A) Estado de necessidade</li><li>B) Estrito cumprimento do dever legal</li><li>C) Legítima defesa</li><li>D) Exercício regular de direito</li></ul>
+  </div>
+  <div class="q"><p>Q4. Um motorista dirige a 120 km/h em área urbana, não consegue frear e atropela um pedestre. Considerando que previu o resultado mas confiou que não ocorreria, age com:</p>
+    <ul><li>A) Dolo direto</li><li>B) Dolo eventual</li><li>C) Culpa consciente</li><li>D) Culpa inconsciente</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q3-B | Q4-C</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">3. ITER CRIMINIS E TENTATIVA</h1>
+
+<h2 class="sub">Fases do crime (iter criminis)</h2>
+<table>
+  <tr><th>Fase</th><th>Descrição</th><th>É punida?</th></tr>
+  <tr><td>Cogitação</td><td>O agente pensa no crime</td><td>NÃO — pensamento é livre</td></tr>
+  <tr><td>Preparação</td><td>Atos preparatórios (comprar arma, planejar)</td><td>NÃO (regra geral). Exceções: petrechos para falsificação, associação criminosa</td></tr>
+  <tr><td>Execução</td><td>Início dos atos executórios do crime</td><td>SIM — a partir daqui é punível (tentativa)</td></tr>
+  <tr><td>Consumação</td><td>Completou todos os elementos do tipo penal</td><td>SIM — pena integral</td></tr>
+  <tr><td>Exaurimento</td><td>Consequências após a consumação</td><td>Pode agravar a pena (circunstância)</td></tr>
+</table>
+
+<h2 class="sub">Tentativa (art. 14, II CP)</h2>
+<p>Inicia a execução, não consuma por circunstâncias alheias à vontade do agente.</p>
+<p><strong>Pena:</strong> reduzida de 1/3 a 2/3 (quanto mais próximo da consumação, menor a redução).</p>
+<div class="art">Crimes que não admitem tentativa: crimes culposos, preterdolosos, contravenções, crimes omissivos próprios, crimes habituais, crimes unissubsistentes (consumam-se com um único ato).</div>
+
+<h2 class="sub">Desistência voluntária e Arrependimento eficaz (art. 15)</h2>
+<p><strong>Desistência voluntária:</strong> iniciou a execução e desistiu voluntariamente — ainda podia continuar mas não quis. Responde só pelos atos já praticados.</p>
+<p><strong>Arrependimento eficaz:</strong> completou todos os atos executórios mas impediu o resultado (ex.: deu veneno, depois deu antídoto e a vítima sobreviveu). Responde só pelos atos praticados.</p>
+<div class="dica"><strong>Frase-chave:</strong> "Ponte de ouro" — o legislador estimula o agente a evitar o resultado, premiando com a não-responsabilização pelo crime mais grave.</div>
+
+<h2 class="sub">Arrependimento posterior (art. 16 CP)</h2>
+<p>Após CONSUMAR o crime (sem violência ou grave ameaça à pessoa), o agente repara o dano antes do recebimento da denúncia. A pena é reduzida de 1/3 a 2/3 (quanto mais rápida a reparação, maior a redução).</p>
+
+<h2 class="sub">Crime impossível (art. 17 CP)</h2>
+<p>Quando por ineficácia absoluta do meio ou impropriedade absoluta do objeto, é impossível consumar o crime. Não é punido.</p>
+<ul>
+  <li>Ineficácia absoluta do meio: tentar matar com arma desmuniciada que o agente acredita estar carregada.</li>
+  <li>Impropriedade absoluta do objeto: tentar matar cadáver que o agente pensa estar vivo.</li>
+</ul>
+<div class="atencao">Ineficácia RELATIVA do meio não é crime impossível — é tentativa. Ex.: apunhalar alguém que usa colete à prova de faca — pode ser tentativa de homicídio.</div>
+
+<div class="ex">
+  <h3>Exercícios — Iter Criminis</h3>
+  <div class="q"><p>Q5. João iniciou a execução de um furto, mas, ao ouvir a sirene da viatura, fugiu sem levar nada. Trata-se de:</p>
+    <ul><li>A) Desistência voluntária</li><li>B) Arrependimento eficaz</li><li>C) Tentativa de furto</li><li>D) Arrependimento posterior</li></ul>
+  </div>
+  <div class="q"><p>Q6. Pedro deu veneno à vítima, mas, arrependido, administrou o antídoto e ela sobreviveu. Pedro responde por:</p>
+    <ul><li>A) Homicídio tentado</li><li>B) Só pelos atos que praticou (lesão corporal/envenenamento)</li><li>C) Tentativa de homicídio com redução de pena</li><li>D) Não responde por nada</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q5-C (circunstâncias alheias à vontade — sirene) | Q6-B (arrependimento eficaz)</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">4. CONCURSO DE PESSOAS E DE CRIMES</h1>
+
+<h2 class="sub">Concurso de pessoas (art. 29 CP)</h2>
+<p>Quando dois ou mais agentes contribuem para a prática de um crime, todos respondem pelo mesmo delito.</p>
+<ul>
+  <li><strong>Autor:</strong> realiza diretamente o núcleo do tipo penal ("matar", "subtrair").</li>
+  <li><strong>Co-autor:</strong> realiza junto com outro o núcleo do tipo.</li>
+  <li><strong>Partícipe:</strong> contribui sem executar diretamente — instiga, induz, auxilia materialmente.</li>
+</ul>
+<p><strong>Comunicabilidade das circunstâncias:</strong> circunstâncias objetivas (modo de execução) comunicam-se a todos. Circunstâncias subjetivas (motivo, condição pessoal) comunicam-se só a quem elas se referem.</p>
+<div class="dica"><strong>Exemplo:</strong> se o autor é funcionário público e comete peculato com ajuda de um particular, o particular responde por peculato também (a qualidade de funcionário se comunica por ser elementar do tipo).</div>
+
+<h2 class="sub">Concurso de crimes</h2>
+<table>
+  <tr><th>Tipo</th><th>Situação</th><th>Pena</th></tr>
+  <tr><td><strong>Concurso material</strong> (art. 69)</td><td>Duas ou mais ações → dois ou mais crimes</td><td>Penas somadas (cumuladas)</td></tr>
+  <tr><td><strong>Concurso formal perfeito</strong> (art. 70)</td><td>Uma ação → dois ou mais crimes (sem desígnios autônomos)</td><td>Pena mais grave + exasperação de 1/6 a 1/2</td></tr>
+  <tr><td><strong>Concurso formal imperfeito</strong> (art. 70)</td><td>Uma ação → dois ou mais crimes (com desígnios autônomos)</td><td>Penas somadas (como material)</td></tr>
+  <tr><td><strong>Crime continuado</strong> (art. 71)</td><td>Vários crimes da mesma espécie em circunstâncias semelhantes</td><td>Pena de um crime + exasperação de 1/6 a 2/3</td></tr>
+</table>
+
+<h2 class="sub">Extinção da Punibilidade (art. 107 CP)</h2>
+<ul>
+  <li>Morte do agente</li>
+  <li>Anistia, graça ou indulto</li>
+  <li>Abolitio criminis (lei posterior que deixa de considerar o fato crime)</li>
+  <li>Prescrição, decadência, perempção</li>
+  <li>Renúncia ao direito de queixa ou perdão aceito (ação privada)</li>
+  <li>Retratação do agente nos casos que a lei permite</li>
+  <li>Casamento da vítima com o agente ou de terceiro (revogado para crimes sexuais)</li>
+</ul>
+<p><strong>Prescrição:</strong> perda do direito de punir pelo decurso do tempo. Pode ser da pretensão punitiva (antes da condenação) ou executória (depois da condenação).</p>
+
+<div class="ex">
+  <h3>Exercícios — Concurso</h3>
+  <div class="q"><p>Q7. Um motorista, em única ação, atropela dois pedestres causando a morte de ambos, sem intenção de matar nenhum. Trata-se de:</p>
+    <ul><li>A) Concurso material</li><li>B) Concurso formal perfeito</li><li>C) Crime continuado</li><li>D) Concurso formal imperfeito</li></ul>
+  </div>
+  <div class="q"><p>Q8. Causa de extinção da punibilidade que decorre do decurso do tempo sem que o Estado exercesse seu direito de punir:</p>
+    <ul><li>A) Anistia</li><li>B) Graça</li><li>C) Prescrição</li><li>D) Perdão judicial</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q7-B | Q8-C</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">5. CRIMES EM ESPÉCIE — PARTE ESPECIAL DO CP</h1>
+
+<h2 class="sub">Crimes contra a pessoa (Título I)</h2>
+<table>
+  <tr><th>Crime</th><th>Artigo</th><th>Definição</th><th>Pena base</th></tr>
+  <tr><td>Homicídio simples</td><td>121</td><td>Matar alguém</td><td>6 a 20 anos</td></tr>
+  <tr><td>Homicídio qualificado</td><td>121 §2°</td><td>Motivo torpe, fútil, meio cruel, emboscada, feminicídio, etc.</td><td>12 a 30 anos (hediondo)</td></tr>
+  <tr><td>Homicídio culposo</td><td>121 §3°</td><td>Sem intenção, por imprudência/negligência/imperícia</td><td>1 a 3 anos</td></tr>
+  <tr><td>Lesão corporal</td><td>129</td><td>Ofender integridade física ou saúde de outrem</td><td>3 meses a 1 ano (leve)</td></tr>
+  <tr><td>Ameaça</td><td>147</td><td>Ameaçar causar mal injusto e grave</td><td>1 a 6 meses ou multa</td></tr>
+  <tr><td>Sequestro/Cárcere privado</td><td>148</td><td>Privar alguém de liberdade sem justa causa</td><td>1 a 3 anos</td></tr>
+  <tr><td>Calúnia</td><td>138</td><td>Imputar falsamente fato criminoso</td><td>6 meses a 2 anos + multa</td></tr>
+  <tr><td>Difamação</td><td>139</td><td>Imputar fato ofensivo à reputação (não criminoso)</td><td>3 meses a 1 ano + multa</td></tr>
+  <tr><td>Injúria</td><td>140</td><td>Ofender dignidade ou decoro (qualidade pessoal)</td><td>1 a 6 meses ou multa</td></tr>
+</table>
+
+<h2 class="sub">Crimes contra o patrimônio (Título II)</h2>
+<table>
+  <tr><th>Crime</th><th>Art.</th><th>Definição</th><th>Pena</th></tr>
+  <tr><td>Furto simples</td><td>155</td><td>Subtrair coisa alheia móvel SEM violência/ameaça</td><td>1 a 4 anos + multa</td></tr>
+  <tr><td>Furto qualificado</td><td>155 §4°</td><td>Furto com destruição de obstáculo, abuso de confiança, fraude, escalada, destreza, chave falsa, concurso de pessoas</td><td>2 a 8 anos + multa</td></tr>
+  <tr><td>Roubo simples</td><td>157</td><td>Subtração COM violência ou grave ameaça</td><td>4 a 10 anos + multa</td></tr>
+  <tr><td>Latrocínio</td><td>157 §3°</td><td>Roubo seguido de morte (ou lesão grave)</td><td>20 a 30 anos (hediondo)</td></tr>
+  <tr><td>Extorsão</td><td>158</td><td>Constranger a fazer algo contra a vontade para obter vantagem</td><td>4 a 10 anos + multa</td></tr>
+  <tr><td>Extorsão mediante sequestro</td><td>159</td><td>Sequestra para obter resgate</td><td>8 a 15 anos (hediondo)</td></tr>
+  <tr><td>Estelionato</td><td>171</td><td>Obter vantagem ilícita em prejuízo alheio por fraude ou engano</td><td>1 a 5 anos + multa</td></tr>
+  <tr><td>Receptação</td><td>180</td><td>Adquirir produto de crime sabendo ser produto</td><td>1 a 4 anos + multa</td></tr>
+</table>
+
+<h2 class="sub">Crimes contra a dignidade sexual (Título VI)</h2>
+<table>
+  <tr><th>Crime</th><th>Art.</th><th>Definição</th><th>Pena</th></tr>
+  <tr><td>Estupro</td><td>213</td><td>Constranger a ato libidinoso com violência/grave ameaça</td><td>6 a 10 anos (hediondo)</td></tr>
+  <tr><td>Estupro de vulnerável</td><td>217-A</td><td>Ato libidinoso com menor de 14 anos ou vulnerável (presume-se violência)</td><td>8 a 15 anos (hediondo)</td></tr>
+  <tr><td>Importunação sexual</td><td>215-A</td><td>Praticar ato libidinoso sem consentimento em ambiente público</td><td>1 a 5 anos</td></tr>
+</table>
+
+<h2 class="sub">Crimes contra a fé pública (Título X)</h2>
+<table>
+  <tr><th>Crime</th><th>Art.</th><th>Definição</th></tr>
+  <tr><td>Moeda falsa</td><td>289</td><td>Falsificar moeda corrente</td></tr>
+  <tr><td>Falsidade de documento público</td><td>297</td><td>Falsificar documento público</td></tr>
+  <tr><td>Falsidade de documento privado</td><td>298</td><td>Falsificar documento particular</td></tr>
+  <tr><td>Uso de documento falso</td><td>304</td><td>Fazer uso de documento falso</td></tr>
+  <tr><td>Falsa identidade</td><td>307</td><td>Atribuir-se identidade falsa para obter vantagem ou causar dano</td></tr>
+</table>
+
+<h2 class="sub">Crimes contra a Administração Pública (Título XI)</h2>
+<table>
+  <tr><th>Crime</th><th>Art.</th><th>Definição</th></tr>
+  <tr><td>Peculato próprio</td><td>312</td><td>Funcionário público que se apropria de bem público que tinha posse em razão do cargo</td></tr>
+  <tr><td>Peculato culposo</td><td>312 §2°</td><td>Funcionário concorre culposamente para que terceiro se aproprie</td></tr>
+  <tr><td>Concussão</td><td>316</td><td>Exigir (para si ou terceiro) vantagem indevida em razão da função — sem oferta do particular</td></tr>
+  <tr><td>Corrupção passiva</td><td>317</td><td>Solicitar ou receber vantagem indevida, ou aceitar promessa</td></tr>
+  <tr><td>Corrupção ativa</td><td>333</td><td>Particular que oferece ou promete vantagem a funcionário público</td></tr>
+  <tr><td>Prevaricação</td><td>319</td><td>Retardar ou omitir ato de ofício para satisfazer interesse pessoal</td></tr>
+  <tr><td>Resistência</td><td>329</td><td>Opor-se à execução de ato legal usando violência ou ameaça</td></tr>
+  <tr><td>Desobediência</td><td>330</td><td>Não cumprir ordem legal de funcionário público</td></tr>
+  <tr><td>Desacato</td><td>331</td><td>Ofender funcionário público no exercício da função ou em razão dela</td></tr>
+</table>
+
+<div class="atencao"><strong>Diferença importante:</strong> Concussão = EXIGE. Corrupção passiva = solicita, recebe ou aceita. Corrupção ativa = oferece ou promete (praticada pelo particular).</div>
+
+<div class="ex">
+  <h3>Exercícios — Crimes em Espécie</h3>
+  <div class="q"><p>Q9. Um agente, usando ameaça, exige que a vítima lhe entregue dinheiro. Trata-se de:</p>
+    <ul><li>A) Furto qualificado</li><li>B) Roubo</li><li>C) Extorsão</li><li>D) Estelionato</li></ul>
+  </div>
+  <div class="q"><p>Q10. Funcionário público que solicita propina para despachar requerimento comete o crime de:</p>
+    <ul><li>A) Concussão</li><li>B) Corrupção passiva</li><li>C) Peculato</li><li>D) Prevaricação</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q9-C (exige que faça algo) | Q10-B (solicita = corrupção passiva)</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">6. CRIMES HEDIONDOS — LEI 8.072/1990</h1>
+
+<h2 class="sub">Rol dos crimes hediondos (art. 1° da Lei 8.072/1990)</h2>
+<ul>
+  <li>Homicídio doloso qualificado (art. 121, §2° CP) e homicídio doloso em atividade de grupo de extermínio</li>
+  <li><strong>Feminicídio</strong> (art. 121, §2°, VI CP)</li>
+  <li>Latrocínio (art. 157, §3°, in fine CP)</li>
+  <li>Extorsão qualificada pela morte (art. 158, §2° CP)</li>
+  <li>Extorsão mediante sequestro e qualificados (art. 159 CP)</li>
+  <li><strong>Estupro</strong> (art. 213 CP)</li>
+  <li><strong>Estupro de vulnerável</strong> (art. 217-A CP)</li>
+  <li>Favorecimento da prostituição ou exploração sexual de menor (art. 218-B, §§1° e 2°)</li>
+  <li>Epidemia com resultado morte (art. 267, §1° CP)</li>
+  <li>Falsificação de medicamentos e cosméticos (art. 273 CP)</li>
+  <li>Posse/porte ilegal de arma de uso restrito e comércio ilegal de arma (Estatuto do Desarmamento)</li>
+  <li>Genocídio</li>
+  <li><strong>Equiparados (tratados como hediondos):</strong> tráfico ilícito de drogas (Lei 11.343/2006), terrorismo (Lei 13.260/2016), tortura (Lei 9.455/1997)</li>
+</ul>
+
+<h2 class="sub">Consequências da hediondez</h2>
+<table>
+  <tr><th>Aspecto</th><th>Regra</th></tr>
+  <tr><td>Anistia, graça, indulto</td><td>Insuscetíveis — vedados constitucionalmente (art. 5°, XLIII CF)</td></tr>
+  <tr><td>Fiança</td><td>Insuscetível de fiança</td></tr>
+  <tr><td>Prisão temporária</td><td>30 dias + 30 dias (regra geral: 5 + 5)</td></tr>
+  <tr><td>Regime inicial</td><td>Não necessariamente fechado — STF (HC 111.840): deve ser analisado no caso concreto</td></tr>
+  <tr><td>Livramento condicional</td><td>Mínimo 2/3 da pena (não reincidente) ou 3/5 (reincidente em hediondo)</td></tr>
+  <tr><td>Progressão de regime</td><td>2/5 da pena (primário) ou 3/5 (reincidente específico)</td></tr>
+</table>
+<div class="atencao"><strong>Memorize o TTTT:</strong> Tráfico + Terrorismo + Tortura + os do art. 1° da Lei 8.072 = hediondos ou equiparados. Todos vedados à fiança, graça e anistia.</div>
+
+<h2 class="sub">Lei Maria da Penha — Lei 11.340/2006</h2>
+<p>Criada para proteger a mulher vítima de violência doméstica e familiar. Define, estabelece medidas protetivas e cria mecanismos de prevenção.</p>
+<p><strong>Tipos de violência (art. 7°):</strong></p>
+<ul>
+  <li><strong>Física:</strong> ofenda a integridade ou saúde corporal.</li>
+  <li><strong>Psicológica:</strong> causa dano emocional, controle, humilhação, ameaça.</li>
+  <li><strong>Sexual:</strong> constranja a participar de relação sexual não desejada.</li>
+  <li><strong>Patrimonial:</strong> subtraia, destrua ou retenha bens, documentos, recursos econômicos.</li>
+  <li><strong>Moral:</strong> calúnia, difamação ou injúria.</li>
+</ul>
+<table>
+  <tr><th>Aspecto</th><th>Detalhe</th></tr>
+  <tr><td>Aplicação</td><td>Violência no âmbito doméstico, familiar ou de relação íntima de afeto — independe de orientação sexual</td></tr>
+  <tr><td>Ação penal</td><td>Lesão corporal: pública incondicionada (não precisa de representação da vítima)</td></tr>
+  <tr><td>Medidas protetivas de urgência</td><td>Afastamento do agressor, proibição de aproximação/contato, suspensão de porte de arma, alimentos provisórios — deferidas pelo juiz em 48h</td></tr>
+  <tr><td>Descumprimento de medida protetiva</td><td>Crime (art. 24-A): detenção de 3 meses a 2 anos; pode haver prisão preventiva</td></tr>
+  <tr><td>Vedações</td><td>Não cabe pena de multa isolada ou cesta básica; não cabe suspensão condicional do processo</td></tr>
+  <tr><td>Prisão preventiva</td><td>Pode ser decretada para garantia da execução das medidas protetivas de urgência</td></tr>
+</table>
+<div class="dica"><strong>Feminicídio (art. 121, §2°, VI CP):</strong> homicídio doloso praticado contra mulher por razão de condição de sexo feminino (violência doméstica e familiar ou menosprezo/discriminação). É crime hediondo, qualificador de natureza objetiva (comunica-se ao coautor).</div>
+
+<div class="ex">
+  <h3>Exercícios — Hediondos e Lei Maria da Penha</h3>
+  <div class="q"><p>Q9-A (complementar). De acordo com a Lei 8.072/1990, os crimes hediondos são insuscetíveis de:</p>
+    <ul><li>A) Progressão de regime</li><li>B) Anistia, graça, indulto e fiança</li><li>C) Liberdade provisória sem fiança</li><li>D) Réu primário responder em regime aberto</li></ul>
+  </div>
+  <div class="q"><p>Q9-B (complementar). Segundo a Lei Maria da Penha, o crime de lesão corporal praticado em contexto de violência doméstica é de ação penal:</p>
+    <ul><li>A) Privada — somente a vítima pode propor</li><li>B) Pública condicionada — depende de representação</li><li>C) Pública incondicionada — o MP age independentemente da vítima</li><li>D) Pública condicionada à requisição do juiz</li></ul>
+  </div>
+  <div class="gab">Q9-A: B | Q9-B: C</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">GABARITO GERAL — DIREITO PENAL</h1>
+<table>
+  <tr><th>Q</th><th>Resp.</th><th>Tema</th></tr>
+  <tr><td>Q1</td><td>C</td><td>Retroatividade da lei mais benéfica</td></tr>
+  <tr><td>Q2</td><td>B</td><td>Princípio da insignificância</td></tr>
+  <tr><td>Q3</td><td>B</td><td>Estrito cumprimento do dever legal</td></tr>
+  <tr><td>Q4</td><td>C</td><td>Culpa consciente</td></tr>
+  <tr><td>Q5</td><td>C</td><td>Tentativa (circunstância alheia)</td></tr>
+  <tr><td>Q6</td><td>B</td><td>Arrependimento eficaz</td></tr>
+  <tr><td>Q7</td><td>B</td><td>Concurso formal perfeito</td></tr>
+  <tr><td>Q8</td><td>C</td><td>Prescrição</td></tr>
+  <tr><td>Q9</td><td>C</td><td>Extorsão</td></tr>
+  <tr><td>Q10</td><td>B</td><td>Corrupção passiva</td></tr>
+</table>
+</div>
+
+
+<div class="contracapa">
+  <div class="logo-sc">Polícia Civil</div>
+  <div class="logo-pc">PC-SC</div>
+  <div class="logo-sc">Santa Catarina</div>
+  <div class="stripe"></div>
+  <h2>Bons estudos!</h2>
+  <p>Concurso Público — Edital 01/2025</p>
+  <p>Cargo: Agente de Polícia Civil</p>
+  <p>Organizadora: IDECAN</p>
+  <p style="margin-top:4mm; color:#fff; font-weight:bold;">Elaborado por: Dani Kaloi</p>
+  <div class="stripe"></div>
+  <div class="data">PROVA: 21 DE MARÇO DE 2026</div>
+  <div class="rodape">Material de estudo — uso pessoal</div>
+</div>
+
+</body>
+</html>

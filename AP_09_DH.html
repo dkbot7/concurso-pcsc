@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Apostila PC-SC — Direitos Humanos</title>
+<style>
+  @page { size: A5; margin: 12mm 10mm 16mm 10mm; @bottom-center { content: "Página " counter(page) " de " counter(pages); font-size: 7pt; color: #555; font-family: Arial, sans-serif; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 8.5pt; color: #111; line-height: 1.4; background: #fff; }
+  .capa { text-align: center; padding: 40mm 20mm; page-break-after: always; }
+  .capa .num { font-size: 48pt; color: #1a3560; font-weight: bold; margin: 20px 0; }
+  .capa h1 { font-size: 22pt; color: #1a3560; margin-bottom: 8px; }
+  .capa h2 { font-size: 15pt; color: #c0392b; margin-bottom: 20px; }
+  .capa .info { font-size: 11pt; margin: 5px 0; }
+  .capa .prova { font-size: 12pt; font-weight: bold; color: #c0392b; border: 2px solid #c0392b; padding: 10px 20px; display: inline-block; margin-top: 20px; }
+  .secao { page-break-before: always; }
+  .secao:first-of-type { page-break-before: avoid; }
+  h1.titulo { background: #1a3560; color: #fff; font-size: 13pt; padding: 8px 12px; margin-bottom: 14px; }
+  h2.sub { font-size: 11pt; color: #1a3560; border-left: 4px solid #1a3560; padding-left: 8px; margin: 14px 0 7px; }
+  p { margin-bottom: 7px; }
+  ul, ol { padding-left: 18px; margin-bottom: 8px; }
+  li { margin-bottom: 3px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 9.5pt; }
+  th { background: #1a3560; color: #fff; padding: 5px 7px; text-align: left; }
+  td { padding: 4px 7px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f7fb; }
+  .alerta { background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .dica { background: #d4edda; border-left: 4px solid #28a745; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .atencao { background: #f8d7da; border-left: 4px solid #c0392b; padding: 8px 12px; margin: 10px 0; font-size: 9.5pt; }
+  .ex { background: #f4f7fb; border: 1px solid #1a3560; border-radius: 4px; padding: 12px 14px; margin: 16px 0; }
+  .ex h3 { color: #1a3560; font-size: 11pt; margin-bottom: 10px; border-bottom: 1px solid #1a3560; padding-bottom: 4px; }
+  .q { margin-bottom: 14px; }
+  .q p { font-weight: bold; margin-bottom: 5px; }
+  .q ul { font-size: 9.5pt; padding-left: 10px; }
+  .q ul li { list-style: none; margin-bottom: 2px; }
+  .gab { background: #1a3560; color: #fff; border-radius: 4px; padding: 8px 14px; margin-top: 10px; font-size: 9pt; }
+  /* === CAPA REDESIGN === */
+  .capa { text-align: center; background: #1a3560; color: #fff; padding: 8mm 8mm 10mm 8mm; page-break-after: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .capa .num { font-size: 52pt; color: #fff; font-weight: bold; margin: 0 0 2mm 0; line-height: 1; }
+  .capa h1 { font-size: 14pt; color: #fff; margin-bottom: 4px; font-weight: bold; }
+  .capa h2 { font-size: 10pt; color: #aad4f5; margin-bottom: 6px; font-weight: normal; }
+  .capa .info { font-size: 8.5pt; color: #ccc; margin: 2px 0; }
+  .capa .stripe { width: 100%; height: 3px; background: #c0392b; margin: 5mm 0; }
+  .capa .prova { font-size: 9.5pt; font-weight: bold; color: #fff; background: #c0392b; padding: 6px 16px; display: inline-block; margin-top: 5mm; border-radius: 2px; }
+  /* === CONTRACAPA === */
+  .contracapa { text-align: center; background: #1a3560; color: #fff; padding: 10mm 8mm; page-break-before: always; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 175mm; }
+  .contracapa .logo-pc { font-size: 48pt; font-weight: bold; color: #c0392b; line-height: 1; letter-spacing: 4px; }
+  .contracapa .logo-sc { font-size: 8.5pt; color: #aad4f5; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 1mm; }
+  .contracapa .stripe { width: 60%; height: 3px; background: #c0392b; margin: 6mm auto; }
+  .contracapa h2 { font-size: 14pt; color: #fff; margin: 0 0 4mm 0; }
+  .contracapa p { font-size: 8.5pt; color: #aad4f5; margin: 2px 0; line-height: 1.6; }
+  .contracapa .data { font-size: 10pt; color: #fff; font-weight: bold; margin-top: 5mm; border: 2px solid #c0392b; padding: 5px 14px; display: inline-block; letter-spacing: 1px; }
+  .contracapa .rodape { font-size: 7pt; color: #444; margin-top: 10mm; }
+</style>
+</head>
+<body>
+<div class="capa">
+  <div class="num">9</div>
+  <div class="stripe"></div>
+  <h1>NOÇÕES DE DIREITOS HUMANOS</h1>
+  <h2>Apostila Completa — PC-SC 2026</h2>
+  <div class="info">Polícia Civil de Santa Catarina | Edital 01/2025</div>
+  <div class="info"><strong>5 questões na prova</strong></div>
+  <div class="prova">PROVA: 21 DE MARÇO DE 2026</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">1. CONCEITO E CARACTERÍSTICAS</h1>
+<h2 class="sub">O que são Direitos Humanos</h2>
+<p>São direitos inerentes a todo ser humano, independentemente de raça, sexo, nacionalidade, etnia, idioma, religião ou qualquer outra condição. Fundamentam-se na dignidade da pessoa humana.</p>
+<h2 class="sub">Características</h2>
+<table>
+  <tr><th>Característica</th><th>Significado</th></tr>
+  <tr><td>Universalidade</td><td>Valem para todos, em qualquer lugar</td></tr>
+  <tr><td>Indivisibilidade</td><td>Todos os direitos têm igual importância — não se escolhe quais respeitar</td></tr>
+  <tr><td>Interdependência</td><td>Os direitos se relacionam — violação de um afeta os outros</td></tr>
+  <tr><td>Inalienabilidade</td><td>Ninguém pode abrir mão dos próprios direitos humanos</td></tr>
+  <tr><td>Imprescritibilidade</td><td>Nunca perdem a validade</td></tr>
+  <tr><td>Irrenunciabilidade</td><td>Não podem ser renunciados</td></tr>
+  <tr><td>Historicidade</td><td>Evoluíram ao longo da história</td></tr>
+</table>
+<h2 class="sub">Dimensões/Gerações dos Direitos Humanos</h2>
+<table>
+  <tr><th>Dimensão</th><th>Direitos</th><th>Obrigação do Estado</th></tr>
+  <tr><td>1ª geração (séc. XVIII)</td><td>Civis e políticos: vida, liberdade, voto, propriedade</td><td>Negativa — não interferir</td></tr>
+  <tr><td>2ª geração (séc. XIX-XX)</td><td>Econômicos, sociais, culturais: saúde, educação, trabalho, moradia</td><td>Positiva — agir, promover</td></tr>
+  <tr><td>3ª geração (séc. XX)</td><td>Solidariedade: paz, meio ambiente, desenvolvimento, patrimônio comum da humanidade</td><td>Coletiva — todos os Estados e povos</td></tr>
+  <tr><td>4ª geração (debate atual)</td><td>Bioética, internet, democracia direta — ainda em construção doutrinária</td><td>—</td></tr>
+</table>
+<div class="ex">
+  <h3>Exercício</h3>
+  <div class="q"><p>Q1. O direito ao meio ambiente equilibrado é classificado como direito de:</p>
+    <ul><li>A) 1ª geração</li><li>B) 2ª geração</li><li>C) 3ª geração</li><li>D) 4ª geração</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q1-C</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">2. ONU — SISTEMA UNIVERSAL</h1>
+<h2 class="sub">Declaração Universal dos Direitos Humanos (DUDH — 1948)</h2>
+<ul>
+  <li>Aprovada pela Assembleia Geral da ONU em <strong>10 de dezembro de 1948</strong>, após as atrocidades da 2ª Guerra Mundial.</li>
+  <li>Composta por <strong>30 artigos</strong>.</li>
+  <li>Não é um tratado — é uma declaração (soft law). Não tem força jurídica vinculante direta, mas tem enorme peso moral e influenciou todas as constituições posteriores.</li>
+  <li>Artigos mais cobrados: Art. 1° (todos nascem livres e iguais), Art. 3° (vida, liberdade, segurança), Art. 5° (proibição de tortura), Art. 9° (proibição de prisão arbitrária), Art. 11° (presunção de inocência).</li>
+</ul>
+<h2 class="sub">Tratados internacionais de direitos humanos (ONU)</h2>
+<table>
+  <tr><th>Tratado</th><th>Ano</th><th>Conteúdo</th></tr>
+  <tr><td>Pacto Internacional sobre Direitos Civis e Políticos (PIDCP)</td><td>1966</td><td>Vida, liberdade, julgamento justo, voto — obrigatório aos signatários</td></tr>
+  <tr><td>Pacto Internacional sobre Direitos Econômicos, Sociais e Culturais (PIDESC)</td><td>1966</td><td>Trabalho, saúde, educação, moradia — obrigatório</td></tr>
+  <tr><td>Convenção contra a Tortura</td><td>1984</td><td>Proíbe tortura absoluta — sem exceção</td></tr>
+  <tr><td>Convenção sobre os Direitos da Criança</td><td>1989</td><td>Proteção integral da criança</td></tr>
+  <tr><td>Conv. Internacional sobre Pessoas com Deficiência</td><td>2006</td><td>Acessibilidade, inclusão — no Brasil tem status de emenda constitucional</td></tr>
+</table>
+
+<div class="ex">
+  <h3>Exercício</h3>
+  <div class="q"><p>Q2. A Declaração Universal dos Direitos Humanos foi aprovada em:</p>
+    <ul><li>A) 1945, junto com a criação da ONU</li><li>B) 1948, pela Assembleia Geral da ONU</li><li>C) 1966, com os Pactos Internacionais</li><li>D) 1988, com a Constituição brasileira</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q2-B</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">3. SISTEMA INTERAMERICANO — OEA</h1>
+<h2 class="sub">Convenção Americana de Direitos Humanos (Pacto de São José da Costa Rica — 1969)</h2>
+<ul>
+  <li>Principal tratado do sistema interamericano.</li>
+  <li>Brasil ratificou em <strong>1992</strong>.</li>
+  <li>Cria a Comissão e a Corte Interamericanas de DH.</li>
+  <li>Status no Brasil: <strong>supralegal</strong> (acima das leis, abaixo da CF) — entendimento do STF.</li>
+</ul>
+<h2 class="sub">Comissão Interamericana de Direitos Humanos (CIDH)</h2>
+<ul>
+  <li>Sede: Washington D.C., EUA.</li>
+  <li>Composta por <strong>7 membros</strong>, mandato de 4 anos (renovável uma vez). Eleitos pelos Estados-membros da OEA.</li>
+  <li>Recebe petições de indivíduos e organizações (ONGs) sobre violações de direitos.</li>
+  <li>Faz recomendações, relatórios e medidas cautelares (urgentes, sem passar pela Corte).</li>
+  <li>Se o Estado não cumpre, pode enviar o caso para a Corte IDH.</li>
+  <li><strong>Distinção:</strong> a CIDH não condena — recomenda. Só a Corte IDH condena.</li>
+</ul>
+<h2 class="sub">Corte Interamericana de Direitos Humanos</h2>
+<ul>
+  <li>Sede: São José, Costa Rica.</li>
+  <li>Composta por <strong>7 juízes</strong>, mandato de 6 anos (renovável uma vez). Eleitos pelos Estados partes da Convenção Americana.</li>
+  <li>Tem função <strong>consultiva</strong> (opina sobre interpretação da Convenção) e <strong>contenciosa</strong> (julga casos concretos).</li>
+  <li>Brasil aceitou a jurisdição contenciosa em <strong>1998</strong>.</li>
+  <li>Suas decisões são <strong>obrigatórias</strong> para o Brasil — responsabilidade internacional.</li>
+  <li><strong>Casos em que o Brasil foi condenado:</strong>
+    <ul>
+      <li>Caso Damião Ximenes Lopes (2006): morte em hospital psiquiátrico.</li>
+      <li>Caso Gilson Nogueira de Carvalho (2006): execução por grupos de extermínio.</li>
+      <li>Caso Escher (2009): interceptação ilegal de telefone.</li>
+      <li>Caso Gomes Lund (2010): desaparecimento na Guerrilha do Araguaia.</li>
+      <li>Caso Povo Indígena Xucuru (2018): demarcação de terras indígenas.</li>
+    </ul>
+  </li>
+</ul>
+<h2 class="sub">Incorporação de tratados no Brasil</h2>
+<table>
+  <tr><th>Rito</th><th>Status</th><th>Base</th></tr>
+  <tr><td>Aprovado com 3/5 em dois turnos em cada Casa</td><td>Equivale a emenda constitucional</td><td>Art. 5°, §3° CF (EC 45/2004)</td></tr>
+  <tr><td>Aprovado pelo rito comum</td><td>Status supralegal (acima das leis, abaixo da CF)</td><td>Entendimento do STF (RE 466.343)</td></tr>
+</table>
+<div class="dica"><strong>Exemplo prático:</strong> a Convenção sobre Pessoas com Deficiência (2006) foi aprovada pelo rito especial → status de emenda constitucional. O Pacto de São José da Costa Rica (aprovado antes da EC 45) → status supralegal.</div>
+
+<div class="ex">
+  <h3>Exercício</h3>
+  <div class="q"><p>Q3. A Corte Interamericana de Direitos Humanos tem sede em:</p>
+    <ul><li>A) Nova York (EUA)</li><li>B) Washington D.C. (EUA)</li><li>C) Haia (Holanda)</li><li>D) São José (Costa Rica)</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q3-D</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">4. USO DA FORÇA POLICIAL — LEI 13.060/2014 E DECRETO 12.341/2024</h1>
+<h2 class="sub">Lei 13.060/2014 — Instrumentos de menor potencial ofensivo</h2>
+<ul>
+  <li>Estabelece princípios para o uso de instrumentos de menor potencial ofensivo pela polícia.</li>
+  <li><strong>Princípios:</strong> legalidade, necessidade, proporcionalidade, moderação e conveniência.</li>
+  <li>O uso de força deve ser a ultima ratio — após esgotados outros meios.</li>
+  <li>Prioridade para preservação da vida e integridade física — inclusive do suspeito.</li>
+  <li>Instrumentos de menor potencial ofensivo: spray de pimenta, bastão, taser, munição de impacto controlado.</li>
+</ul>
+<h2 class="sub">Decreto 12.341/2024 — Regulamentação do uso da força</h2>
+<p>Regulamenta o uso da força pelos agentes de segurança pública no âmbito federal e serve de modelo para os estados.</p>
+<ul>
+  <li><strong>Escalonamento progressivo da força:</strong></li>
+</ul>
+<table>
+  <tr><th>Nível</th><th>Ação</th></tr>
+  <tr><td>1</td><td>Presença policial — dissuasão pela presença</td></tr>
+  <tr><td>2</td><td>Verbalização — comandos verbais claros e firmes</td></tr>
+  <tr><td>3</td><td>Controle físico sem arma — imobilização, algemamento</td></tr>
+  <tr><td>4</td><td>Instrumentos de menor potencial ofensivo — taser, spray, bastão</td></tr>
+  <tr><td>5</td><td>Força letal — apenas como último recurso, risco real e iminente à vida</td></tr>
+</table>
+<ul>
+  <li>Após o uso de força: relatório obrigatório descrevendo circunstâncias.</li>
+  <li>Proibido usar força contra: pessoa já imobilizada/controlada, pessoa incapacitada, pessoa em fuga sem representar perigo imediato.</li>
+  <li>Atenção especial: grupos vulneráveis (idosos, gestantes, crianças, pessoas com deficiência).</li>
+</ul>
+
+<div class="ex">
+  <h3>Exercícios — Uso da Força</h3>
+  <div class="q"><p>Q4. De acordo com a Lei 13.060/2014, os instrumentos de menor potencial ofensivo devem ser priorizados porque:</p>
+    <ul><li>A) São proibidos em situações de risco</li><li>B) Permitem preservar a vida e integridade física com menor risco de danos fatais</li><li>C) Podem ser usados sem critérios em qualquer situação</li><li>D) Substituem completamente o uso de armas de fogo</li></ul>
+  </div>
+  <div class="q"><p>Q5. Segundo o Decreto 12.341/2024, a força letal é:</p>
+    <ul><li>A) O primeiro recurso a ser utilizado em qualquer resistência</li><li>B) Permitida sempre que houver ordem de prisão</li><li>C) O último recurso, quando há risco real e iminente à vida</li><li>D) Proibida em qualquer circunstância</li></ul>
+  </div>
+  <div class="gab">Gabarito: Q4-B | Q5-C</div>
+</div>
+</div>
+
+<div class="secao">
+<h1 class="titulo">GABARITO GERAL — DIREITOS HUMANOS</h1>
+<table>
+  <tr><th>Q</th><th>Resp.</th><th>Tema</th></tr>
+  <tr><td>Q1</td><td>C</td><td>Meio ambiente = 3ª geração</td></tr>
+  <tr><td>Q2</td><td>B</td><td>DUDH 1948</td></tr>
+  <tr><td>Q3</td><td>D</td><td>Corte Interamericana = São José/Costa Rica</td></tr>
+  <tr><td>Q4</td><td>B</td><td>Menor potencial ofensivo = preservar vida</td></tr>
+  <tr><td>Q5</td><td>C</td><td>Força letal = último recurso</td></tr>
+</table>
+</div>
+
+<div class="contracapa">
+  <div class="logo-sc">Polícia Civil</div>
+  <div class="logo-pc">PC-SC</div>
+  <div class="logo-sc">Santa Catarina</div>
+  <div class="stripe"></div>
+  <h2>Bons estudos!</h2>
+  <p>Concurso Público — Edital 01/2025</p>
+  <p>Cargo: Agente de Polícia Civil</p>
+  <p>Organizadora: IDECAN</p>
+  <p style="margin-top:4mm; color:#fff; font-weight:bold;">Elaborado por: Dani Kaloi</p>
+  <div class="stripe"></div>
+  <div class="data">PROVA: 21 DE MARÇO DE 2026</div>
+  <div class="rodape">Material de estudo — uso pessoal</div>
+</div>
+
+</body>
+</html>
